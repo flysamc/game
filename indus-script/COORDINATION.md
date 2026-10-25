@@ -8,9 +8,9 @@ Project entry point: [README.md](README.md)
 **Active handoff: IND-004 — five-record pilot curation and v0.2 schema corrections.**  
 Status: **IN REVIEW — Codex**, 25 October 2026.  
 Review [PR #4](https://github.com/flysamc/game/pull/4), stacked on [PR #2](https://github.com/flysamc/game/pull/2). [Curation note and exact source checklist](https://github.com/flysamc/game/blob/indus/IND-004-pilot-curation/indus-script/notes/IND-004-pilot-curation.md); [current data guide](https://github.com/flysamc/game/blob/indus/IND-004-pilot-curation/indus-script/data/README.md).  
-Completed: all 12 normalized faces; proposed photo crosswalks to H-322, H-303, H-916, H-977 and H-351; field-specific photo outcomes and surface-content support; both source-doubt marks retained. Thirty-one tests pass; the analytical release gate remains closed pending independent v0.2 review and object-identity adjudication.  
-IND-002 is DONE and [PR #1](https://github.com/flysamc/game/pull/1) is merged after Claude's acceptance. IND-003 review corrections are implemented in #4, awaiting review.  
-The broader strokes-plus-cup family remains the subsequent search target; these five are a workflow pilot. [H001 proposal #3](https://github.com/flysamc/game/pull/3) has been revised by Claude but remains unlocked. No expanded label-by-count tabulation or H001 test was run. The pinned public third-party copy was used only to cross-check the 12 exposed pilot sequences; no raw corpus or scans are committed.
+Completed: all 12 normalized faces; [Claude accepted the source addendum, crosswalks and five pilot identities](https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407). His three corrections are applied: H-322 A and H-977 B normalization outcomes are now qualified; H-977 C retains both its M77 sign encoding and an explicitly inferred CISI motif assessment. Photo outcomes total 9 confirms / 8 consistent; both source-doubt marks remain. Thirty-five tests pass. Record-level transcription/content review and a frozen release remain pending.  
+Acceptance is scoped: Claude did not independently check Vats I pp. 348/351 item-to-find links. No corpus-wide duplicate or production-group independence is claimed. [Review response and remaining checks](https://github.com/flysamc/game/blob/indus/IND-004-pilot-curation/indus-script/notes/IND-004-review-response.md). IND-002 is DONE and [PR #1](https://github.com/flysamc/game/pull/1) is merged. IND-003/004 remain IN REVIEW.  
+The broader strokes-plus-cup family remains the subsequent search target; these five are a workflow pilot. [H001 proposal #3](https://github.com/flysamc/game/pull/3) is at Claude's revision 3 and remains unlocked. No expanded label-by-count tabulation or H001 test was run. The pinned public third-party copy was used only to cross-check the 12 exposed pilot sequences; no raw corpus or scans are committed.
 
 Sam asked us to use `flysamc/game` as a shared workspace and proceed one step at a time. The summary is now the starting reference. Actual coordination happens through committed notes, task status, and reviews when a contributor's session is active; this file does not automatically invoke or synchronize assistants.
 
@@ -23,7 +23,7 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 | IND-001 | Initial project summary, references, hypothesis, and coordination protocol | DONE | Codex | This initial documentation commit; no corpus analysis claimed |
 | IND-002 | Verify source availability and H-351 identification/transcription | DONE | Codex; reviewed by Claude | [PR #1](https://github.com/flysamc/game/pull/1); [Claude review](notes/IND-002-review-claude.md) accepted with additions (2026-10-25) |
 | IND-003 | Choose the pilot source, schema, and deduplication rules | IN REVIEW | Codex; reviewed by Claude | [PR #2](https://github.com/flysamc/game/pull/2); requested changes implemented in v0.2 [PR #4](https://github.com/flysamc/game/pull/4), awaiting review |
-| IND-004 | Curate and independently review stroke-plus-cup parallels | IN REVIEW | Codex | [PR #4](https://github.com/flysamc/game/pull/4): exposed five-record pilot complete; four new photo crosswalks and nine new face sequences; independent review and broader family curation still pending |
+| IND-004 | Curate and independently review stroke-plus-cup parallels | IN REVIEW | Codex; crosswalks reviewed by Claude | [PR #4](https://github.com/flysamc/game/pull/4): source addendum and five pilot identities accepted; three corrections applied; record-level transcription/content review and broader family curation pending |
 | IND-005 | Test H001 descriptively and reproduce basic positional statistics where data support it | BLOCKED | Unclaimed | IND-004; rerunnable code, inputs, output, and limitations |
 | IND-006 | Compare structural models with matched controls and held-out records | BLOCKED | Unclaimed | Adequate audited corpus and locked evaluation design |
 | IND-007 | Evaluate specific semantic/phonetic readings | DEFERRED | Unclaimed | Independent anchors and predeclared rules; not dependent merely on a high model score |
@@ -148,6 +148,16 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Exposure: full M77 p. 360 context, Vats and CISI index rows, adjacent CISI plates, Claude's aggregate report, and the 12 cross-check rows were seen. No family-wide label/count table, hypothesis test, phonetic assignment or translation was made.
 - Claude has revised proposal #3 following the six review points. It remains unlocked; method details still need resolution before inference. Next action: independent review of #4 using its source checklist, then identity adjudication and a separately specified family search.
 
+### 2026-10-25 — Codex — Claude's IND-004 review applied
+
+- Read [Claude's actual review](https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407) and H001 revision 3 at `23fa6579cc702608aafae15c0c96132e69b951e8`. Branch: `indus/IND-004-pilot-curation`; PR #4 stays open and stacked on #2.
+- Re-inspected CISI-I p. 226 and CISI-II p. 343. Changed H-322 A and H-977 B normalization outcomes to `consistent`; kept the independently visible stroke counts at `confirms`. Now 17 outcomes: 9 confirms, 8 consistent.
+- Preserved M77 59 on H-977 C while adding evidence-linked `content_disputed`/`content_assessments`. CISI's plate heading supports a motif interpretation by inference, not an explicit per-face ruling. Checked CISI-I p. 230's heading too; no equivalent source conflict is established for H-351 C's X. Its function remains an open question.
+- Recorded Claude's explicitly authorized source-addendum and crosswalk acceptance plus five distinct physical-object groups within the pilot. H-322's excavation number remains unreported. Vats I pp. 348/351 were not independently checked by Claude; that limitation is explicit, and Vats alias statuses are not upgraded. All record-level transcription reviews remain pending.
+- Validation: all 35 tests pass; draft validator exit 0; `--require-ready` exit 1 as intended. Historical v0.1 data/schema unchanged. No corpus scans or raw third-party data committed.
+- New family leads (H-917/M77 4472 and H-354/M77 5499) remain Claude-reported, not new pilot records. Read his reported direction/alternative-face example; no additional family search or statistical test performed.
+- Next: review corrected record transcriptions and source-classification representation; inspect outstanding Vats links if accessible; settle H001's analysis rules before broader tabulation. IND-003 and IND-004 remain IN REVIEW; H001 remains unlocked. Full response is in `notes/IND-004-review-response.md` on the curation branch.
+
 ## Handoff entry template
 
 - Date / contributor / task:
@@ -159,4 +169,5 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Unresolved gaps or disagreements:
 - Task status:
 - Next action:
+
 
