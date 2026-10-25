@@ -1,0 +1,159 @@
+{
+  "manifest_version": "0.1",
+  "audit": "IND-002",
+  "audited_on": "2026-10-25",
+  "author": "Codex",
+  "independent_review": "pending",
+  "scope": "Source register, not an inscription dataset. Page numbers are 1-based. Hashes describe retrieved bytes, not publisher authenticity.",
+  "redistribution": "Source PDFs and plates are not committed. No general corpus redistribution license was established.",
+  "sources": [
+    {
+      "id": "mahadevan-tablet-paper",
+      "title": "A Megalithic Pottery Inscription and a Harappa Tablet: A Case of Extraordinary Resemblance",
+      "author": "Iravatham Mahadevan",
+      "publication_date": null,
+      "publication_date_note": "Not verified; do not substitute the retrieval date or PDF creation metadata.",
+      "url": "https://www.harappa.com/sites/default/files/pdf/sulur-megalithic.pdf",
+      "access": "downloaded PDF",
+      "bytes": 78099,
+      "sha256": "7b791a94838b34dbdceefa6c5fbbae243be5a0e1a9c67d641a84250be50da7f2",
+      "pdf_pages": 5,
+      "inspected": [
+        "Section 3, printed/PDF pp. 2–3",
+        "Section 5, printed/PDF pp. 3–4"
+      ],
+      "use": "Author-reported H-351 identity and normalized transcription; not adoption of the paper's Sulur continuity claim.",
+      "reuse_license": "not established"
+    },
+    {
+      "id": "mahadevan-tablet-figures",
+      "title": "Illustration supplement to Mahadevan's Sulur/Harappa tablet paper",
+      "author": "Iravatham Mahadevan",
+      "url": "https://www.harappa.com/sites/default/files/pdf/sulur-figs.pdf",
+      "access": "downloaded and visually inspected PDF",
+      "bytes": 2260687,
+      "sha256": "a8e93075dfd8ddc8b33b1f1dc9b4d4a673592509586b67ae9cd4487a0f195d59",
+      "pdf_pages": 3,
+      "inspected": [
+        "PDF p. 2: Figs. 2 and 3",
+        "PDF p. 3: Fig. 4, reproduced M77 printed p. 360"
+      ],
+      "dependency": "Fig. 2 reproduces CISI photographic evidence; not independent artifact evidence.",
+      "reuse_license": "not established"
+    },
+    {
+      "id": "cisi-1-ignca-scan",
+      "title": "Corpus of Indus Seals and Inscriptions, vol. 1: Collections in India",
+      "editors": [
+        "Jagat Pati Joshi",
+        "Asko Parpola"
+      ],
+      "publication_year": 1987,
+      "url": "https://ignca.gov.in/Asi_data/76884.pdf",
+      "access": "downloaded scan; selected pages visually inspected",
+      "bytes": 31508998,
+      "sha256": "47a4da4227cfb7baa56d6a561e25797225499d0ec54f5a702a82c67ab4746d4d",
+      "pdf_pages": 862,
+      "container_scope": "The scan's complete contents were not audited. Identification here is based on its vol. 1 title page.",
+      "inspected": [
+        {
+          "pdf_page": 5,
+          "location": "title page"
+        },
+        {
+          "pdf_page": 6,
+          "location": "copyright page"
+        },
+        {
+          "pdf_page": 266,
+          "printed_page": "230",
+          "location": "H-351 A/B/C photographs"
+        }
+      ],
+      "reuse_license": "Copyright page assigns volume rights to Academia Scientiarum Fennica and photograph rights to owners of the original objects; no open reuse permission observed."
+    },
+    {
+      "id": "m77-coding-excerpt",
+      "title": "The Indus Script: Texts, Concordance and Tables — reproduced excerpts",
+      "author": "Iravatham Mahadevan",
+      "publication_year": 1977,
+      "url": "https://www.scribd.com/document/265262777/Excerpts-from-Mahadevan-I-1977-The-Indus-Script-Texts-Concordance-and-Tables-Delhi-ASI-Memoir-No-77",
+      "access": "rendered webpage text of reproduced primary-source excerpt",
+      "inspected": [
+        "Printed pp. 30–31: codes 3, 5, 8"
+      ],
+      "limitation": "Code definitions checked in extracted text, not a full-edition visual audit; uncertain-sign convention also corroborated by Yadav et al. Fig. 12.",
+      "reuse_license": "not established"
+    },
+    {
+      "id": "yadav-2010",
+      "title": "Statistical Analysis of the Indus Script Using n-Grams",
+      "authors": "Nisha Yadav et al.",
+      "publication_date": "2010-03-19",
+      "doi": "10.1371/journal.pone.0009506",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009506",
+      "access": "primary article read",
+      "inspected": [
+        "Materials and Methods: M77/EBUDS filtering and sequence conventions",
+        "Fig. 12 caption: doubtful-sign asterisks",
+        "Article copyright statement"
+      ],
+      "raw_sequence_file_obtained": false,
+      "reuse_license": "Article states Creative Commons Attribution. Does not establish rights to an unprovided dataset or separately credited photographs."
+    },
+    {
+      "id": "rmrl-irc",
+      "title": "Roja Muthiah Research Library: Indus Research Centre",
+      "url": "https://rmrl.in/en/irc",
+      "access": "official provider page read",
+      "use": "Confirms IndusScript.in as an IRC application based on Mahadevan 1977.",
+      "reuse_license": "Page footer says all rights reserved; data reuse terms not established."
+    },
+    {
+      "id": "indusscript-portal",
+      "title": "IndusScript.in",
+      "url": "https://indusscript.in/",
+      "access": "text-only retrieval yielded no extractable rows",
+      "raw_sequence_file_obtained": false,
+      "limitation": "No conclusion about login requirements or absence of an export follows from this retrieval. Portal version and raw data not audited.",
+      "reuse_license": "not established"
+    },
+    {
+      "id": "icit-official",
+      "title": "Interactive Corpus of Indus Text: official access page",
+      "url": "https://www.epigraphica.de/indus/menueindus.htm",
+      "access": "official page read",
+      "raw_sequence_file_obtained": false,
+      "limitation": "Access enquiry directed to administrator; no request sent, account used or live export obtained.",
+      "reuse_license": "not established"
+    },
+    {
+      "id": "icit-manual-2010",
+      "title": "Documentation of the Online Indus Writing Database",
+      "author": "Andreas Fuls",
+      "publication_year": 2010,
+      "url": "https://www.epigraphica.de/indus/help_onlinedatabase.pdf",
+      "access": "PDF text inspected through web retrieval",
+      "pdf_pages": 16,
+      "inspected": [
+        "PDF p. 1: documented access levels",
+        "PDF p. 2: sign scheme and descriptions",
+        "PDF p. 5: serialization and damage markers"
+      ],
+      "limitation": "Historical documentation; not confirmation that current access or exports behave identically.",
+      "reuse_license": "Copyright Andreas Fuls, Berlin 2010; no bulk-data license established."
+    }
+  ],
+  "unsuccessful_retrievals": [
+    {
+      "url": "https://www.rmrl.in/wordpress/wp-content/uploads/2014/02/papers/5a.pdf",
+      "result": "HTTP 404 on direct request",
+      "consequence": "Used identified reproduced excerpt; no replacement PDF claimed."
+    },
+    {
+      "url": "https://archive.org/download/TheIndusScript.TextConcordanceAndTablesIravathanMahadevan/The%20Indus%20Script.%20Text%2C%20Concordance%20and%20Tables%20-Iravathan%20Mahadevan.pdf",
+      "result": "Web retrieval exceeded size limit; direct download returned HTTP 503",
+      "consequence": "Full M77 scan not obtained in this audit."
+    }
+  ]
+}

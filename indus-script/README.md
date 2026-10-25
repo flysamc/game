@@ -1,7 +1,7 @@
 # Indus script research
 
 Started: 25 October 2026  
-Status: literature-based project setup; no decipherment or independent corpus analysis yet.
+Status: IND-002 source audit prepared for independent review; no decipherment or corpus statistics yet.
 
 This folder is the shared research workspace for Sam, Codex, Claude, and other contributors. The goal is to investigate how much structure, function, meaning, and eventually pronunciation can be recovered from Indus inscriptions through reproducible tests.
 
@@ -12,8 +12,10 @@ Start here, then read [COORDINATION.md](COORDINATION.md) for the current task an
 - An initial literature scan covered comparative/rebus readings, statistical models, cryptanalysis, sign variants, archaeological interpretations, and recent neural approaches.
 - Mahadevan's published normalized transcription of Harappa tablet **H-351** was read and selected as a first case.
 - A provisional hypothesis and an ordered research plan were defined.
+- [IND-002 source audit](notes/IND-002-source-audit.md): checked H-351 against the CISI photograph and separate illustration supplement; identified five candidate catalogue entries, source-specific surface labels, and two doubtful sign readings. Independent review is pending.
+- Added a [source manifest](sources/manifest.json) with retrieval details and hashes for downloaded reference PDFs.
 
-This was an initial literature review, not an exhaustive systematic review. **No complete corpus has been downloaded, independently validated, or analyzed by this project. No original artifact photograph has yet been checked by us. No sign pronunciation or translation has been established.** Numbers and results below belong to the cited studies unless explicitly marked as our own future results.
+This was an initial literature review, not an exhaustive systematic review. **Reference scans have been downloaded and H-351's published photograph has been visually checked. No machine-readable corpus has been obtained and independently validated; no corpus statistics, sign pronunciation or translation have been established.** Numbers and results below belong to the cited studies unless explicitly marked as our own future results.
 
 ## Starting position
 
@@ -57,9 +59,11 @@ The source identifies the object as **Vats 581 = IM 77:4581 = CISI-I:H-351**, a 
 
 | Surface | Published sign sequence, in the author's reading order | Conventional shape labels |
 |---|---|---|
-| Side 1 | `119 – 87 – 342 – 176` | “Raindrops”; two tall strokes; “jar”; “harrow” |
+| Side 1 | `119 – 87 – 342 – 176` (first sign marked doubtful in reproduced M77 figure) | “Raindrops”; two tall strokes; “jar”; “harrow” |
 | Side 2 | `95 – 328` | Four tall strokes; “cup” |
 | Side 3 | `137` | X-shaped sign |
+
+The [source audit](notes/IND-002-source-audit.md) maps these labels to CISI A/B/C and M77 side/line codes: paper Side 1 = CISI A = M77 `20`; Side 2 = B = `30`; Side 3 = C = `10`. Keep these labels separate and retain the doubtful-reading annotation on `119`.
 
 The sign numbers use **Mahadevan's scheme**. A number such as 95 is a sign identifier, not a decoded quantity. Store the source's order explicitly; do not reverse it merely because the original script is usually described as right-to-left. Seal faces and impressions also require different orientation handling.
 
@@ -67,7 +71,7 @@ Mahadevan describes related Harappa tablets with the same four-sign group on one
 
 ### Hypothesis H001 — fixed label with variable numerical field
 
-**Status: proposed from published parallels; not independently tested.**
+**Status: proposed; five illustrated candidates identified in IND-002, with independent transcription review and hypothesis testing still pending.**
 
 Some tablets may combine a relatively fixed label with a variable numerical field.
 
@@ -102,7 +106,7 @@ For model tests, group duplicate and related records before splitting, fit trans
 
 Near-term progress means a verified dataset, replicated structural findings, and clearly testable functional hypotheses. Stronger progress would be a fixed interpretation that predicts independent inscriptions and fits external evidence with few exceptions. Model agreement or two assistants agreeing does not replace independent evidence.
 
-The immediate handoff is **IND-002 in [COORDINATION.md](COORDINATION.md)**. Do not start translation generation or large models before the source and transcription checks.
+The immediate handoff is **independent review of the [IND-002 source audit](notes/IND-002-source-audit.md)**; see [COORDINATION.md](COORDINATION.md) for status. Do not start translation generation or large models before the source and transcription checks.
 
 [yadav]: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009506
 [parpola]: https://tuhat.helsinki.fi/ws/portalfiles/portal/127256488/Parpola_A_2009._Hind_leg_fish_in_the_Indus_script._Scripta1_37_76.pdf
@@ -117,3 +121,4 @@ The immediate handoff is **IND-002 in [COORDINATION.md](COORDINATION.md)**. Do n
 [tiwari]: https://aclanthology.org/2026.nlp4dh-1.28/
 [tablet]: https://www.harappa.com/sites/default/files/pdf/sulur-megalithic.pdf
 [icit]: https://www.epigraphica.de/indus/menueindus.htm
+
