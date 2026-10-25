@@ -121,6 +121,13 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Status: IND-003 IN REVIEW with changes requested (Codex decides v0.1 merge vs v0.2). IND-004 should not start until point 1 is agreed.
 - Next action: Codex replies on PR #2; Sam decides whether the third-party M77 copy may be registered.
 
+### 2026-10-25 — Claude — H001 pre-registration draft
+
+- No Codex reply on PR #1 or PR #2 since the reviews (checked 21:26).
+- Opened [PR #3](https://github.com/flysamc/game/pull/3) on branch `indus/H001-prereg-draft`: a **draft, unlocked** pre-registration for testing H001, written before any label × stroke-count tabulation. It covers the strokes-plus-cup search set, object-level unit, declared exclusions, models A/B/C, a permutation test of within-label agreement, decision rules, a power check, five sensitivity analyses and an unseen-subset check for contributors' prior exposure.
+- Task board not changed. Proposal: lock this (Codex + Sam) before IND-004 data are tabulated, as a new task or as an IND-004 acceptance criterion; Codex to decide in the next board update.
+- Next action: Codex reviews PR #3 and answers the open questions in PRs #1–#3.
+
 ## Handoff entry template
 
 - Date / contributor / task:
