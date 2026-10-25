@@ -5,11 +5,12 @@ Project entry point: [README.md](README.md)
 
 ## Current handoff
 
-**Active handoff: IND-004 — pilot released; broader family discovery next.**  
-Status: **IN PROGRESS — Codex**, 25 October 2026.  
+**Active handoff: IND-004 — family discovery method ready for review.**  
+Status: **IN REVIEW — Codex**, 25 October 2026.  
 Claude [accepted all five record transcriptions and the classification representation](https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653). Codex recorded the actual reviews and froze pilot v0.2: five distinct pilot objects, twelve normalized faces, two source-doubt marks, one preserved fish classification disagreement. All 35 tests pass; both validator modes now exit 0. The release permits bounded pilot descriptions; population inference remains disabled. [Release record](https://github.com/flysamc/game/blob/indus/IND-004-pilot-curation/indus-script/notes/IND-004-pilot-release.md).  
-[PR #2](https://github.com/flysamc/game/pull/2) supplies the historical pilot design, followed by the reviewed v0.2 implementation in [PR #4](https://github.com/flysamc/game/pull/4). IND-003 is complete; IND-004's broader family curation remains open. The earlier acceptance limits remain: Claude did not independently inspect Vats I pp. 348/351 item-to-find links, and no corpus-wide duplicate or production-group audit is claimed.  
-Next: verify the remaining stroke-sign inventory question and commit discovery rules before candidate extraction. [H001 proposal #3](https://github.com/flysamc/game/pull/3) is at revision 3.1 and remains unlocked. Pilot freezing does not unlock H001. No expanded label/count table or hypothesis test has been run; no raw corpus or scans are committed.
+[PR #2](https://github.com/flysamc/game/pull/2) and [PR #4](https://github.com/flysamc/game/pull/4) are merged, including the frozen pilot. IND-003 is complete; IND-004's broader family curation remains open. The earlier acceptance limits remain: Claude did not independently inspect Vats I pp. 348/351 item-to-find links, and no corpus-wide duplicate or production-group audit is claimed.  
+[PR #5](https://github.com/flysamc/game/pull/5), branch `indus/IND-004-family-discovery`, now contains the [discovery protocol and result](https://github.com/flysamc/game/blob/indus/IND-004-family-discovery/indus-script/notes/IND-004-family-discovery.md), committed rules before extraction, an extractor and a full cup-row audit. Result: 241 candidate catalogue anchors, including the five pilot anchors and **236 additional candidates**; 11 unknown-span rows need manual review. These are unreviewed export-derived references, not verified physical objects. All 44 tests pass and the frozen pilot hashes are unchanged.  
+The primary-source check identifies 108 as six short strokes and 110 as seven short strokes; the tall-series query remains 86/87/89/95/96. Next: independent discovery-method review, then primary curation starting at M77 4314 in ascending order. [H001 proposal #3](https://github.com/flysamc/game/pull/3) remains unlocked at revision 3.1. No expanded label/count table or hypothesis test was run; no raw corpus or scans are committed.
 
 Sam asked us to use `flysamc/game` as a shared workspace and proceed one step at a time. The summary is now the starting reference. Actual coordination happens through committed notes, task status, and reviews when a contributor's session is active; this file does not automatically invoke or synchronize assistants.
 
@@ -22,7 +23,7 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 | IND-001 | Initial project summary, references, hypothesis, and coordination protocol | DONE | Codex | This initial documentation commit; no corpus analysis claimed |
 | IND-002 | Verify source availability and H-351 identification/transcription | DONE | Codex; reviewed by Claude | [PR #1](https://github.com/flysamc/game/pull/1); [Claude review](notes/IND-002-review-claude.md) accepted with additions (2026-10-25) |
 | IND-003 | Choose the pilot source, schema, and deduplication rules | DONE | Codex; reviewed by Claude | PR #2 design and PR #4 corrections; reviewed v0.2 pilot frozen after actual record acceptance |
-| IND-004 | Curate and independently review stroke-plus-cup parallels | IN PROGRESS | Codex; pilot reviewed by Claude | Five-object pilot frozen; broader family discovery and individual review are next. H001 remains unlocked |
+| IND-004 | Curate and independently review stroke-plus-cup parallels | IN PROGRESS | Codex; pilot reviewed by Claude | Five-object pilot frozen; discovery queue has 236 additional candidates; method review then individual primary curation. H001 remains unlocked |
 | IND-005 | Test H001 descriptively and reproduce basic positional statistics where data support it | BLOCKED | Unclaimed | IND-004; rerunnable code, inputs, output, and limitations |
 | IND-006 | Compare structural models with matched controls and held-out records | BLOCKED | Unclaimed | Adequate audited corpus and locked evaluation design |
 | IND-007 | Evaluate specific semantic/phonetic readings | DEFERRED | Unclaimed | Independent anchors and predeclared rules; not dependent merely on a high model score |
@@ -163,6 +164,23 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Recorded the five accepted record reviews with the actual reviewer/date/link, including the content-classification representation. Froze v0.2 without changing any token, doubt mark, graphic count, photo outcome or artifact direction. The release decision is Codex's; it is not an inferred extra approval by Claude.
 - Added release scope and SHA-256 file manifest. All 35 tests pass; normal and readiness validation both exit 0. Population inference remains disabled; the selected pilot is not an H001 test set.
 - IND-003 is DONE. IND-004 continues with a separately recorded family discovery protocol, source inventory verification and individual candidate curation. No broad label/count tabulation or hypothesis test has been performed. H001 revision 3.1 remains unlocked.
+
+### 2026-10-25 — Codex — family discovery claim and prospective rules
+
+- Branch: `indus/IND-004-family-discovery`, based on merged pilot release `04375213ed95ce512c13884d585a5f2d82343eef`. Prior PRs #2/#4 are merged; the pilot remains frozen and unchanged.
+- Checked M77 printed pp. 31–32 (PDF 42–43). 108 has six short strokes; 110 has seven short strokes. Both remain outside the tall-series inventory; requested independent review of this correction. Line code 0 means the only text line on a side, which constrains the discovery filter.
+- Read the pinned third-party CSV header and converter description. No new candidate list or label/count table was extracted before this protocol commit.
+- Added `notes/IND-004-family-discovery-protocol.md`, `notes/H001-stroke-inventory-check.md` and a separate source/query manifest. Candidate output will contain IDs, uncertainty flags and audit reasons, not raw sequences, stroke counts or other-face labels. All candidates require primary-source curation and independent review.
+- Next: implement and test this fixed discovery query, verify the pinned input blob, extract a review queue and report its coverage limits. H001 remains unlocked; no hypothesis test is authorized by discovery.
+
+### 2026-10-25 — Codex — family discovery queue handoff
+
+- [PR #5](https://github.com/flysamc/game/pull/5); extraction content commit `015eae1f5c63b887439e58580f8d1a6f10c22d4c`. Protocol committed before extraction at `b0d5e27bbb92a52e13f145a6e4ee263b2a0a454d` on `indus/IND-004-family-discovery`. Used only the previously pinned CSV blob; verified its Git blob and SHA-256. Raw input is not committed.
+- Result: 3,573 exported rows, 2,906 catalogue anchors; every one of 313 cup-containing rows accounted for as 242 matching rows, 11 unknown-span manual-review rows and 60 explicitly excluded rows. Matching rows map to 241 catalogue anchors, including five frozen pilot anchors and 236 additional candidates. These are not deduplicated physical-object counts.
+- Fifteen matching rows retain nonzero source uncertainty. Output contains identifiers, flags and audit reasons, not raw sign sequences, candidate stroke counts or other-face labels. No analytic label/count table or H001 test was made.
+- Added the standard-library extractor and nine meaningful synthetic failure tests. All 44 project tests pass. Frozen pilot release hashes are unchanged. The report includes rerun commands and the complete audit.
+- Exposure: code read the whole export for filtering/integrity; Codex saw resulting IDs, audit reasons, uncertainty flags and inventory totals. No claim of blind confirmation.
+- Next: Claude reviews the prospective filter, tall/short inventory correction, line/face rules and output audit. Then curate M77 4314 first under the ascending-ID rule. H001 remains unlocked, and every new candidate needs its own primary evidence and independent review.
 
 ## Handoff entry template
 
