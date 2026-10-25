@@ -1,0 +1,4807 @@
+{
+  "dataset_id": "m77-strokes-cup-discovery-v0.1",
+  "status": "unreviewed_discovery_queue",
+  "protocol_commit": "b0d5e27bbb92a52e13f145a6e4ee263b2a0a454d",
+  "source": {
+    "repository": "joyboseroy/indus_decipher",
+    "commit": "cd600349f6d3193a241c3eb87ff80a2a65377efc",
+    "path": "data/m77_indusscript_real_corpus.csv",
+    "git_blob_sha": "c61d3777ad19807efd7835da6296fa6d10833845",
+    "unit": "One nonempty M77 catalogue text number and side/line pair, according to its converter",
+    "raw_data_redistributed": false,
+    "underlying_portal_data_reuse_rights": "unestablished",
+    "bytes": 266368,
+    "sha256": "c87b82a6d0ce2d02e70c96711f4ae6fd2a01f8b0dbb9795e564e17b12e2ce1d3"
+  },
+  "query": {
+    "tall_stroke_signs": [
+      86,
+      87,
+      89,
+      95,
+      96
+    ],
+    "cup_sign": 328,
+    "exact_token_count": 2,
+    "sequence_order": "as_stored_no_reversal",
+    "complete_face_line_code": "0",
+    "require_no_other_exported_row_on_same_side": true,
+    "unknown_span_is_wildcard": false,
+    "audit_all_other_rows_containing_cup": true,
+    "do_not_emit_candidate_stroke_counts_or_other_face_labels": true
+  },
+  "scope": "Export-derived catalogue anchors, not deduplicated physical objects. No label/count table, statistical test or semantic reading.",
+  "integrity": {
+    "exported_rows": 3573,
+    "catalogue_anchors_in_export": 2906,
+    "rows_containing_cup": 313,
+    "matched_rows": 242,
+    "candidate_catalogue_anchors": 241,
+    "existing_frozen_pilot_anchors": 5,
+    "new_candidate_catalogue_anchors": 236,
+    "manual_review_rows": 11,
+    "excluded_cup_rows": 60,
+    "all_cup_rows_accounted_for": true,
+    "unexpected_sign_code_rows": 0
+  },
+  "audit_reason_counts": {
+    "not_an_exact_two_token_match": 52,
+    "prefix_not_in_declared_stroke_inventory": 8,
+    "unknown_span_not_a_wildcard": 11
+  },
+  "candidates": [
+    {
+      "record_id": "m77-4314",
+      "catalogue_id": "4314",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4314.20",
+          "source_row_number": 2007,
+          "catalogue_id": "4314",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4324",
+      "catalogue_id": "4324",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4324.20",
+          "source_row_number": 2019,
+          "catalogue_id": "4324",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4342",
+      "catalogue_id": "4342",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4342.20",
+          "source_row_number": 2038,
+          "catalogue_id": "4342",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4345",
+      "catalogue_id": "4345",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4345.20",
+          "source_row_number": 2044,
+          "catalogue_id": "4345",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4346",
+      "catalogue_id": "4346",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4346.20",
+          "source_row_number": 2046,
+          "catalogue_id": "4346",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4348",
+      "catalogue_id": "4348",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4348.20",
+          "source_row_number": 2050,
+          "catalogue_id": "4348",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4350",
+      "catalogue_id": "4350",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4350.20",
+          "source_row_number": 2054,
+          "catalogue_id": "4350",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4352",
+      "catalogue_id": "4352",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4352.20",
+          "source_row_number": 2058,
+          "catalogue_id": "4352",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4353",
+      "catalogue_id": "4353",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4353.20",
+          "source_row_number": 2060,
+          "catalogue_id": "4353",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4354",
+      "catalogue_id": "4354",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4354.20",
+          "source_row_number": 2062,
+          "catalogue_id": "4354",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4355",
+      "catalogue_id": "4355",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4355.20",
+          "source_row_number": 2064,
+          "catalogue_id": "4355",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4357",
+      "catalogue_id": "4357",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4357.20",
+          "source_row_number": 2068,
+          "catalogue_id": "4357",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4358",
+      "catalogue_id": "4358",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4358.20",
+          "source_row_number": 2070,
+          "catalogue_id": "4358",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4359",
+      "catalogue_id": "4359",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4359.20",
+          "source_row_number": 2072,
+          "catalogue_id": "4359",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4360",
+      "catalogue_id": "4360",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4360.20",
+          "source_row_number": 2074,
+          "catalogue_id": "4360",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4361",
+      "catalogue_id": "4361",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4361.20",
+          "source_row_number": 2076,
+          "catalogue_id": "4361",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4364",
+      "catalogue_id": "4364",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4364.20",
+          "source_row_number": 2082,
+          "catalogue_id": "4364",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4368",
+      "catalogue_id": "4368",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4368.20",
+          "source_row_number": 2085,
+          "catalogue_id": "4368",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4369",
+      "catalogue_id": "4369",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4369.20",
+          "source_row_number": 2087,
+          "catalogue_id": "4369",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4370",
+      "catalogue_id": "4370",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4370.20",
+          "source_row_number": 2089,
+          "catalogue_id": "4370",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4371",
+      "catalogue_id": "4371",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4371.20",
+          "source_row_number": 2091,
+          "catalogue_id": "4371",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4373",
+      "catalogue_id": "4373",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4373.20",
+          "source_row_number": 2095,
+          "catalogue_id": "4373",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4374",
+      "catalogue_id": "4374",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4374.20",
+          "source_row_number": 2097,
+          "catalogue_id": "4374",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4375",
+      "catalogue_id": "4375",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4375.20",
+          "source_row_number": 2099,
+          "catalogue_id": "4375",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4376",
+      "catalogue_id": "4376",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4376.20",
+          "source_row_number": 2101,
+          "catalogue_id": "4376",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4378",
+      "catalogue_id": "4378",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4378.20",
+          "source_row_number": 2104,
+          "catalogue_id": "4378",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4381",
+      "catalogue_id": "4381",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4381.20",
+          "source_row_number": 2109,
+          "catalogue_id": "4381",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4386",
+      "catalogue_id": "4386",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4386.20",
+          "source_row_number": 2115,
+          "catalogue_id": "4386",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4387",
+      "catalogue_id": "4387",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4387.20",
+          "source_row_number": 2117,
+          "catalogue_id": "4387",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4402",
+      "catalogue_id": "4402",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4402.20",
+          "source_row_number": 2121,
+          "catalogue_id": "4402",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4403",
+      "catalogue_id": "4403",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4403.20",
+          "source_row_number": 2123,
+          "catalogue_id": "4403",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4404",
+      "catalogue_id": "4404",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4404.20",
+          "source_row_number": 2125,
+          "catalogue_id": "4404",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4405",
+      "catalogue_id": "4405",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4405.20",
+          "source_row_number": 2127,
+          "catalogue_id": "4405",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4406",
+      "catalogue_id": "4406",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4406.20",
+          "source_row_number": 2129,
+          "catalogue_id": "4406",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4407",
+      "catalogue_id": "4407",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4407.20",
+          "source_row_number": 2131,
+          "catalogue_id": "4407",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4410",
+      "catalogue_id": "4410",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4410.20",
+          "source_row_number": 2135,
+          "catalogue_id": "4410",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4419",
+      "catalogue_id": "4419",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4419.20",
+          "source_row_number": 2149,
+          "catalogue_id": "4419",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4420",
+      "catalogue_id": "4420",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4420.20",
+          "source_row_number": 2151,
+          "catalogue_id": "4420",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4428",
+      "catalogue_id": "4428",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4428.20",
+          "source_row_number": 2161,
+          "catalogue_id": "4428",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4444",
+      "catalogue_id": "4444",
+      "existing_frozen_pilot": true,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4444.20",
+          "source_row_number": 2182,
+          "catalogue_id": "4444",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4445",
+      "catalogue_id": "4445",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4445.20",
+          "source_row_number": 2184,
+          "catalogue_id": "4445",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4451",
+      "catalogue_id": "4451",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4451.20",
+          "source_row_number": 2196,
+          "catalogue_id": "4451",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4455",
+      "catalogue_id": "4455",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4455.20",
+          "source_row_number": 2204,
+          "catalogue_id": "4455",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4456",
+      "catalogue_id": "4456",
+      "existing_frozen_pilot": true,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4456.20",
+          "source_row_number": 2206,
+          "catalogue_id": "4456",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4457",
+      "catalogue_id": "4457",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4457.20",
+          "source_row_number": 2208,
+          "catalogue_id": "4457",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4458",
+      "catalogue_id": "4458",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4458.20",
+          "source_row_number": 2210,
+          "catalogue_id": "4458",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4459",
+      "catalogue_id": "4459",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4459.20",
+          "source_row_number": 2212,
+          "catalogue_id": "4459",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4461",
+      "catalogue_id": "4461",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4461.20",
+          "source_row_number": 2216,
+          "catalogue_id": "4461",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4462",
+      "catalogue_id": "4462",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4462.20",
+          "source_row_number": 2218,
+          "catalogue_id": "4462",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4463",
+      "catalogue_id": "4463",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4463.20",
+          "source_row_number": 2220,
+          "catalogue_id": "4463",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4468",
+      "catalogue_id": "4468",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4468.20",
+          "source_row_number": 2228,
+          "catalogue_id": "4468",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4469",
+      "catalogue_id": "4469",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4469.20",
+          "source_row_number": 2230,
+          "catalogue_id": "4469",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4470",
+      "catalogue_id": "4470",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4470.20",
+          "source_row_number": 2232,
+          "catalogue_id": "4470",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4473",
+      "catalogue_id": "4473",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4473.20",
+          "source_row_number": 2238,
+          "catalogue_id": "4473",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4475",
+      "catalogue_id": "4475",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4475.20",
+          "source_row_number": 2242,
+          "catalogue_id": "4475",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4476",
+      "catalogue_id": "4476",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4476.20",
+          "source_row_number": 2244,
+          "catalogue_id": "4476",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4479",
+      "catalogue_id": "4479",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4479.20",
+          "source_row_number": 2250,
+          "catalogue_id": "4479",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4483",
+      "catalogue_id": "4483",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4483.20",
+          "source_row_number": 2258,
+          "catalogue_id": "4483",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4484",
+      "catalogue_id": "4484",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4484.20",
+          "source_row_number": 2260,
+          "catalogue_id": "4484",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4489",
+      "catalogue_id": "4489",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4489.20",
+          "source_row_number": 2270,
+          "catalogue_id": "4489",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4490",
+      "catalogue_id": "4490",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4490.20",
+          "source_row_number": 2272,
+          "catalogue_id": "4490",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4491",
+      "catalogue_id": "4491",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4491.20",
+          "source_row_number": 2274,
+          "catalogue_id": "4491",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4492",
+      "catalogue_id": "4492",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4492.20",
+          "source_row_number": 2276,
+          "catalogue_id": "4492",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4493",
+      "catalogue_id": "4493",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4493.20",
+          "source_row_number": 2278,
+          "catalogue_id": "4493",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4497",
+      "catalogue_id": "4497",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4497.20",
+          "source_row_number": 2282,
+          "catalogue_id": "4497",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4498",
+      "catalogue_id": "4498",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4498.20",
+          "source_row_number": 2284,
+          "catalogue_id": "4498",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4499",
+      "catalogue_id": "4499",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4499.20",
+          "source_row_number": 2286,
+          "catalogue_id": "4499",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4501",
+      "catalogue_id": "4501",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4501.20",
+          "source_row_number": 2290,
+          "catalogue_id": "4501",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4502",
+      "catalogue_id": "4502",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4502.20",
+          "source_row_number": 2292,
+          "catalogue_id": "4502",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4503",
+      "catalogue_id": "4503",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4503.20",
+          "source_row_number": 2294,
+          "catalogue_id": "4503",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4504",
+      "catalogue_id": "4504",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4504.20",
+          "source_row_number": 2296,
+          "catalogue_id": "4504",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4508",
+      "catalogue_id": "4508",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4508.20",
+          "source_row_number": 2303,
+          "catalogue_id": "4508",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4509",
+      "catalogue_id": "4509",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4509.20",
+          "source_row_number": 2305,
+          "catalogue_id": "4509",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4510",
+      "catalogue_id": "4510",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4510.20",
+          "source_row_number": 2307,
+          "catalogue_id": "4510",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4511",
+      "catalogue_id": "4511",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4511.20",
+          "source_row_number": 2309,
+          "catalogue_id": "4511",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4512",
+      "catalogue_id": "4512",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4512.20",
+          "source_row_number": 2311,
+          "catalogue_id": "4512",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4515",
+      "catalogue_id": "4515",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4515.20",
+          "source_row_number": 2315,
+          "catalogue_id": "4515",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4516",
+      "catalogue_id": "4516",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4516.20",
+          "source_row_number": 2317,
+          "catalogue_id": "4516",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4519",
+      "catalogue_id": "4519",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4519.20",
+          "source_row_number": 2323,
+          "catalogue_id": "4519",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4520",
+      "catalogue_id": "4520",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4520.20",
+          "source_row_number": 2325,
+          "catalogue_id": "4520",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4522",
+      "catalogue_id": "4522",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4522.20",
+          "source_row_number": 2329,
+          "catalogue_id": "4522",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4523",
+      "catalogue_id": "4523",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4523.20",
+          "source_row_number": 2331,
+          "catalogue_id": "4523",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4525",
+      "catalogue_id": "4525",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4525.20",
+          "source_row_number": 2333,
+          "catalogue_id": "4525",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4528",
+      "catalogue_id": "4528",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4528.20",
+          "source_row_number": 2337,
+          "catalogue_id": "4528",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4543",
+      "catalogue_id": "4543",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4543.20",
+          "source_row_number": 2355,
+          "catalogue_id": "4543",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4544",
+      "catalogue_id": "4544",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4544.20",
+          "source_row_number": 2357,
+          "catalogue_id": "4544",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4548",
+      "catalogue_id": "4548",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4548.20",
+          "source_row_number": 2364,
+          "catalogue_id": "4548",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4549",
+      "catalogue_id": "4549",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4549.20",
+          "source_row_number": 2366,
+          "catalogue_id": "4549",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4550",
+      "catalogue_id": "4550",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4550.20",
+          "source_row_number": 2368,
+          "catalogue_id": "4550",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4551",
+      "catalogue_id": "4551",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4551.20",
+          "source_row_number": 2370,
+          "catalogue_id": "4551",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4552",
+      "catalogue_id": "4552",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4552.20",
+          "source_row_number": 2372,
+          "catalogue_id": "4552",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4553",
+      "catalogue_id": "4553",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4553.20",
+          "source_row_number": 2374,
+          "catalogue_id": "4553",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4554",
+      "catalogue_id": "4554",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4554.20",
+          "source_row_number": 2376,
+          "catalogue_id": "4554",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4555",
+      "catalogue_id": "4555",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4555.20",
+          "source_row_number": 2378,
+          "catalogue_id": "4555",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4556",
+      "catalogue_id": "4556",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4556.20",
+          "source_row_number": 2380,
+          "catalogue_id": "4556",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4559",
+      "catalogue_id": "4559",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4559.20",
+          "source_row_number": 2384,
+          "catalogue_id": "4559",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4562",
+      "catalogue_id": "4562",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4562.20",
+          "source_row_number": 2389,
+          "catalogue_id": "4562",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4564",
+      "catalogue_id": "4564",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4564.20",
+          "source_row_number": 2392,
+          "catalogue_id": "4564",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4566",
+      "catalogue_id": "4566",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4566.20",
+          "source_row_number": 2394,
+          "catalogue_id": "4566",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4571",
+      "catalogue_id": "4571",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4571.20",
+          "source_row_number": 2396,
+          "catalogue_id": "4571",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4574",
+      "catalogue_id": "4574",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4574.20",
+          "source_row_number": 2401,
+          "catalogue_id": "4574",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4575",
+      "catalogue_id": "4575",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4575.20",
+          "source_row_number": 2403,
+          "catalogue_id": "4575",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4576",
+      "catalogue_id": "4576",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4576.30",
+          "source_row_number": 2406,
+          "catalogue_id": "4576",
+          "side_line_code": "30",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4577",
+      "catalogue_id": "4577",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4577.20",
+          "source_row_number": 2408,
+          "catalogue_id": "4577",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4579",
+      "catalogue_id": "4579",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4579.20",
+          "source_row_number": 2411,
+          "catalogue_id": "4579",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4580",
+      "catalogue_id": "4580",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4580.20",
+          "source_row_number": 2413,
+          "catalogue_id": "4580",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4581",
+      "catalogue_id": "4581",
+      "existing_frozen_pilot": true,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4581.30",
+          "source_row_number": 2416,
+          "catalogue_id": "4581",
+          "side_line_code": "30",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4582",
+      "catalogue_id": "4582",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4582.20",
+          "source_row_number": 2418,
+          "catalogue_id": "4582",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4585",
+      "catalogue_id": "4585",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4585.20",
+          "source_row_number": 2424,
+          "catalogue_id": "4585",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4586",
+      "catalogue_id": "4586",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4586.30",
+          "source_row_number": 2427,
+          "catalogue_id": "4586",
+          "side_line_code": "30",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4587",
+      "catalogue_id": "4587",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4587.20",
+          "source_row_number": 2429,
+          "catalogue_id": "4587",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4588",
+      "catalogue_id": "4588",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4588.30",
+          "source_row_number": 2432,
+          "catalogue_id": "4588",
+          "side_line_code": "30",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4589",
+      "catalogue_id": "4589",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4589.30",
+          "source_row_number": 2435,
+          "catalogue_id": "4589",
+          "side_line_code": "30",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4591",
+      "catalogue_id": "4591",
+      "existing_frozen_pilot": true,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4591.30",
+          "source_row_number": 2440,
+          "catalogue_id": "4591",
+          "side_line_code": "30",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4593",
+      "catalogue_id": "4593",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4593.20",
+          "source_row_number": 2443,
+          "catalogue_id": "4593",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4594",
+      "catalogue_id": "4594",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4594.20",
+          "source_row_number": 2445,
+          "catalogue_id": "4594",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4595",
+      "catalogue_id": "4595",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4595.20",
+          "source_row_number": 2447,
+          "catalogue_id": "4595",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4596",
+      "catalogue_id": "4596",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4596.20",
+          "source_row_number": 2449,
+          "catalogue_id": "4596",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4597",
+      "catalogue_id": "4597",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4597.20",
+          "source_row_number": 2451,
+          "catalogue_id": "4597",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4601",
+      "catalogue_id": "4601",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4601.20",
+          "source_row_number": 2454,
+          "catalogue_id": "4601",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4602",
+      "catalogue_id": "4602",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4602.20",
+          "source_row_number": 2456,
+          "catalogue_id": "4602",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4603",
+      "catalogue_id": "4603",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4603.20",
+          "source_row_number": 2458,
+          "catalogue_id": "4603",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4604",
+      "catalogue_id": "4604",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4604.20",
+          "source_row_number": 2460,
+          "catalogue_id": "4604",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4605",
+      "catalogue_id": "4605",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4605.20",
+          "source_row_number": 2462,
+          "catalogue_id": "4605",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4606",
+      "catalogue_id": "4606",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4606.20",
+          "source_row_number": 2464,
+          "catalogue_id": "4606",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4607",
+      "catalogue_id": "4607",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4607.20",
+          "source_row_number": 2466,
+          "catalogue_id": "4607",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4610",
+      "catalogue_id": "4610",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4610.20",
+          "source_row_number": 2468,
+          "catalogue_id": "4610",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4613",
+      "catalogue_id": "4613",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4613.20",
+          "source_row_number": 2470,
+          "catalogue_id": "4613",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4641",
+      "catalogue_id": "4641",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4641.20",
+          "source_row_number": 2501,
+          "catalogue_id": "4641",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4642",
+      "catalogue_id": "4642",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4642.30",
+          "source_row_number": 2504,
+          "catalogue_id": "4642",
+          "side_line_code": "30",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4645",
+      "catalogue_id": "4645",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4645.30",
+          "source_row_number": 2509,
+          "catalogue_id": "4645",
+          "side_line_code": "30",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4646",
+      "catalogue_id": "4646",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4646.20",
+          "source_row_number": 2511,
+          "catalogue_id": "4646",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4647",
+      "catalogue_id": "4647",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4647.20",
+          "source_row_number": 2513,
+          "catalogue_id": "4647",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4649",
+      "catalogue_id": "4649",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4649.20",
+          "source_row_number": 2516,
+          "catalogue_id": "4649",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4660",
+      "catalogue_id": "4660",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4660.20",
+          "source_row_number": 2531,
+          "catalogue_id": "4660",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4661",
+      "catalogue_id": "4661",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4661.20",
+          "source_row_number": 2533,
+          "catalogue_id": "4661",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4665",
+      "catalogue_id": "4665",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4665.20",
+          "source_row_number": 2537,
+          "catalogue_id": "4665",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4666",
+      "catalogue_id": "4666",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4666.20",
+          "source_row_number": 2539,
+          "catalogue_id": "4666",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4667",
+      "catalogue_id": "4667",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4667.20",
+          "source_row_number": 2541,
+          "catalogue_id": "4667",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4670",
+      "catalogue_id": "4670",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4670.20",
+          "source_row_number": 2545,
+          "catalogue_id": "4670",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4671",
+      "catalogue_id": "4671",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4671.20",
+          "source_row_number": 2547,
+          "catalogue_id": "4671",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4673",
+      "catalogue_id": "4673",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4673.20",
+          "source_row_number": 2551,
+          "catalogue_id": "4673",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4674",
+      "catalogue_id": "4674",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4674.20",
+          "source_row_number": 2553,
+          "catalogue_id": "4674",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4675",
+      "catalogue_id": "4675",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4675.20",
+          "source_row_number": 2555,
+          "catalogue_id": "4675",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4678",
+      "catalogue_id": "4678",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4678.20",
+          "source_row_number": 2559,
+          "catalogue_id": "4678",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4679",
+      "catalogue_id": "4679",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4679.20",
+          "source_row_number": 2561,
+          "catalogue_id": "4679",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4680",
+      "catalogue_id": "4680",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4680.20",
+          "source_row_number": 2563,
+          "catalogue_id": "4680",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4681",
+      "catalogue_id": "4681",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4681.20",
+          "source_row_number": 2565,
+          "catalogue_id": "4681",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4682",
+      "catalogue_id": "4682",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4682.20",
+          "source_row_number": 2567,
+          "catalogue_id": "4682",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4683",
+      "catalogue_id": "4683",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4683.20",
+          "source_row_number": 2569,
+          "catalogue_id": "4683",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4684",
+      "catalogue_id": "4684",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4684.20",
+          "source_row_number": 2571,
+          "catalogue_id": "4684",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4686",
+      "catalogue_id": "4686",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4686.20",
+          "source_row_number": 2575,
+          "catalogue_id": "4686",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4689",
+      "catalogue_id": "4689",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4689.20",
+          "source_row_number": 2579,
+          "catalogue_id": "4689",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4691",
+      "catalogue_id": "4691",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4691.20",
+          "source_row_number": 2582,
+          "catalogue_id": "4691",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4692",
+      "catalogue_id": "4692",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4692.20",
+          "source_row_number": 2584,
+          "catalogue_id": "4692",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4700",
+      "catalogue_id": "4700",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4700.20",
+          "source_row_number": 2594,
+          "catalogue_id": "4700",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4702",
+      "catalogue_id": "4702",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4702.20",
+          "source_row_number": 2597,
+          "catalogue_id": "4702",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4704",
+      "catalogue_id": "4704",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4704.20",
+          "source_row_number": 2600,
+          "catalogue_id": "4704",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4718",
+      "catalogue_id": "4718",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "4718.20",
+          "source_row_number": 2612,
+          "catalogue_id": "4718",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5222",
+      "catalogue_id": "5222",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5222.20",
+          "source_row_number": 2770,
+          "catalogue_id": "5222",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5223",
+      "catalogue_id": "5223",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5223.20",
+          "source_row_number": 2772,
+          "catalogue_id": "5223",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5264",
+      "catalogue_id": "5264",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5264.20",
+          "source_row_number": 2819,
+          "catalogue_id": "5264",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5269",
+      "catalogue_id": "5269",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5269.20",
+          "source_row_number": 2825,
+          "catalogue_id": "5269",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5270",
+      "catalogue_id": "5270",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5270.20",
+          "source_row_number": 2827,
+          "catalogue_id": "5270",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5271",
+      "catalogue_id": "5271",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5271.20",
+          "source_row_number": 2829,
+          "catalogue_id": "5271",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5274",
+      "catalogue_id": "5274",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5274.20",
+          "source_row_number": 2831,
+          "catalogue_id": "5274",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5276",
+      "catalogue_id": "5276",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5276.20",
+          "source_row_number": 2834,
+          "catalogue_id": "5276",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5277",
+      "catalogue_id": "5277",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5277.20",
+          "source_row_number": 2836,
+          "catalogue_id": "5277",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5278",
+      "catalogue_id": "5278",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5278.20",
+          "source_row_number": 2838,
+          "catalogue_id": "5278",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5285",
+      "catalogue_id": "5285",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5285.20",
+          "source_row_number": 2848,
+          "catalogue_id": "5285",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5286",
+      "catalogue_id": "5286",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5286.20",
+          "source_row_number": 2850,
+          "catalogue_id": "5286",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5292",
+      "catalogue_id": "5292",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5292.20",
+          "source_row_number": 2858,
+          "catalogue_id": "5292",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5293",
+      "catalogue_id": "5293",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5293.20",
+          "source_row_number": 2860,
+          "catalogue_id": "5293",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5302",
+      "catalogue_id": "5302",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5302.20",
+          "source_row_number": 2869,
+          "catalogue_id": "5302",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5310",
+      "catalogue_id": "5310",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5310.20",
+          "source_row_number": 2878,
+          "catalogue_id": "5310",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5317",
+      "catalogue_id": "5317",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5317.20",
+          "source_row_number": 2887,
+          "catalogue_id": "5317",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5318",
+      "catalogue_id": "5318",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5318.20",
+          "source_row_number": 2889,
+          "catalogue_id": "5318",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5319",
+      "catalogue_id": "5319",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5319.20",
+          "source_row_number": 2891,
+          "catalogue_id": "5319",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5321",
+      "catalogue_id": "5321",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5321.20",
+          "source_row_number": 2895,
+          "catalogue_id": "5321",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5322",
+      "catalogue_id": "5322",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5322.20",
+          "source_row_number": 2897,
+          "catalogue_id": "5322",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5323",
+      "catalogue_id": "5323",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5323.20",
+          "source_row_number": 2899,
+          "catalogue_id": "5323",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5327",
+      "catalogue_id": "5327",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5327.20",
+          "source_row_number": 2906,
+          "catalogue_id": "5327",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5335",
+      "catalogue_id": "5335",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5335.20",
+          "source_row_number": 2916,
+          "catalogue_id": "5335",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5336",
+      "catalogue_id": "5336",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5336.20",
+          "source_row_number": 2918,
+          "catalogue_id": "5336",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5337",
+      "catalogue_id": "5337",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5337.20",
+          "source_row_number": 2920,
+          "catalogue_id": "5337",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5402",
+      "catalogue_id": "5402",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5402.20",
+          "source_row_number": 2927,
+          "catalogue_id": "5402",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5405",
+      "catalogue_id": "5405",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5405.20",
+          "source_row_number": 2932,
+          "catalogue_id": "5405",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5406",
+      "catalogue_id": "5406",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5406.20",
+          "source_row_number": 2934,
+          "catalogue_id": "5406",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5407",
+      "catalogue_id": "5407",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5407.20",
+          "source_row_number": 2936,
+          "catalogue_id": "5407",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5408",
+      "catalogue_id": "5408",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5408.20",
+          "source_row_number": 2938,
+          "catalogue_id": "5408",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5409",
+      "catalogue_id": "5409",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5409.20",
+          "source_row_number": 2940,
+          "catalogue_id": "5409",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5410",
+      "catalogue_id": "5410",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5410.20",
+          "source_row_number": 2942,
+          "catalogue_id": "5410",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5411",
+      "catalogue_id": "5411",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5411.20",
+          "source_row_number": 2944,
+          "catalogue_id": "5411",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5412",
+      "catalogue_id": "5412",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5412.20",
+          "source_row_number": 2946,
+          "catalogue_id": "5412",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5413",
+      "catalogue_id": "5413",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5413.20",
+          "source_row_number": 2948,
+          "catalogue_id": "5413",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        },
+        {
+          "source_row_id": "5413.30",
+          "source_row_number": 2949,
+          "catalogue_id": "5413",
+          "side_line_code": "30",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5414",
+      "catalogue_id": "5414",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5414.20",
+          "source_row_number": 2951,
+          "catalogue_id": "5414",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5415",
+      "catalogue_id": "5415",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5415.20",
+          "source_row_number": 2953,
+          "catalogue_id": "5415",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5416",
+      "catalogue_id": "5416",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5416.20",
+          "source_row_number": 2955,
+          "catalogue_id": "5416",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5418",
+      "catalogue_id": "5418",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5418.20",
+          "source_row_number": 2959,
+          "catalogue_id": "5418",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5419",
+      "catalogue_id": "5419",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5419.20",
+          "source_row_number": 2961,
+          "catalogue_id": "5419",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5420",
+      "catalogue_id": "5420",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5420.20",
+          "source_row_number": 2963,
+          "catalogue_id": "5420",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5421",
+      "catalogue_id": "5421",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5421.20",
+          "source_row_number": 2965,
+          "catalogue_id": "5421",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5422",
+      "catalogue_id": "5422",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5422.20",
+          "source_row_number": 2967,
+          "catalogue_id": "5422",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5423",
+      "catalogue_id": "5423",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5423.20",
+          "source_row_number": 2969,
+          "catalogue_id": "5423",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5425",
+      "catalogue_id": "5425",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5425.20",
+          "source_row_number": 2971,
+          "catalogue_id": "5425",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5426",
+      "catalogue_id": "5426",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5426.20",
+          "source_row_number": 2973,
+          "catalogue_id": "5426",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5427",
+      "catalogue_id": "5427",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5427.20",
+          "source_row_number": 2975,
+          "catalogue_id": "5427",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5429",
+      "catalogue_id": "5429",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5429.20",
+          "source_row_number": 2979,
+          "catalogue_id": "5429",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5430",
+      "catalogue_id": "5430",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5430.20",
+          "source_row_number": 2981,
+          "catalogue_id": "5430",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5432",
+      "catalogue_id": "5432",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5432.20",
+          "source_row_number": 2984,
+          "catalogue_id": "5432",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5433",
+      "catalogue_id": "5433",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5433.20",
+          "source_row_number": 2986,
+          "catalogue_id": "5433",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5434",
+      "catalogue_id": "5434",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5434.20",
+          "source_row_number": 2988,
+          "catalogue_id": "5434",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5436",
+      "catalogue_id": "5436",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5436.20",
+          "source_row_number": 2990,
+          "catalogue_id": "5436",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5437",
+      "catalogue_id": "5437",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5437.20",
+          "source_row_number": 2992,
+          "catalogue_id": "5437",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5440",
+      "catalogue_id": "5440",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5440.20",
+          "source_row_number": 2996,
+          "catalogue_id": "5440",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5442",
+      "catalogue_id": "5442",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5442.20",
+          "source_row_number": 3000,
+          "catalogue_id": "5442",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5443",
+      "catalogue_id": "5443",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5443.20",
+          "source_row_number": 3002,
+          "catalogue_id": "5443",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5444",
+      "catalogue_id": "5444",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5444.20",
+          "source_row_number": 3004,
+          "catalogue_id": "5444",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5447",
+      "catalogue_id": "5447",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5447.20",
+          "source_row_number": 3008,
+          "catalogue_id": "5447",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5449",
+      "catalogue_id": "5449",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5449.20",
+          "source_row_number": 3010,
+          "catalogue_id": "5449",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 50.0,
+          "source_uncertainty_present": true,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5450",
+      "catalogue_id": "5450",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5450.20",
+          "source_row_number": 3012,
+          "catalogue_id": "5450",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5452",
+      "catalogue_id": "5452",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5452.20",
+          "source_row_number": 3016,
+          "catalogue_id": "5452",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5454",
+      "catalogue_id": "5454",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5454.20",
+          "source_row_number": 3019,
+          "catalogue_id": "5454",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5455",
+      "catalogue_id": "5455",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5455.20",
+          "source_row_number": 3021,
+          "catalogue_id": "5455",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5457",
+      "catalogue_id": "5457",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5457.20",
+          "source_row_number": 3025,
+          "catalogue_id": "5457",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5464",
+      "catalogue_id": "5464",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5464.20",
+          "source_row_number": 3038,
+          "catalogue_id": "5464",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5466",
+      "catalogue_id": "5466",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5466.20",
+          "source_row_number": 3040,
+          "catalogue_id": "5466",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5471",
+      "catalogue_id": "5471",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5471.30",
+          "source_row_number": 3047,
+          "catalogue_id": "5471",
+          "side_line_code": "30",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5472",
+      "catalogue_id": "5472",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5472.20",
+          "source_row_number": 3049,
+          "catalogue_id": "5472",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5474",
+      "catalogue_id": "5474",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5474.20",
+          "source_row_number": 3053,
+          "catalogue_id": "5474",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5476",
+      "catalogue_id": "5476",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5476.20",
+          "source_row_number": 3056,
+          "catalogue_id": "5476",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5478",
+      "catalogue_id": "5478",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5478.20",
+          "source_row_number": 3059,
+          "catalogue_id": "5478",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5479",
+      "catalogue_id": "5479",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5479.20",
+          "source_row_number": 3061,
+          "catalogue_id": "5479",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5483",
+      "catalogue_id": "5483",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5483.20",
+          "source_row_number": 3069,
+          "catalogue_id": "5483",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5490",
+      "catalogue_id": "5490",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5490.30",
+          "source_row_number": 3080,
+          "catalogue_id": "5490",
+          "side_line_code": "30",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5495",
+      "catalogue_id": "5495",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5495.20",
+          "source_row_number": 3086,
+          "catalogue_id": "5495",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5496",
+      "catalogue_id": "5496",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5496.20",
+          "source_row_number": 3088,
+          "catalogue_id": "5496",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5497",
+      "catalogue_id": "5497",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5497.20",
+          "source_row_number": 3090,
+          "catalogue_id": "5497",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5498",
+      "catalogue_id": "5498",
+      "existing_frozen_pilot": true,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5498.20",
+          "source_row_number": 3092,
+          "catalogue_id": "5498",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-5499",
+      "catalogue_id": "5499",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "5499.20",
+          "source_row_number": 3094,
+          "catalogue_id": "5499",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    },
+    {
+      "record_id": "m77-8117",
+      "catalogue_id": "8117",
+      "existing_frozen_pilot": false,
+      "identity_status": "not_adjudicated_by_discovery",
+      "matching_rows": [
+        {
+          "source_row_id": "8117.20",
+          "source_row_number": 3483,
+          "catalogue_id": "8117",
+          "side_line_code": "20",
+          "source_mean_uncertainty_percent": 0.0,
+          "source_uncertainty_present": false,
+          "review_status": "unreviewed_discovery_match"
+        }
+      ]
+    }
+  ],
+  "manual_review_rows": [
+    {
+      "source_row_id": "1165.0",
+      "source_row_number": 171,
+      "catalogue_id": "1165",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "unknown_span_not_a_wildcard"
+    },
+    {
+      "source_row_id": "2188.0",
+      "source_row_number": 772,
+      "catalogue_id": "2188",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 25.0,
+      "source_uncertainty_present": true,
+      "reason": "unknown_span_not_a_wildcard"
+    },
+    {
+      "source_row_id": "4347.20",
+      "source_row_number": 2048,
+      "catalogue_id": "4347",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "unknown_span_not_a_wildcard"
+    },
+    {
+      "source_row_id": "4494.20",
+      "source_row_number": 2280,
+      "catalogue_id": "4494",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "unknown_span_not_a_wildcard"
+    },
+    {
+      "source_row_id": "4546.20",
+      "source_row_number": 2361,
+      "catalogue_id": "4546",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "unknown_span_not_a_wildcard"
+    },
+    {
+      "source_row_id": "4639.20",
+      "source_row_number": 2499,
+      "catalogue_id": "4639",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "unknown_span_not_a_wildcard"
+    },
+    {
+      "source_row_id": "5281.20",
+      "source_row_number": 2842,
+      "catalogue_id": "5281",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "unknown_span_not_a_wildcard"
+    },
+    {
+      "source_row_id": "5428.20",
+      "source_row_number": 2977,
+      "catalogue_id": "5428",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "unknown_span_not_a_wildcard"
+    },
+    {
+      "source_row_id": "5456.20",
+      "source_row_number": 3023,
+      "catalogue_id": "5456",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "unknown_span_not_a_wildcard"
+    },
+    {
+      "source_row_id": "7238.0",
+      "source_row_number": 3342,
+      "catalogue_id": "7238",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "unknown_span_not_a_wildcard"
+    },
+    {
+      "source_row_id": "7280.0",
+      "source_row_number": 3391,
+      "catalogue_id": "7280",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "unknown_span_not_a_wildcard"
+    }
+  ],
+  "excluded_cup_rows": [
+    {
+      "source_row_id": "1206.0",
+      "source_row_number": 212,
+      "catalogue_id": "1206",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "1475.10",
+      "source_row_number": 478,
+      "catalogue_id": "1475",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "1477.0",
+      "source_row_number": 480,
+      "catalogue_id": "1477",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "1527.12",
+      "source_row_number": 501,
+      "catalogue_id": "1527",
+      "side_line_code": "12",
+      "source_mean_uncertainty_percent": 20.0,
+      "source_uncertainty_present": true,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "1532.0",
+      "source_row_number": 505,
+      "catalogue_id": "1532",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "1623.10",
+      "source_row_number": 558,
+      "catalogue_id": "1623",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "1623.30",
+      "source_row_number": 560,
+      "catalogue_id": "1623",
+      "side_line_code": "30",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "2035.0",
+      "source_row_number": 627,
+      "catalogue_id": "2035",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "2169.0",
+      "source_row_number": 754,
+      "catalogue_id": "2169",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "2208.0",
+      "source_row_number": 791,
+      "catalogue_id": "2208",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "2604.12",
+      "source_row_number": 1209,
+      "catalogue_id": "2604",
+      "side_line_code": "12",
+      "source_mean_uncertainty_percent": 20.0,
+      "source_uncertainty_present": true,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "2815.10",
+      "source_row_number": 1334,
+      "catalogue_id": "2815",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "2847.10",
+      "source_row_number": 1363,
+      "catalogue_id": "2847",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "2847.30",
+      "source_row_number": 1365,
+      "catalogue_id": "2847",
+      "side_line_code": "30",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "2905.10",
+      "source_row_number": 1404,
+      "catalogue_id": "2905",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "2906.10",
+      "source_row_number": 1406,
+      "catalogue_id": "2906",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "3224.10",
+      "source_row_number": 1582,
+      "catalogue_id": "3224",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "3230.10",
+      "source_row_number": 1587,
+      "catalogue_id": "3230",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "3234.10",
+      "source_row_number": 1591,
+      "catalogue_id": "3234",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4132.0",
+      "source_row_number": 1855,
+      "catalogue_id": "4132",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4147.0",
+      "source_row_number": 1870,
+      "catalogue_id": "4147",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4231.0",
+      "source_row_number": 1925,
+      "catalogue_id": "4231",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4309.22",
+      "source_row_number": 2003,
+      "catalogue_id": "4309",
+      "side_line_code": "22",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4316.10",
+      "source_row_number": 2009,
+      "catalogue_id": "4316",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4321.20",
+      "source_row_number": 2015,
+      "catalogue_id": "4321",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "prefix_not_in_declared_stroke_inventory"
+    },
+    {
+      "source_row_id": "4340.10",
+      "source_row_number": 2035,
+      "catalogue_id": "4340",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4344.20",
+      "source_row_number": 2042,
+      "catalogue_id": "4344",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4349.20",
+      "source_row_number": 2052,
+      "catalogue_id": "4349",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4351.20",
+      "source_row_number": 2056,
+      "catalogue_id": "4351",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4356.20",
+      "source_row_number": 2066,
+      "catalogue_id": "4356",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 20.0,
+      "source_uncertainty_present": true,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4363.20",
+      "source_row_number": 2080,
+      "catalogue_id": "4363",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4401.20",
+      "source_row_number": 2119,
+      "catalogue_id": "4401",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4446.20",
+      "source_row_number": 2186,
+      "catalogue_id": "4446",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4448.20",
+      "source_row_number": 2190,
+      "catalogue_id": "4448",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4452.20",
+      "source_row_number": 2198,
+      "catalogue_id": "4452",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4477.20",
+      "source_row_number": 2246,
+      "catalogue_id": "4477",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4485.20",
+      "source_row_number": 2262,
+      "catalogue_id": "4485",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4487.20",
+      "source_row_number": 2266,
+      "catalogue_id": "4487",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "prefix_not_in_declared_stroke_inventory"
+    },
+    {
+      "source_row_id": "4653.20",
+      "source_row_number": 2522,
+      "catalogue_id": "4653",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "4672.20",
+      "source_row_number": 2549,
+      "catalogue_id": "4672",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "5077.0",
+      "source_row_number": 2712,
+      "catalogue_id": "5077",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "5250.20",
+      "source_row_number": 2802,
+      "catalogue_id": "5250",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "5252.20",
+      "source_row_number": 2805,
+      "catalogue_id": "5252",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "prefix_not_in_declared_stroke_inventory"
+    },
+    {
+      "source_row_id": "5254.20",
+      "source_row_number": 2808,
+      "catalogue_id": "5254",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "5257.20",
+      "source_row_number": 2812,
+      "catalogue_id": "5257",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "prefix_not_in_declared_stroke_inventory"
+    },
+    {
+      "source_row_id": "5283.20",
+      "source_row_number": 2845,
+      "catalogue_id": "5283",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "5289.20",
+      "source_row_number": 2854,
+      "catalogue_id": "5289",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "prefix_not_in_declared_stroke_inventory"
+    },
+    {
+      "source_row_id": "5303.20",
+      "source_row_number": 2871,
+      "catalogue_id": "5303",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "5311.20",
+      "source_row_number": 2880,
+      "catalogue_id": "5311",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "prefix_not_in_declared_stroke_inventory"
+    },
+    {
+      "source_row_id": "5325.20",
+      "source_row_number": 2903,
+      "catalogue_id": "5325",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "5334.20",
+      "source_row_number": 2914,
+      "catalogue_id": "5334",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "prefix_not_in_declared_stroke_inventory"
+    },
+    {
+      "source_row_id": "5460.20",
+      "source_row_number": 3030,
+      "catalogue_id": "5460",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "5461.20",
+      "source_row_number": 3032,
+      "catalogue_id": "5461",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "5473.20",
+      "source_row_number": 3051,
+      "catalogue_id": "5473",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "5481.20",
+      "source_row_number": 3065,
+      "catalogue_id": "5481",
+      "side_line_code": "20",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "prefix_not_in_declared_stroke_inventory"
+    },
+    {
+      "source_row_id": "5484.10",
+      "source_row_number": 3070,
+      "catalogue_id": "5484",
+      "side_line_code": "10",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "6109.0",
+      "source_row_number": 3118,
+      "catalogue_id": "6109",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "7001.0",
+      "source_row_number": 3200,
+      "catalogue_id": "7001",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 20.0,
+      "source_uncertainty_present": true,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "8202.0",
+      "source_row_number": 3494,
+      "catalogue_id": "8202",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 0.0,
+      "source_uncertainty_present": false,
+      "reason": "not_an_exact_two_token_match"
+    },
+    {
+      "source_row_id": "9073.0",
+      "source_row_number": 3531,
+      "catalogue_id": "9073",
+      "side_line_code": "00",
+      "source_mean_uncertainty_percent": 20.0,
+      "source_uncertainty_present": true,
+      "reason": "not_an_exact_two_token_match"
+    }
+  ],
+  "source_anomalies": [],
+  "population_inference_allowed": false,
+  "analysis_plan_status": "H001 revision 3.1 remains unlocked",
+  "extractor_sha256": "b311ae7625c01bd976b114138e354a6b4d576ee7b202936c271423a2fc0f28d2"
+}
