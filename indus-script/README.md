@@ -1,7 +1,7 @@
 # Indus script research
 
 Started: 25 October 2026  
-Status: IND-002 source audit prepared for independent review; no decipherment or corpus statistics yet.
+Status: IND-003 draft pilot design and data examples prepared; independent source/design review pending. No decipherment or corpus statistics yet.
 
 This folder is the shared research workspace for Sam, Codex, Claude, and other contributors. The goal is to investigate how much structure, function, meaning, and eventually pronunciation can be recovered from Indus inscriptions through reproducible tests.
 
@@ -14,8 +14,10 @@ Start here, then read [COORDINATION.md](COORDINATION.md) for the current task an
 - A provisional hypothesis and an ordered research plan were defined.
 - [IND-002 source audit](notes/IND-002-source-audit.md): checked H-351 against the CISI photograph and separate illustration supplement; identified five candidate catalogue entries, source-specific surface labels, and two doubtful sign readings. Independent review is pending.
 - Added a [source manifest](sources/manifest.json) with retrieval details and hashes for downloaded reference PDFs.
+- [IND-003 pilot design](notes/IND-003-pilot-design.md) defines source selection, per-face records and duplicate-handling rules. The [draft inventory](data/README.md) holds five catalogue records and twelve faces; only H-351's three faces currently have sign-number sequences.
+- Added a JSON Schema and runnable validator. Eighteen regression tests pass; the draft explicitly fails the analysis-readiness gate because evidence and reviews are still missing.
 
-This was an initial literature review, not an exhaustive systematic review. **Reference scans have been downloaded and H-351's published photograph has been visually checked. No machine-readable corpus has been obtained and independently validated; no corpus statistics, sign pronunciation or translation have been established.** Numbers and results below belong to the cited studies unless explicitly marked as our own future results.
+This was an initial literature review, not an exhaustive systematic review. **Reference scans have been downloaded and H-351's published photograph has been visually checked. A small machine-readable draft inventory has been created, but no independently validated analytical corpus is available; no corpus statistics, sign pronunciation or translation have been established.** Numbers and results below belong to the cited studies unless explicitly marked as our own future results.
 
 ## Starting position
 
@@ -106,7 +108,7 @@ For model tests, group duplicate and related records before splitting, fit trans
 
 Near-term progress means a verified dataset, replicated structural findings, and clearly testable functional hypotheses. Stronger progress would be a fixed interpretation that predicts independent inscriptions and fits external evidence with few exceptions. Model agreement or two assistants agreeing does not replace independent evidence.
 
-The immediate handoff is **independent review of the [IND-002 source audit](notes/IND-002-source-audit.md)**; see [COORDINATION.md](COORDINATION.md) for status. Do not start translation generation or large models before the source and transcription checks.
+The immediate handoff is **review of the [IND-002 source audit](notes/IND-002-source-audit.md) and [IND-003 pilot design](notes/IND-003-pilot-design.md)**, followed by completing the object crosswalks and transcriptions in IND-004. See [COORDINATION.md](COORDINATION.md) for status. Do not start translation generation or large models before the source and transcription checks.
 
 [yadav]: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009506
 [parpola]: https://tuhat.helsinki.fi/ws/portalfiles/portal/127256488/Parpola_A_2009._Hind_leg_fish_in_the_Indus_script._Scripta1_37_76.pdf
@@ -121,4 +123,3 @@ The immediate handoff is **independent review of the [IND-002 source audit](note
 [tiwari]: https://aclanthology.org/2026.nlp4dh-1.28/
 [tablet]: https://www.harappa.com/sites/default/files/pdf/sulur-megalithic.pdf
 [icit]: https://www.epigraphica.de/indus/menueindus.htm
-

@@ -1,0 +1,755 @@
+{
+  "schema_version": "0.1.0",
+  "dataset_id": "h351-figure4-seed",
+  "release_status": "draft",
+  "created_by": "Codex",
+  "created_on": "2026-10-25",
+  "selection": {
+    "kind": "author_selected_illustration",
+    "catalogue_ids": [
+      "5498",
+      "4444",
+      "4456",
+      "4591",
+      "4581"
+    ],
+    "evidence_refs": [
+      "fig4"
+    ],
+    "scope": "Complete inventory of the five entries shown in Figure 4, not an exhaustive set of Harappa parallels.",
+    "population_inference_allowed": false
+  },
+  "evidence": [
+    {
+      "id": "paper-case",
+      "source_id": "mahadevan-tablet-paper",
+      "locator": "Section 3, PDF pp. 2–3",
+      "kind": "text",
+      "dependency_group": "mahadevan-tablet-paper"
+    },
+    {
+      "id": "paper-parallels",
+      "source_id": "mahadevan-tablet-paper",
+      "locator": "Section 5, PDF pp. 3–4",
+      "kind": "text",
+      "dependency_group": "mahadevan-tablet-paper"
+    },
+    {
+      "id": "fig4",
+      "source_id": "mahadevan-tablet-figures",
+      "locator": "PDF p. 3, Figure 4; reproduction of M77 printed p. 360",
+      "kind": "normalized_diagram",
+      "dependency_group": "M77-p360"
+    },
+    {
+      "id": "fig2",
+      "source_id": "mahadevan-tablet-figures",
+      "locator": "PDF p. 2, Figure 2, H-351 three-face photograph",
+      "kind": "photograph",
+      "dependency_group": "CISI-I-H351-photographs"
+    },
+    {
+      "id": "cisi230",
+      "source_id": "cisi-1-ignca-scan",
+      "locator": "PDF p. 266, printed p. 230, H-351 A/B/C",
+      "kind": "photograph",
+      "dependency_group": "CISI-I-H351-photographs"
+    }
+  ],
+  "records": [
+    {
+      "record_id": "m77-5498",
+      "catalogue": {
+        "scheme": "M77-1977",
+        "text_id": "5498"
+      },
+      "recorded_by": "Codex",
+      "recorded_on": "2026-10-25",
+      "aliases": [],
+      "metadata": {
+        "site": "Harappa",
+        "object_type": "miniature_tablet",
+        "material": null,
+        "dating": null,
+        "evidence_refs": [
+          "paper-parallels"
+        ]
+      },
+      "identity": {
+        "status": "unresolved",
+        "physical_object_group": null,
+        "evidence_refs": [],
+        "review": {
+          "status": "pending",
+          "reviewer": null,
+          "reviewed_on": null,
+          "reference": null
+        }
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewed_on": null,
+        "reference": null
+      },
+      "surfaces": [
+        {
+          "surface_id": "m77-5498-10",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "10",
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: raindrops-like group; two tall strokes; jar-like sign; harrow-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": null,
+          "normalization": null,
+          "photo_evidence_refs": [],
+          "artifact_direction_evidence_refs": []
+        },
+        {
+          "surface_id": "m77-5498-20",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "20",
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: 2 tall strokes followed by a cup-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": {
+            "count": 2,
+            "evidence_refs": [
+              "fig4"
+            ]
+          },
+          "normalization": null,
+          "photo_evidence_refs": [],
+          "artifact_direction_evidence_refs": []
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4444",
+      "catalogue": {
+        "scheme": "M77-1977",
+        "text_id": "4444"
+      },
+      "recorded_by": "Codex",
+      "recorded_on": "2026-10-25",
+      "aliases": [],
+      "metadata": {
+        "site": "Harappa",
+        "object_type": "miniature_tablet",
+        "material": null,
+        "dating": null,
+        "evidence_refs": [
+          "paper-parallels"
+        ]
+      },
+      "identity": {
+        "status": "unresolved",
+        "physical_object_group": null,
+        "evidence_refs": [],
+        "review": {
+          "status": "pending",
+          "reviewer": null,
+          "reviewed_on": null,
+          "reference": null
+        }
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewed_on": null,
+        "reference": null
+      },
+      "surfaces": [
+        {
+          "surface_id": "m77-4444-10",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "10",
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: raindrops-like group; two tall strokes; jar-like sign; harrow-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": null,
+          "normalization": null,
+          "photo_evidence_refs": [],
+          "artifact_direction_evidence_refs": []
+        },
+        {
+          "surface_id": "m77-4444-20",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "20",
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: 3 tall strokes followed by a cup-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": {
+            "count": 3,
+            "evidence_refs": [
+              "fig4"
+            ]
+          },
+          "normalization": null,
+          "photo_evidence_refs": [],
+          "artifact_direction_evidence_refs": []
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4456",
+      "catalogue": {
+        "scheme": "M77-1977",
+        "text_id": "4456"
+      },
+      "recorded_by": "Codex",
+      "recorded_on": "2026-10-25",
+      "aliases": [],
+      "metadata": {
+        "site": "Harappa",
+        "object_type": "miniature_tablet",
+        "material": null,
+        "dating": null,
+        "evidence_refs": [
+          "paper-parallels"
+        ]
+      },
+      "identity": {
+        "status": "unresolved",
+        "physical_object_group": null,
+        "evidence_refs": [],
+        "review": {
+          "status": "pending",
+          "reviewer": null,
+          "reviewed_on": null,
+          "reference": null
+        }
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewed_on": null,
+        "reference": null
+      },
+      "surfaces": [
+        {
+          "surface_id": "m77-4456-10",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "10",
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: raindrops-like group; two tall strokes; jar-like sign; harrow-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": null,
+          "normalization": null,
+          "photo_evidence_refs": [],
+          "artifact_direction_evidence_refs": []
+        },
+        {
+          "surface_id": "m77-4456-20",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "20",
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: 3 tall strokes followed by a cup-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": {
+            "count": 3,
+            "evidence_refs": [
+              "fig4"
+            ]
+          },
+          "normalization": null,
+          "photo_evidence_refs": [],
+          "artifact_direction_evidence_refs": []
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4591",
+      "catalogue": {
+        "scheme": "M77-1977",
+        "text_id": "4591"
+      },
+      "recorded_by": "Codex",
+      "recorded_on": "2026-10-25",
+      "aliases": [],
+      "metadata": {
+        "site": "Harappa",
+        "object_type": "miniature_tablet",
+        "material": null,
+        "dating": null,
+        "evidence_refs": [
+          "paper-parallels"
+        ]
+      },
+      "identity": {
+        "status": "unresolved",
+        "physical_object_group": null,
+        "evidence_refs": [],
+        "review": {
+          "status": "pending",
+          "reviewer": null,
+          "reviewed_on": null,
+          "reference": null
+        }
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewed_on": null,
+        "reference": null
+      },
+      "surfaces": [
+        {
+          "surface_id": "m77-4591-10",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "10",
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description: fish-shaped sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": null,
+          "normalization": null,
+          "photo_evidence_refs": [],
+          "artifact_direction_evidence_refs": []
+        },
+        {
+          "surface_id": "m77-4591-20",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "20",
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: raindrops-like group; two tall strokes; jar-like sign; harrow-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [
+            {
+              "symbol": "*",
+              "kind": "doubtful_reading",
+              "position_1based": 1,
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "tall_strokes_next_to_cup": null,
+          "normalization": null,
+          "photo_evidence_refs": [],
+          "artifact_direction_evidence_refs": []
+        },
+        {
+          "surface_id": "m77-4591-30",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "30",
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: 4 tall strokes followed by a cup-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": {
+            "count": 4,
+            "evidence_refs": [
+              "fig4"
+            ]
+          },
+          "normalization": null,
+          "photo_evidence_refs": [],
+          "artifact_direction_evidence_refs": []
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4581",
+      "catalogue": {
+        "scheme": "M77-1977",
+        "text_id": "4581"
+      },
+      "recorded_by": "Codex",
+      "recorded_on": "2026-10-25",
+      "aliases": [
+        {
+          "scheme": "CISI-I",
+          "value": "H-351",
+          "status": "source_reported",
+          "evidence_refs": [
+            "paper-case"
+          ]
+        },
+        {
+          "scheme": "Vats",
+          "value": "581",
+          "status": "source_reported",
+          "evidence_refs": [
+            "paper-case"
+          ]
+        },
+        {
+          "scheme": "ASI-accession",
+          "value": "63.11/75",
+          "status": "source_reported",
+          "evidence_refs": [
+            "paper-case"
+          ]
+        },
+        {
+          "scheme": "Excavation-number",
+          "value": "2429",
+          "status": "source_reported",
+          "evidence_refs": [
+            "paper-case"
+          ]
+        }
+      ],
+      "metadata": {
+        "site": "Harappa",
+        "object_type": "miniature_tablet",
+        "material": "steatite",
+        "dating": null,
+        "evidence_refs": [
+          "paper-case"
+        ]
+      },
+      "identity": {
+        "status": "unresolved",
+        "physical_object_group": null,
+        "evidence_refs": [],
+        "review": {
+          "status": "pending",
+          "reviewer": null,
+          "reviewed_on": null,
+          "reference": null
+        }
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewed_on": null,
+        "reference": null
+      },
+      "surfaces": [
+        {
+          "surface_id": "m77-4581-10",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "10",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "Mahadevan-paper-side",
+              "value": "Side 3",
+              "evidence_refs": [
+                "paper-case"
+              ]
+            },
+            {
+              "namespace": "CISI-I-face",
+              "value": "C",
+              "evidence_refs": [
+                "cisi230"
+              ]
+            }
+          ],
+          "source_description": "Project shape description: X-shaped sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": null,
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "137",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "paper-case",
+              "fig4"
+            ],
+            "change_log": [
+              "Typed the paper's normalized sign IDs in its reading order; no sign merger, repair, or cross-face concatenation."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi230",
+            "fig2"
+          ],
+          "artifact_direction_evidence_refs": []
+        },
+        {
+          "surface_id": "m77-4581-20",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "20",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "Mahadevan-paper-side",
+              "value": "Side 1",
+              "evidence_refs": [
+                "paper-case"
+              ]
+            },
+            {
+              "namespace": "CISI-I-face",
+              "value": "A",
+              "evidence_refs": [
+                "cisi230"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: raindrops-like group; two tall strokes; jar-like sign; harrow-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [
+            {
+              "symbol": "*",
+              "kind": "doubtful_reading",
+              "position_1based": 1,
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "tall_strokes_next_to_cup": null,
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "119",
+                "certainty": "source_doubtful"
+              },
+              {
+                "sign_id": "87",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "342",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "176",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "paper-case",
+              "fig4"
+            ],
+            "change_log": [
+              "Typed the paper's normalized sign IDs in its reading order; no sign merger, repair, or cross-face concatenation.",
+              "Retained the first-sign asterisk from Figure 4, although the paper's prose prints 119 without it."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi230",
+            "fig2"
+          ],
+          "artifact_direction_evidence_refs": []
+        },
+        {
+          "surface_id": "m77-4581-30",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "30",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "Mahadevan-paper-side",
+              "value": "Side 2",
+              "evidence_refs": [
+                "paper-case"
+              ]
+            },
+            {
+              "namespace": "CISI-I-face",
+              "value": "B",
+              "evidence_refs": [
+                "cisi230"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: 4 tall strokes followed by a cup-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": {
+            "count": 4,
+            "evidence_refs": [
+              "fig4"
+            ]
+          },
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "95",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "328",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "paper-case",
+              "fig4"
+            ],
+            "change_log": [
+              "Typed the paper's normalized sign IDs in its reading order; no sign merger, repair, or cross-face concatenation."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi230",
+            "fig2"
+          ],
+          "artifact_direction_evidence_refs": []
+        }
+      ]
+    }
+  ]
+}
