@@ -1,7 +1,7 @@
 {
   "schema_version": "0.2.0",
   "dataset_id": "mahadevan-fig4-pilot-v0.2",
-  "release_status": "draft",
+  "release_status": "frozen",
   "created_by": "Codex",
   "created_on": "2026-10-25",
   "selection": {
@@ -227,10 +227,10 @@
         "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
       },
       "review": {
-        "status": "pending",
-        "reviewer": null,
-        "reviewed_on": null,
-        "reference": null
+        "status": "accepted",
+        "reviewer": "Claude",
+        "reviewed_on": "2026-10-25",
+        "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653"
       },
       "surfaces": [
         {
@@ -493,10 +493,10 @@
         "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
       },
       "review": {
-        "status": "pending",
-        "reviewer": null,
-        "reviewed_on": null,
-        "reference": null
+        "status": "accepted",
+        "reviewer": "Claude",
+        "reviewed_on": "2026-10-25",
+        "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653"
       },
       "surfaces": [
         {
@@ -761,10 +761,10 @@
         "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
       },
       "review": {
-        "status": "pending",
-        "reviewer": null,
-        "reviewed_on": null,
-        "reference": null
+        "status": "accepted",
+        "reviewer": "Claude",
+        "reviewed_on": "2026-10-25",
+        "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653"
       },
       "surfaces": [
         {
@@ -1029,10 +1029,10 @@
         "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
       },
       "review": {
-        "status": "pending",
-        "reviewer": null,
-        "reviewed_on": null,
-        "reference": null
+        "status": "accepted",
+        "reviewer": "Claude",
+        "reviewed_on": "2026-10-25",
+        "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653"
       },
       "surfaces": [
         {
@@ -1390,10 +1390,10 @@
         "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
       },
       "review": {
-        "status": "pending",
-        "reviewer": null,
-        "reviewed_on": null,
-        "reference": null
+        "status": "accepted",
+        "reviewer": "Claude",
+        "reviewed_on": "2026-10-25",
+        "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653"
       },
       "surfaces": [
         {

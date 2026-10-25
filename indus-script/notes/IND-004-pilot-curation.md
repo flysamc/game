@@ -1,8 +1,8 @@
 # IND-004 — five-record photographic curation
 
-Author: Codex · 25 October 2026 · **IN REVIEW**
+Author: Codex · 25 October 2026 · **PILOT REVIEWED AND FROZEN**
 
-The nine missing face sequences are now transcribed, giving **12 normalized faces across five catalogue records**. [Claude's review](https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407) accepts the source addendum, crosswalks and five distinct physical objects within this pilot. Its three requested corrections are applied; record-level transcription review remains pending. This is not a decipherment or a frozen analytical corpus. [Pilot v0.2](../data/pilot-v0.2.json) preserves v0.1 as history. See the [review response](IND-004-review-response.md) for the precise acceptance scope and unverified Vats links.
+The pilot contains **12 normalized faces across five catalogue records**. [Claude's first review](https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407) accepted the source addendum, crosswalks and five distinct physical objects. After three corrections, [his record-level review](https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653) accepted every transcription and the faithful representation of the fish classification disagreement. [Pilot v0.2](../data/pilot-v0.2.json) is now frozen; see its [release record](IND-004-pilot-release.md). The [earlier response](IND-004-review-response.md) retains the acceptance scope and unverified Vats links. Freezing this selected pilot does not establish a decipherment or a representative analytical corpus.
 
 ## Object crosswalks
 
@@ -49,7 +49,7 @@ The data store **17 field-specific checks on 12 faces**, performed by Codex and 
 | H-977 | Consistent; worn first group remains doubtful | Normalization consistent: cup end broken; four-stroke count confirmed | Figure consistent with M77 59; script/motif classification disputed |
 | H-351 | Consistent; first group remains doubtful | Consistent with four; edge/slant limits unqualified confirmation | X-shaped sign confirmed |
 
-H-351's qualification incorporates the earlier [Claude source review](IND-002-review-claude.md). The later PR #4 review accepts the crosswalks and agrees with the other 14 photographic outcomes, while leaving record-level transcription sign-off for a subsequent review. “Consistent” must not be silently changed to “confirmed.” Repeated photographs (`bis`) and reproduced plates do not create new physical objects.
+H-351's qualification incorporates the earlier [Claude source review](IND-002-review-claude.md). Claude subsequently accepted all five record transcriptions, including the corrected outcomes and source-classification representation. “Consistent” must not be silently changed to “confirmed.” Repeated photographs (`bis`) and reproduced plates do not create new physical objects.
 
 For **H-977 C**, M77 encodes the figure as sign 59, while CISI-II p. 343's plate-level heading mentions fish iconography. The latter is evidence for a competing motif assessment, inferred by the reviewers; it is not an explicit per-face editorial ruling. `content_disputed: true` and two evidence-linked `content_assessments` preserve that difference. The M77 token is unchanged. Codex also inspected CISI-I p. 230: its heading does not establish an equivalent classification disagreement for H-351 C's X. That remains an open question, not a second asserted source conflict.
 
@@ -71,13 +71,13 @@ The converter **claims** an IndusScript.in export through a logged-in browser. W
 
 ## Validation and handoff
 
-Run commands in [data/README.md](../data/README.md). Python 3.12.14: **35 tests pass** (18 legacy contract tests and 17 v0.2 cases); draft validation exits 0; `--require-ready` exits 1. The latter is expected: independent record-level transcription review, review of the newly encoded classification alternatives, and a frozen release are still absent. Source-addendum and pilot identity acceptance are now recorded with the actual review link.
+Run commands in [data/README.md](../data/README.md). Python 3.12.14: **35 tests pass** (18 legacy contract tests and 17 v0.2 cases); both normal validation and `--require-ready` exit 0. All actual review decisions are linked in the data; no synthetic acceptance was written to research records. The fish disagreement remains visible and population inference remains disabled.
 
-For the next reviewer:
+For subsequent family curation:
 
 1. If checking the remaining source-link gap, inspect Vats I pp. 348/351 (PDF pp. 372/375). The accepted crosswalks and pilot identity decisions need not be repeated without new evidence.
-2. Review all 12 normalized sequences, both asterisks, the sign variants, corrected photographic outcomes and the fish's explicitly qualified content assessments. Record each actual transcription decision; current record reviews remain pending.
-3. Run the validator/tests and scrutinize motif/unknown-span handling. Record actual acceptance or corrections; do not accept an analytical release just because structural validation passes. A future family audit still needs duplicate-publication and production-group decisions beyond these five objects.
+2. Preserve the reviewed pilot unchanged and version subsequent data separately. For each new record, verify the normalization, uncertainty, side mapping, photographic outcomes and source-content alternatives; do not inherit pilot acceptance.
+3. A family audit still needs duplicate-publication and production-group decisions beyond these five objects. Its records require their own evidence and independent reviews.
 4. Resolve the H001 design comments before further family tabulation. The exposed five are not a blind test set. Contributors have also seen adjacent plates, the M77 p. 360 context, Claude's aggregate report and the 12-row cross-check; record that exposure in any subsequent evaluation plan.
 
 This curation supports a bounded observation: the published selected examples combine the same normalized main group with two, three or four tall strokes beside a cup-like sign. Whether this reflects quantities, categories, titles, workshops or another function remains unresolved. These selected examples cannot establish a corpus frequency, causal relation or word meaning.

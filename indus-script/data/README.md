@@ -1,6 +1,6 @@
 # Pilot inventory
 
-[`pilot-v0.2.json`](pilot-v0.2.json) is the current **draft curation inventory**: five source-selected catalogue records, twelve normalized faces, photographic checks for every face, and two preserved source-doubt marks. Read the [curation note](../notes/IND-004-pilot-curation.md) for the object crosswalks and qualifications. Claude accepted the source addendum, crosswalks and five distinct physical objects within the pilot, with scope recorded in the [review response](../notes/IND-004-review-response.md). Record-level transcription review remains pending. No analytical release or decipherment is claimed.
+[`pilot-v0.2.json`](pilot-v0.2.json) is the **frozen, independently reviewed five-object pilot**, released on 25 October 2026: twelve normalized faces, photographic checks for every face, two preserved source-doubt marks and one documented classification disagreement. [Claude accepted all five record transcriptions and the ambiguity representation](https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653), following the earlier source and identity acceptance. See the [release record](../notes/IND-004-pilot-release.md) and [file hashes](../releases/pilot-v0.2.json). This selected pilot supports bounded descriptions, not population inference, an H001 test or decipherment.
 
 [`pilot-v0.1.json`](pilot-v0.1.json) and its schema are retained unchanged as history: three normalized faces and nine gaps at that stage. The [original design](../notes/IND-003-pilot-design.md) is historical; v0.2 adds the photo-outcome and surface-content corrections requested in review. Source evidence is registered in the [manifest](../sources/manifest.json).
 
@@ -16,7 +16,7 @@ indus-script/.venv/bin/python indus-script/scripts/validate_pilot.py --require-r
 
 The default validator uses the [v0.2 schema](../schemas/pilot-v0.2.schema.json). It reports **5 catalogue records, 12 faces, 12 normalized faces and 2 faces with source doubt**, plus one face with disputed content classification. There are 17 field-level photographic outcomes (9 confirms, 8 consistent), not 17 objects or photographs. These are file-inventory counts, not estimated script frequencies.
 
-Normal validation exits **0** for a valid draft. For the current draft, `--require-ready` intentionally exits **1** and lists the outstanding transcription/content review and draft status. Structural/provenance inconsistencies exit **2**. The program does not alter the data. Paths resolve relative to the script, so it can run outside the repository root.
+Both normal validation and `--require-ready` now exit **0** for the frozen v0.2 release, with no blockers. A structurally valid unfinished draft still exits **1** with `--require-ready`; structural/provenance inconsistencies exit **2**. The program does not alter the data. Paths resolve relative to the script, so it can run outside the repository root. Freeze preserves the qualified readings and content disagreement; it does not make them certain. Use a new dataset version for subsequent curation.
 
 For the preserved v0.1 inventory, pass both matching paths:
 

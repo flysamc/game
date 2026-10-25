@@ -34,15 +34,16 @@ class PhotoAndContentTests(unittest.TestCase):
         r['identity'].update(status='resolved', physical_object_group='synthetic-5498', review=copy.deepcopy(review))
         self.manifest['curation_addendum'].update(independent_review='accepted', reviewer='Synthetic reviewer', reviewed_on='2026-10-25', review_reference='synthetic-only')
 
-    def test_all_twelve_readings_are_valid_draft_with_qualified_photo_checks(self):
+    def test_frozen_pilot_keeps_qualified_photos_and_reviewed_ambiguity(self):
         errors, report = self.check()
         self.assertEqual(errors, [])
         self.assertEqual(report['normalized_surfaces'], 12)
         self.assertEqual(report['photo_check_outcomes'], {'consistent': 8, 'confirms': 9})
         self.assertEqual(report['content_disputed_surfaces'], ['m77-4591-10'])
-        self.assertFalse(report['ready_for_descriptive_analysis'])
+        self.assertTrue(report['ready_for_descriptive_analysis'])
 
     def test_consulted_photo_is_not_a_completed_check(self):
+        self.data['release_status'] = 'draft'
         self.face()['photo_checks'] = []
         errors, report = self.check()
         self.assertEqual(errors, [])
@@ -114,7 +115,7 @@ class PhotoAndContentTests(unittest.TestCase):
         self.assertEqual({a['content'] for a in fish['content_assessments']}, {'script', 'non_script_motif'})
         motif = next(a for a in fish['content_assessments'] if a['content'] == 'non_script_motif')
         self.assertEqual(motif['basis'], 'reviewer_inference')
-        self.assertTrue(any('classification alternatives need independent review' in b for b in self.check()[1]['blockers']))
+        self.assertFalse(any('classification alternatives need independent review' in b for b in self.check()[1]['blockers']))
 
     def test_disagreement_cannot_be_hidden_behind_a_false_flag(self):
         self.data['records'][3]['surfaces'][0]['content_disputed'] = False
