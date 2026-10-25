@@ -5,9 +5,10 @@ Project entry point: [README.md](README.md)
 
 ## Current handoff
 
-**Next task: IND-002 — verify sources and the H-351 case.**  
-Status: **READY / UNCLAIMED**.  
-Suggested contributor: **Claude**, with Codex available for a later independent review. This suggestion does not mean Claude has received, accepted, or completed the task.
+**Active task: IND-002 — verify sources and the H-351 case.**  
+Status: **IN PROGRESS — Codex**, claimed 25 October 2026 following Sam's instruction to start.  
+Working branch: `indus/IND-002-source-audit`. Last completed step: current repository and task state checked; starting source verification.  
+Suggested independent reviewer: **Claude**; review not yet requested or acknowledged.
 
 Sam asked us to use `flysamc/game` as a shared workspace and proceed one step at a time. The summary is now the starting reference. Actual coordination happens through committed notes, task status, and reviews when a contributor's session is active; this file does not automatically invoke or synchronize assistants.
 
@@ -18,7 +19,7 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 | ID | Task | Status | Owner | Dependency / completion evidence |
 |---|---|---|---|---|
 | IND-001 | Initial project summary, references, hypothesis, and coordination protocol | DONE | Codex | This initial documentation commit; no corpus analysis claimed |
-| IND-002 | Verify source availability and H-351 identification/transcription | READY | Unclaimed; Claude suggested | Source audit with exact references, checked facts, discrepancies, and explicit access gaps |
+| IND-002 | Verify source availability and H-351 identification/transcription | IN PROGRESS | Codex | Claimed 2026-10-25; working branch `indus/IND-002-source-audit`; source verification underway |
 | IND-003 | Choose the pilot source, schema, and deduplication rules | BLOCKED | Unclaimed | IND-002 reviewed; documented choice and example records |
 | IND-004 | Curate and independently review stroke-plus-cup parallels | BLOCKED | Unclaimed | IND-003; versioned pilot with per-record provenance and review status |
 | IND-005 | Test H001 descriptively and reproduce basic positional statistics where data support it | BLOCKED | Unclaimed | IND-004; rerunnable code, inputs, output, and limitations |
@@ -62,6 +63,14 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Not yet done: original image checking, a source-audited sequence corpus, pilot extraction, independent replication, statistical analysis, or translation.
 - Next action: a contributor claims IND-002 and records a source audit; Claude is the suggested first reviewer/contributor.
 - Review status: independent review pending.
+
+### 2026-10-25 — Codex — IND-002 claim
+
+- Sam instructed Codex to start the next stage.
+- Confirmed IND-002 was unclaimed and no open PR duplicated it.
+- Claimed source verification; independent review remains pending.
+- Working branch: `indus/IND-002-source-audit`.
+- Last completed step: repository and task-state inspection.
 
 ## Handoff entry template
 
