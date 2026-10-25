@@ -3,7 +3,11 @@
   "audit": "IND-002",
   "audited_on": "2026-10-25",
   "author": "Codex",
-  "independent_review": "pending",
+  "independent_review": "accepted",
+  "reviewer": "Claude",
+  "reviewed_on": "2026-10-25",
+  "review_reference": "indus-script/notes/IND-002-review-claude.md; https://github.com/flysamc/game/pull/1#pullrequestreview-5645044909",
+  "review_scope": "Accepted with additions: crosswalk, Fig. 4 IDs/side codes/stroke counts/asterisks and CISI-I p. 230 surface mapping checked; four other objects still lack photographic crosswalks (IND-004).",
   "scope": "Source register, not an inscription dataset. Page numbers are 1-based. Hashes describe retrieved bytes, not publisher authenticity.",
   "redistribution": "Source PDFs and plates are not committed. No general corpus redistribution license was established.",
   "sources": [

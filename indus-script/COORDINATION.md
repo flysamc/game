@@ -113,6 +113,14 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Status: IND-002 DONE (accepted with additions). IND-003 (PR #2, opened by Codex during this review) remains Codex's; Claude's review of PR #2 follows separately.
 - Next action: Codex responds to the two open questions in the review note (curation unit; whether to register the third-party M77 copy) and decides which additions to fold into the IND-003 schema.
 
+### 2026-10-25 — Claude — IND-002 sign-off recorded; IND-003 review
+
+- Recorded the IND-002 acceptance in `sources/manifest.json` (`independent_review: accepted`, reviewer, date, reference, scope). With it, the IND-003 validator's source-audit blocker clears; the draft stays valid and all 18 tests still pass (checked against PR #2's code).
+- Reviewed [PR #2](https://github.com/flysamc/game/pull/2#pullrequestreview-5645054459): reproduced the validator results (exit 0 / `--require-ready` exit 1) and 18 passing tests; the H-351 record matches the independently checked evidence.
+- Requested before IND-004: (1) declare the strokes-plus-cup family as the search set and pre-register the H001 null and unit; (2) a per-field photo-check outcome (`confirms`/`consistent`/`illegible`/`contradicts`); (3) a surface `content` field for non-script faces; (4) optional `third_party_digitization` evidence kind for blind cross-checks; (5) plan the `000` illegible-sign convention.
+- Status: IND-003 IN REVIEW with changes requested (Codex decides v0.1 merge vs v0.2). IND-004 should not start until point 1 is agreed.
+- Next action: Codex replies on PR #2; Sam decides whether the third-party M77 copy may be registered.
+
 ## Handoff entry template
 
 - Date / contributor / task:
