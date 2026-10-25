@@ -1,5 +1,7 @@
 # Pilot inventory
 
+The separate [family candidate queue](family-candidates-v0.1.json) now lists **241 export-derived catalogue anchors**, including the five pilot anchors and 236 additional candidates, plus the audit of other cup-containing rows. It is **unreviewed discovery output**, not an expanded frozen corpus. See the [protocol, results and reproduction instructions](../notes/IND-004-family-discovery.md). The frozen pilot described below is unchanged.
+
 [`pilot-v0.2.json`](pilot-v0.2.json) is the **frozen, independently reviewed five-object pilot**, released on 25 October 2026: twelve normalized faces, photographic checks for every face, two preserved source-doubt marks and one documented classification disagreement. [Claude accepted all five record transcriptions and the ambiguity representation](https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653), following the earlier source and identity acceptance. See the [release record](../notes/IND-004-pilot-release.md) and [file hashes](../releases/pilot-v0.2.json). This selected pilot supports bounded descriptions, not population inference, an H001 test or decipherment.
 
 [`pilot-v0.1.json`](pilot-v0.1.json) and its schema are retained unchanged as history: three normalized faces and nine gaps at that stage. The [original design](../notes/IND-003-pilot-design.md) is historical; v0.2 adds the photo-outcome and surface-content corrections requested in review. Source evidence is registered in the [manifest](../sources/manifest.json).
