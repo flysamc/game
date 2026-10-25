@@ -1,7 +1,7 @@
 # Indus script research
 
 Started: 25 October 2026  
-Status: IND-003 draft pilot design and data examples prepared; independent source/design review pending. No decipherment or corpus statistics yet.
+Status: IND-002 reviewed and merged; IND-004 five-record curation and v0.2 review corrections prepared. Independent v0.2 review remains pending. No decipherment or corpus statistics yet.
 
 This folder is the shared research workspace for Sam, Codex, Claude, and other contributors. The goal is to investigate how much structure, function, meaning, and eventually pronunciation can be recovered from Indus inscriptions through reproducible tests.
 
@@ -12,12 +12,12 @@ Start here, then read [COORDINATION.md](COORDINATION.md) for the current task an
 - An initial literature scan covered comparative/rebus readings, statistical models, cryptanalysis, sign variants, archaeological interpretations, and recent neural approaches.
 - Mahadevan's published normalized transcription of Harappa tablet **H-351** was read and selected as a first case.
 - A provisional hypothesis and an ordered research plan were defined.
-- [IND-002 source audit](notes/IND-002-source-audit.md): checked H-351 against the CISI photograph and separate illustration supplement; identified five candidate catalogue entries, source-specific surface labels, and two doubtful sign readings. Independent review is pending.
+- [IND-002 source audit](notes/IND-002-source-audit.md): checked H-351 against the CISI photograph and separate illustration supplement; identified five candidate catalogue entries, source-specific surface labels, and two doubtful sign readings. [Claude accepted the source audit with additions](notes/IND-002-review-claude.md); PR #1 is merged.
 - Added a [source manifest](sources/manifest.json) with retrieval details and hashes for downloaded reference PDFs.
-- [IND-003 pilot design](notes/IND-003-pilot-design.md) defines source selection, per-face records and duplicate-handling rules. The [draft inventory](data/README.md) holds five catalogue records and twelve faces; only H-351's three faces currently have sign-number sequences.
-- Added a JSON Schema and runnable validator. Eighteen regression tests pass; the draft explicitly fails the analysis-readiness gate because evidence and reviews are still missing.
+- [IND-003 pilot design](notes/IND-003-pilot-design.md) defines source selection, per-face records and duplicate-handling rules. [IND-004 curation](notes/IND-004-pilot-curation.md) completes all twelve normalized faces and proposes photographic crosswalks to H-322, H-303, H-916, H-977 and H-351. The [v0.2 inventory](data/README.md) retains qualified readings and both doubtful signs.
+- Updated the schema and validator for field-specific photo outcomes and non-script faces. Thirty-one tests pass; the draft intentionally fails the analysis-readiness gate pending independent review and identity adjudication. The broader [H001 proposal](https://github.com/flysamc/game/pull/3) remains unlocked.
 
-This was an initial literature review, not an exhaustive systematic review. **Reference scans have been downloaded and H-351's published photograph has been visually checked. A small machine-readable draft inventory has been created, but no independently validated analytical corpus is available; no corpus statistics, sign pronunciation or translation have been established.** Numbers and results below belong to the cited studies unless explicitly marked as our own future results.
+This was an initial literature review, not an exhaustive systematic review. **Published photographs for all five pilot records have now been compared with their source normalizations. A small machine-readable draft inventory exists, but no independently validated analytical corpus is available; no corpus statistics, sign pronunciation or translation have been established.** Numbers and results below belong to the cited studies unless explicitly marked as our own future results.
 
 ## Starting position
 
