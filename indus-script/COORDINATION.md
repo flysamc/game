@@ -8,6 +8,7 @@ Project entry point: [README.md](README.md)
 **Active task: IND-003 — pilot source, schema and duplicate-handling rules.**  
 Status: **IN REVIEW — Codex**, updated 25 October 2026 after completing the requested draft design.  
 Working branch: `indus/IND-003-pilot-schema`, based on the IND-002 source-audit branch. Last completed step: source choice, data schema, duplicate rules, five-record draft, validator and 18 passing regression tests.
+Review: [PR #2](https://github.com/flysamc/game/pull/2) (depends on PR #1).  
 Design: [IND-003](https://github.com/flysamc/game/blob/indus/IND-003-pilot-schema/indus-script/notes/IND-003-pilot-design.md). Draft/run instructions: [data README](https://github.com/flysamc/game/blob/indus/IND-003-pilot-schema/indus-script/data/README.md).  
 IND-002 remains **IN REVIEW** at [PR #1](https://github.com/flysamc/game/pull/1). Sam's instruction authorizes drafting the next stage while that review is pending; it does not establish source approval.  
 Suggested independent reviewer: **Claude**. Review and curation gates still apply before freezing data or running H001 tests.
@@ -22,7 +23,7 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 |---|---|---|---|---|
 | IND-001 | Initial project summary, references, hypothesis, and coordination protocol | DONE | Codex | This initial documentation commit; no corpus analysis claimed |
 | IND-002 | Verify source availability and H-351 identification/transcription | IN REVIEW | Codex | [PR #1](https://github.com/flysamc/game/pull/1); independent review pending |
-| IND-003 | Choose the pilot source, schema, and deduplication rules | IN REVIEW | Codex | Design, draft inventory, schema and validator on `indus/IND-003-pilot-schema`; 18 tests pass; source/design review pending |
+| IND-003 | Choose the pilot source, schema, and deduplication rules | IN REVIEW | Codex | [PR #2](https://github.com/flysamc/game/pull/2); draft, schema and validator; 18 tests pass; source/design review pending |
 | IND-004 | Curate and independently review stroke-plus-cup parallels | BLOCKED | Unclaimed | Source/design review; four object crosswalks and nine face transcriptions remain; do not freeze the draft |
 | IND-005 | Test H001 descriptively and reproduce basic positional statistics where data support it | BLOCKED | Unclaimed | IND-004; rerunnable code, inputs, output, and limitations |
 | IND-006 | Compare structural models with matched controls and held-out records | BLOCKED | Unclaimed | Adequate audited corpus and locked evaluation design |
@@ -94,12 +95,12 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 
 ### 2026-10-25 — Codex — IND-003 design handoff
 
-- Branch: `indus/IND-003-pilot-schema`, based on the source-audit branch so this work can be reviewed separately.
+- Branch: `indus/IND-003-pilot-schema`; [PR #2](https://github.com/flysamc/game/pull/2), based on the source-audit branch. Implementation commit: [62ec337](https://github.com/flysamc/game/commit/62ec337b9bb000c21f73b482bd466d38c6cae270).
 - Deliverables: explicit five-entry source choice; data contract and duplicate rules; draft JSON with twelve separate faces; three H-351 sign-number sequences; nine untranscribed faces; preserved doubt on 4581:20 and 4591:20.
 - Added a JSON Schema, cross-record validator, pinned Python requirements and regression tests. Unknown metadata stays null, matching strings do not merge objects, and repeated publications do not create new artifact evidence.
 - Checks: Python 3.12.14; all 18 tests pass. Normal validation exits 0; `--require-ready` correctly exits 1. Rechecked the Figure 4 inventory visually and verified local links. These are implementation/transcription checks, not independent review.
 - Status: IND-003 IN REVIEW. IND-002 still IN REVIEW; neither stage has been signed off on behalf of Claude.
-- Review checklist: examine the source-selection limits, H-351 mappings and uncertainty; run both validator modes; scrutinize duplicate and review rules; record actual acceptance or requested changes.
+- Review checklist: examine the source-selection limits, H-351 mappings and uncertainty; run both validator modes; scrutinize duplicate and review rules; record actual acceptance or requested changes. Use the current board rather than earlier handoff states: accepting IND-002 alone must not downgrade the already drafted IND-003 to READY.
 - Next curation: locate original photographs and crosswalks for 5498, 4444, 4456 and 4591; transcribe their nine faces; resolve physical-object duplicates and review all records before an analytical release.
 - The pilot PR is stacked on PR #1. After PR #1 is merged, retarget the pilot PR to the current default branch before merging it. Keep shared coordination updates when reconciling either PR.
 
@@ -114,3 +115,4 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Unresolved gaps or disagreements:
 - Task status:
 - Next action:
+
