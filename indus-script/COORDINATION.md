@@ -5,13 +5,12 @@ Project entry point: [README.md](README.md)
 
 ## Current handoff
 
-**Active task: IND-003 — pilot source, schema and duplicate-handling rules.**  
-Status: **IN REVIEW — Codex**, updated 25 October 2026 after completing the requested draft design.  
-Working branch: `indus/IND-003-pilot-schema`, based on the IND-002 source-audit branch. Last completed step: source choice, data schema, duplicate rules, five-record draft, validator and 18 passing regression tests.
-Review: [PR #2](https://github.com/flysamc/game/pull/2) (depends on PR #1).  
-Design: [IND-003](https://github.com/flysamc/game/blob/indus/IND-003-pilot-schema/indus-script/notes/IND-003-pilot-design.md). Draft/run instructions: [data README](https://github.com/flysamc/game/blob/indus/IND-003-pilot-schema/indus-script/data/README.md).  
-IND-002 was reviewed by Claude on 25 October 2026 and accepted with additions ([review note](notes/IND-002-review-claude.md)); PR #1 is ready to merge. The additions affect IND-003/IND-004 scope and should be answered in PR #2.  
-Suggested independent reviewer: **Claude**. Review and curation gates still apply before freezing data or running H001 tests.
+**Active task: IND-004 — complete the exposed five-record transcription pilot and address IND-003 review.**  
+Status: **IN PROGRESS — Codex**, claimed 25 October 2026 on Sam's instruction to continue.  
+Working branch: `indus/IND-004-pilot-curation`. The v0.2 schema will first add explicit photographic outcomes and non-script surface content; the remaining pilot faces will then be transcribed from primary images.  
+IND-002 is DONE and [PR #1](https://github.com/flysamc/game/pull/1) is merged after Claude's acceptance. IND-003 remains IN REVIEW with changes requested ([PR #2](https://github.com/flysamc/game/pull/2)).  
+Scope decision: Codex accepts the strokes-plus-cup family for subsequent search; the five Figure 4 entries remain a workflow pilot. [H001 proposal #3](https://github.com/flysamc/game/pull/3) is still unlocked, with statistical revisions requested. No expanded label-by-count tabulation or H001 test will run in this curation pass.  
+The public third-party M77 copy may be registered as a provenance-limited cross-check; it is not sole transcription evidence and will not be redistributed.
 
 Sam asked us to use `flysamc/game` as a shared workspace and proceed one step at a time. The summary is now the starting reference. Actual coordination happens through committed notes, task status, and reviews when a contributor's session is active; this file does not automatically invoke or synchronize assistants.
 
@@ -23,8 +22,8 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 |---|---|---|---|---|
 | IND-001 | Initial project summary, references, hypothesis, and coordination protocol | DONE | Codex | This initial documentation commit; no corpus analysis claimed |
 | IND-002 | Verify source availability and H-351 identification/transcription | DONE | Codex; reviewed by Claude | [PR #1](https://github.com/flysamc/game/pull/1); [Claude review](notes/IND-002-review-claude.md) accepted with additions (2026-10-25) |
-| IND-003 | Choose the pilot source, schema, and deduplication rules | IN REVIEW | Codex | [PR #2](https://github.com/flysamc/game/pull/2); draft, schema and validator; 18 tests pass; source/design review pending |
-| IND-004 | Curate and independently review stroke-plus-cup parallels | BLOCKED | Unclaimed | Source/design review; four object crosswalks and nine face transcriptions remain; do not freeze the draft |
+| IND-003 | Choose the pilot source, schema, and deduplication rules | IN REVIEW | Codex; reviewed by Claude | [PR #2](https://github.com/flysamc/game/pull/2): photo-outcome and surface-content changes requested; addressed in the IND-004 v0.2 work |
+| IND-004 | Curate and independently review stroke-plus-cup parallels | IN PROGRESS | Codex | Claim 2026-10-25; complete the exposed pilot, implement schema prerequisites, retain review gates; family-wide testing remains deferred |
 | IND-005 | Test H001 descriptively and reproduce basic positional statistics where data support it | BLOCKED | Unclaimed | IND-004; rerunnable code, inputs, output, and limitations |
 | IND-006 | Compare structural models with matched controls and held-out records | BLOCKED | Unclaimed | Adequate audited corpus and locked evaluation design |
 | IND-007 | Evaluate specific semantic/phonetic readings | DEFERRED | Unclaimed | Independent anchors and predeclared rules; not dependent merely on a high model score |
@@ -45,7 +44,7 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 
 - Before working, fetch the current default branch and read these two documents plus any applicable repository instructions. Claim the task by committing an owner/status update. Do not assume ownership from the suggested-contributor field.
 - Use explicit states: READY, IN PROGRESS, IN REVIEW, DONE, BLOCKED, DEFERRED. Record a date, branch, and last completed step for an active task.
-- Keep one implementation stage active at a time. Sam's 2026-10-25 instruction to proceed allows IND-003 design and draft examples while IND-002 is in review. Do not treat this sequencing change as an independent review or freeze unreviewed data; later empirical tests still require their evidence dependencies.
+- Keep one implementation workstream active at a time. Sam's 2026-10-25 instruction to continue authorizes IND-004 pilot curation and its prerequisite schema corrections. Keep source approval, design review, transcription review and an analytical release distinct; do not treat a sequencing change as an independent review.
 - Keep research files under `indus-script/`. Avoid unrelated game changes.
 - For substantive tasks, use a focused branch such as `indus/IND-002-source-audit` and a small PR to the current default branch. Recheck the branch head before updating shared files. Reconcile concurrent edits without overwriting another contributor's work or force-pushing shared history.
 - Use GitHub diffs and an independent review when feasible. Mark a review as pending until it has actually occurred. Do not sign off on behalf of another contributor.
@@ -127,6 +126,15 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Opened [PR #3](https://github.com/flysamc/game/pull/3) on branch `indus/H001-prereg-draft`: a **draft, unlocked** pre-registration for testing H001, written before any label × stroke-count tabulation. It covers the strokes-plus-cup search set, object-level unit, declared exclusions, models A/B/C, a permutation test of within-label agreement, decision rules, a power check, five sensitivity analyses and an unseen-subset check for contributors' prior exposure.
 - Task board not changed. Proposal: lock this (Codex + Sam) before IND-004 data are tabulated, as a new task or as an IND-004 acceptance criterion; Codex to decide in the next board update.
 - Next action: Codex reviews PR #3 and answers the open questions in PRs #1–#3.
+
+### 2026-10-25 — Codex — IND-004 claim and review response
+
+- Read Claude's accepted IND-002 review, requested IND-003 changes, and new H001 proposal. Preserved all review notes and merged PR #1 after resolving coordination-only history conflicts.
+- Accepted the broader strokes-plus-cup family as the subsequent search target, while retaining the five exposed Figure 4 entries as a workflow pilot. Replied on PRs #2 and #3 before expanded tabulation.
+- Requested corrections to the H001 proposal: non-significance is not evidence for a free quantity; model verdict thresholds need justification; permutation units must be exchangeable; illegible labels cannot form wildcard equivalence groups; curation exposure is not blindness.
+- Claimed `indus/IND-004-pilot-curation`: add photo-check conclusions and surface content; locate the four outstanding pilot objects and transcribe nine faces from primary images; keep unresolved identity and ambiguity explicit.
+- Exposure: Codex has read Claude's aggregate counts, M77 5498 sequences and prior-exposure list, and has already seen the H-351 plate and neighbouring H-352–354. This is not blind replication. No H001 test or family-wide association table is authorized by this claim.
+- Source registration decision: public third-party M77 metadata/cross-checks are within the requested source research; raw data and restricted plates will not be committed. Unknown reuse terms remain documented.
 
 ## Handoff entry template
 
