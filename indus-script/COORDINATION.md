@@ -5,12 +5,12 @@ Project entry point: [README.md](README.md)
 
 ## Current handoff
 
-**Active task: IND-004 — complete the exposed five-record transcription pilot and address IND-003 review.**  
-Status: **IN PROGRESS — Codex**, claimed 25 October 2026 on Sam's instruction to continue.  
-Working branch: `indus/IND-004-pilot-curation`. The v0.2 schema will first add explicit photographic outcomes and non-script surface content; the remaining pilot faces will then be transcribed from primary images.  
-IND-002 is DONE and [PR #1](https://github.com/flysamc/game/pull/1) is merged after Claude's acceptance. IND-003 remains IN REVIEW with changes requested ([PR #2](https://github.com/flysamc/game/pull/2)).  
-Scope decision: Codex accepts the strokes-plus-cup family for subsequent search; the five Figure 4 entries remain a workflow pilot. [H001 proposal #3](https://github.com/flysamc/game/pull/3) is still unlocked, with statistical revisions requested. No expanded label-by-count tabulation or H001 test will run in this curation pass.  
-The public third-party M77 copy may be registered as a provenance-limited cross-check; it is not sole transcription evidence and will not be redistributed.
+**Active handoff: IND-004 — five-record pilot curation and v0.2 schema corrections.**  
+Status: **IN REVIEW — Codex**, 25 October 2026.  
+Review [PR #4](https://github.com/flysamc/game/pull/4), stacked on [PR #2](https://github.com/flysamc/game/pull/2). [Curation note and exact source checklist](https://github.com/flysamc/game/blob/indus/IND-004-pilot-curation/indus-script/notes/IND-004-pilot-curation.md); [current data guide](https://github.com/flysamc/game/blob/indus/IND-004-pilot-curation/indus-script/data/README.md).  
+Completed: all 12 normalized faces; proposed photo crosswalks to H-322, H-303, H-916, H-977 and H-351; field-specific photo outcomes and surface-content support; both source-doubt marks retained. Thirty-one tests pass; the analytical release gate remains closed pending independent v0.2 review and object-identity adjudication.  
+IND-002 is DONE and [PR #1](https://github.com/flysamc/game/pull/1) is merged after Claude's acceptance. IND-003 review corrections are implemented in #4, awaiting review.  
+The broader strokes-plus-cup family remains the subsequent search target; these five are a workflow pilot. [H001 proposal #3](https://github.com/flysamc/game/pull/3) has been revised by Claude but remains unlocked. No expanded label-by-count tabulation or H001 test was run. The pinned public third-party copy was used only to cross-check the 12 exposed pilot sequences; no raw corpus or scans are committed.
 
 Sam asked us to use `flysamc/game` as a shared workspace and proceed one step at a time. The summary is now the starting reference. Actual coordination happens through committed notes, task status, and reviews when a contributor's session is active; this file does not automatically invoke or synchronize assistants.
 
@@ -22,8 +22,8 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 |---|---|---|---|---|
 | IND-001 | Initial project summary, references, hypothesis, and coordination protocol | DONE | Codex | This initial documentation commit; no corpus analysis claimed |
 | IND-002 | Verify source availability and H-351 identification/transcription | DONE | Codex; reviewed by Claude | [PR #1](https://github.com/flysamc/game/pull/1); [Claude review](notes/IND-002-review-claude.md) accepted with additions (2026-10-25) |
-| IND-003 | Choose the pilot source, schema, and deduplication rules | IN REVIEW | Codex; reviewed by Claude | [PR #2](https://github.com/flysamc/game/pull/2): photo-outcome and surface-content changes requested; addressed in the IND-004 v0.2 work |
-| IND-004 | Curate and independently review stroke-plus-cup parallels | IN PROGRESS | Codex | Claim 2026-10-25; complete the exposed pilot, implement schema prerequisites, retain review gates; family-wide testing remains deferred |
+| IND-003 | Choose the pilot source, schema, and deduplication rules | IN REVIEW | Codex; reviewed by Claude | [PR #2](https://github.com/flysamc/game/pull/2); requested changes implemented in v0.2 [PR #4](https://github.com/flysamc/game/pull/4), awaiting review |
+| IND-004 | Curate and independently review stroke-plus-cup parallels | IN REVIEW | Codex | [PR #4](https://github.com/flysamc/game/pull/4): exposed five-record pilot complete; four new photo crosswalks and nine new face sequences; independent review and broader family curation still pending |
 | IND-005 | Test H001 descriptively and reproduce basic positional statistics where data support it | BLOCKED | Unclaimed | IND-004; rerunnable code, inputs, output, and limitations |
 | IND-006 | Compare structural models with matched controls and held-out records | BLOCKED | Unclaimed | Adequate audited corpus and locked evaluation design |
 | IND-007 | Evaluate specific semantic/phonetic readings | DEFERRED | Unclaimed | Independent anchors and predeclared rules; not dependent merely on a high model score |
@@ -135,6 +135,18 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Claimed `indus/IND-004-pilot-curation`: add photo-check conclusions and surface content; locate the four outstanding pilot objects and transcribe nine faces from primary images; keep unresolved identity and ambiguity explicit.
 - Exposure: Codex has read Claude's aggregate counts, M77 5498 sequences and prior-exposure list, and has already seen the H-351 plate and neighbouring H-352–354. This is not blind replication. No H001 test or family-wide association table is authorized by this claim.
 - Source registration decision: public third-party M77 metadata/cross-checks are within the requested source research; raw data and restricted plates will not be committed. Unknown reuse terms remain documented.
+
+### 2026-10-25 — Codex — IND-004 curation handoff
+
+- [PR #4](https://github.com/flysamc/game/pull/4), branch `indus/IND-004-pilot-curation`, content commit [e0308a2](https://github.com/flysamc/game/commit/e0308a2b1146ed7ddc995089d5cf5212ce3505ab); stacked on PR #2. Retarget #4 to the current default after #2 is merged.
+- Located primary identifier chains and photographs: M77 5498 → CISI-I H-322; 4444 → H-303; 4456 → CISI-II H-916; 4591 → H-977. Rechecked the prior H-351 match. These proposed mappings await independent review.
+- Transcribed the nine missing faces; v0.2 now has 12 normalized faces across five catalogue records. Kept both source-doubt marks. Recorded 17 field-level photo outcomes (11 confirms, 6 consistent); these are not independent sample counts. H-351's four strokes remain photographically qualified.
+- Addressed Claude's schema requests: photo outcomes with checker/evidence, explicit surface content, non-script face anchors, separate third-party evidence kind, and a conservative unknown-span policy. No invented motif faces or sign-zero tokens were added.
+- Retrieved full M77, Vats text tables, and CISI-II scans; expanded CISI-I checks. Corrected retrieval traps: FC is not M77; ASI 49.255.200 is on H-322's continuation line, not H-323's row. M77 scan offsets vary: p. 360 is PDF 371, but pp. 821/824 are PDF 830/833.
+- Pinned joyboseroy/indus_decipher at cd600349f6d3193a241c3eb87ff80a2a65377efc. After a primary-source checkpoint, all 12 pilot base-sign sequences agreed with the CSV. Exact doubt positions, direction and damage are not validated by its defaults. Its MIT software license does not establish underlying portal-data rights; no raw corpus was committed.
+- Validation: Python 3.12.14; all 31 tests pass; draft validator exit 0, readiness exit 1 as intended; legacy v0.1 data/schema preserved unchanged and still validate. Source additions, v0.2 transcription/crosswalk review, physical-object grouping and frozen status remain pending.
+- Exposure: full M77 p. 360 context, Vats and CISI index rows, adjacent CISI plates, Claude's aggregate report, and the 12 cross-check rows were seen. No family-wide label/count table, hypothesis test, phonetic assignment or translation was made.
+- Claude has revised proposal #3 following the six review points. It remains unlocked; method details still need resolution before inference. Next action: independent review of #4 using its source checklist, then identity adjudication and a separately specified family search.
 
 ## Handoff entry template
 
