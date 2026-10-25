@@ -5,10 +5,12 @@ Project entry point: [README.md](README.md)
 
 ## Current handoff
 
-**Active task: IND-002 — verify sources and the H-351 case.**  
-Status: **IN PROGRESS — Codex**, claimed 25 October 2026 following Sam's instruction to start.  
-Working branch: `indus/IND-002-source-audit`. Last completed step: current repository and task state checked; starting source verification.  
-Suggested independent reviewer: **Claude**; review not yet requested or acknowledged.
+**Active task: IND-002 — source audit ready for independent review.**  
+Status: **IN REVIEW — Codex**, updated 25 October 2026.  
+Working branch: `indus/IND-002-source-audit`. Last completed step: source audit, H-351 photographic comparison, candidate inventory and access manifest prepared.  
+Review: [PR #1](https://github.com/flysamc/game/pull/1).  
+Audit: [review document](https://github.com/flysamc/game/blob/indus/IND-002-source-audit/indus-script/notes/IND-002-source-audit.md).  
+Suggested independent reviewer: **Claude**; checklist is in the audit. No review or acknowledgement has occurred.
 
 Sam asked us to use `flysamc/game` as a shared workspace and proceed one step at a time. The summary is now the starting reference. Actual coordination happens through committed notes, task status, and reviews when a contributor's session is active; this file does not automatically invoke or synchronize assistants.
 
@@ -19,7 +21,7 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 | ID | Task | Status | Owner | Dependency / completion evidence |
 |---|---|---|---|---|
 | IND-001 | Initial project summary, references, hypothesis, and coordination protocol | DONE | Codex | This initial documentation commit; no corpus analysis claimed |
-| IND-002 | Verify source availability and H-351 identification/transcription | IN PROGRESS | Codex | Claimed 2026-10-25; working branch `indus/IND-002-source-audit`; source verification underway |
+| IND-002 | Verify source availability and H-351 identification/transcription | IN REVIEW | Codex | [PR #1](https://github.com/flysamc/game/pull/1); independent review pending |
 | IND-003 | Choose the pilot source, schema, and deduplication rules | BLOCKED | Unclaimed | IND-002 reviewed; documented choice and example records |
 | IND-004 | Curate and independently review stroke-plus-cup parallels | BLOCKED | Unclaimed | IND-003; versioned pilot with per-record provenance and review status |
 | IND-005 | Test H001 descriptively and reproduce basic positional statistics where data support it | BLOCKED | Unclaimed | IND-004; rerunnable code, inputs, output, and limitations |
@@ -72,6 +74,17 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Working branch: `indus/IND-002-source-audit`.
 - Last completed step: repository and task-state inspection.
 
+### 2026-10-25 — Codex — IND-002 audit handoff
+
+- Branch: `indus/IND-002-source-audit`; [PR #1](https://github.com/flysamc/game/pull/1). Audit content commit: [6d6a8cd](https://github.com/flysamc/game/commit/6d6a8cdd8eed2146f39ebd9dba32e9324d7fdba9).
+- Files: audit note, source manifest, updated project summary and this handoff.
+- Evidence: Mahadevan paper §3/§5 and supplement Figs. 2–4; CISI-I printed p. 230 (IGNCA PDF p. 266); M77 coding excerpt; Yadav et al. Methods/Fig. 12; official RMRL and ICIT pages/manual.
+- Checks performed: visually compared H-351 A/B/C photographs and normalized diagrams; read five candidate IDs and stroke counts; retained doubtful initial signs on M77 4581 and 4591; recorded distinct source surface labels and export conventions; hashed downloaded PDFs.
+- Findings: a tractable curation target exists, but the five examples are source-selected and cannot establish a numerical interpretation or corpus frequency.
+- Gaps: four other object crosswalks and photographs, duplicate checks, complete machine-readable corpus access and reuse terms remain unresolved. These are recorded explicitly for later curation. No statistical analysis or translation was attempted.
+- Next action: an independent reviewer follows the four-item checklist in the audit. Record corrections or acceptance here; only then mark IND-002 DONE and IND-003 READY. Do not infer that Claude has been invoked by this handoff.
+- Status: IN REVIEW; no independent review yet.
+
 ## Handoff entry template
 
 - Date / contributor / task:
@@ -83,3 +96,4 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Unresolved gaps or disagreements:
 - Task status:
 - Next action:
+
