@@ -10,7 +10,7 @@ Status: **IN REVIEW — Codex**, updated 25 October 2026 after completing the re
 Working branch: `indus/IND-003-pilot-schema`, based on the IND-002 source-audit branch. Last completed step: source choice, data schema, duplicate rules, five-record draft, validator and 18 passing regression tests.
 Review: [PR #2](https://github.com/flysamc/game/pull/2) (depends on PR #1).  
 Design: [IND-003](https://github.com/flysamc/game/blob/indus/IND-003-pilot-schema/indus-script/notes/IND-003-pilot-design.md). Draft/run instructions: [data README](https://github.com/flysamc/game/blob/indus/IND-003-pilot-schema/indus-script/data/README.md).  
-IND-002 remains **IN REVIEW** at [PR #1](https://github.com/flysamc/game/pull/1). Sam's instruction authorizes drafting the next stage while that review is pending; it does not establish source approval.  
+IND-002 was reviewed by Claude on 25 October 2026 and accepted with additions ([review note](notes/IND-002-review-claude.md)); PR #1 is ready to merge. The additions affect IND-003/IND-004 scope and should be answered in PR #2.  
 Suggested independent reviewer: **Claude**. Review and curation gates still apply before freezing data or running H001 tests.
 
 Sam asked us to use `flysamc/game` as a shared workspace and proceed one step at a time. The summary is now the starting reference. Actual coordination happens through committed notes, task status, and reviews when a contributor's session is active; this file does not automatically invoke or synchronize assistants.
@@ -22,7 +22,7 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 | ID | Task | Status | Owner | Dependency / completion evidence |
 |---|---|---|---|---|
 | IND-001 | Initial project summary, references, hypothesis, and coordination protocol | DONE | Codex | This initial documentation commit; no corpus analysis claimed |
-| IND-002 | Verify source availability and H-351 identification/transcription | IN REVIEW | Codex | [PR #1](https://github.com/flysamc/game/pull/1); independent review pending |
+| IND-002 | Verify source availability and H-351 identification/transcription | DONE | Codex; reviewed by Claude | [PR #1](https://github.com/flysamc/game/pull/1); [Claude review](notes/IND-002-review-claude.md) accepted with additions (2026-10-25) |
 | IND-003 | Choose the pilot source, schema, and deduplication rules | IN REVIEW | Codex | [PR #2](https://github.com/flysamc/game/pull/2); draft, schema and validator; 18 tests pass; source/design review pending |
 | IND-004 | Curate and independently review stroke-plus-cup parallels | BLOCKED | Unclaimed | Source/design review; four object crosswalks and nine face transcriptions remain; do not freeze the draft |
 | IND-005 | Test H001 descriptively and reproduce basic positional statistics where data support it | BLOCKED | Unclaimed | IND-004; rerunnable code, inputs, output, and limitations |
@@ -103,6 +103,30 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Review checklist: examine the source-selection limits, H-351 mappings and uncertainty; run both validator modes; scrutinize duplicate and review rules; record actual acceptance or requested changes. Use the current board rather than earlier handoff states: accepting IND-002 alone must not downgrade the already drafted IND-003 to READY.
 - Next curation: locate original photographs and crosswalks for 5498, 4444, 4456 and 4591; transcribe their nine faces; resolve physical-object duplicates and review all records before an analytical release.
 - The pilot PR is stacked on PR #1. After PR #1 is merged, retarget the pilot PR to the current default branch before merging it. Keep shared coordination updates when reconciling either PR.
+### 2026-10-25 — Claude — IND-002 independent review
+
+- Branch: `indus/IND-002-source-audit`; review note [notes/IND-002-review-claude.md](notes/IND-002-review-claude.md); PR #1 review comment.
+- Checks performed: paper §3–5 text (crosswalk Vats 581 = IM 77:4581 = CISI-I:H-351); supplement Fig. 4 rendered and read glyph by glyph (IDs, side codes, stroke counts 2/3/3/4/4, asterisks on the first reading-order sign of 4581.20 and 4591.20); CISI-I printed p. 230 photographs H-351 A/B/C; cross-check of all five entries against a third-party machine-readable M77 digitization.
+- Findings: audit table confirmed. Qualifications: H-351 A first sign worn (supports the doubtful mark); H-351 B four strokes consistent but not unambiguous in the scan; paper also cites 5296; CISI p. 230 shows H-352–354 in the same three-sided format with different face-A labels and undocumented dotted-circle faces (M77 crosswalk unverified).
+- Correction: a machine-readable M77 copy exists (joyboseroy/indus_decipher), provenance documented by its converter, reuse terms unknown; use for cross-checking only, do not commit.
+- Selection-effect sizing (not an H001 test): the four-sign group occurs in 11 texts, 5 with a cup line; 255 texts have a two-sign `[X] 328` line. Recommend curating the strokes-plus-cup family and pre-registering the H001 comparison. Reviewer exposure to M77 records 4580–4597 recorded in the note.
+- Status: IND-002 DONE (accepted with additions). IND-003 (PR #2, opened by Codex during this review) remains Codex's; Claude's review of PR #2 follows separately.
+- Next action: Codex responds to the two open questions in the review note (curation unit; whether to register the third-party M77 copy) and decides which additions to fold into the IND-003 schema.
+
+### 2026-10-25 — Claude — IND-002 sign-off recorded; IND-003 review
+
+- Recorded the IND-002 acceptance in `sources/manifest.json` (`independent_review: accepted`, reviewer, date, reference, scope). With it, the IND-003 validator's source-audit blocker clears; the draft stays valid and all 18 tests still pass (checked against PR #2's code).
+- Reviewed [PR #2](https://github.com/flysamc/game/pull/2#pullrequestreview-5645054459): reproduced the validator results (exit 0 / `--require-ready` exit 1) and 18 passing tests; the H-351 record matches the independently checked evidence.
+- Requested before IND-004: (1) declare the strokes-plus-cup family as the search set and pre-register the H001 null and unit; (2) a per-field photo-check outcome (`confirms`/`consistent`/`illegible`/`contradicts`); (3) a surface `content` field for non-script faces; (4) optional `third_party_digitization` evidence kind for blind cross-checks; (5) plan the `000` illegible-sign convention.
+- Status: IND-003 IN REVIEW with changes requested (Codex decides v0.1 merge vs v0.2). IND-004 should not start until point 1 is agreed.
+- Next action: Codex replies on PR #2; Sam decides whether the third-party M77 copy may be registered.
+
+### 2026-10-25 — Claude — H001 pre-registration draft
+
+- No Codex reply on PR #1 or PR #2 since the reviews (checked 21:26).
+- Opened [PR #3](https://github.com/flysamc/game/pull/3) on branch `indus/H001-prereg-draft`: a **draft, unlocked** pre-registration for testing H001, written before any label × stroke-count tabulation. It covers the strokes-plus-cup search set, object-level unit, declared exclusions, models A/B/C, a permutation test of within-label agreement, decision rules, a power check, five sensitivity analyses and an unseen-subset check for contributors' prior exposure.
+- Task board not changed. Proposal: lock this (Codex + Sam) before IND-004 data are tabulated, as a new task or as an IND-004 acceptance criterion; Codex to decide in the next board update.
+- Next action: Codex reviews PR #3 and answers the open questions in PRs #1–#3.
 
 ## Handoff entry template
 
