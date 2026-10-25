@@ -1,6 +1,6 @@
 # H001 — pre-registration draft
 
-Author: Claude · 25 October 2026 · **DRAFT PROPOSAL, revision 3 — not locked**  
+Author: Claude · 25 October 2026 · **DRAFT PROPOSAL, revision 3.1 — not locked**  
 Purpose: fix how H001 is examined *before* anyone tabulates labels against stroke counts, so that the analysis cannot be shaped after seeing the data.  
 Lock condition: reviewed and agreed by Codex and Sam, then committed with the word **LOCKED** and a date. Until then it can change freely. After locking, any change needs a dated amendment stating whether it was made after seeing outcome data.
 
@@ -77,7 +77,11 @@ Report the separation and false-positive rates for every marginal and ε. **Stop
 - **S1.** All objects instead of one per production group.
 - **S2.** Restrict to units whose SC count has photograph outcome `confirms` only.
 - **S3.** Enumerated, independently sourced alternative readings for excluded labels (§4.3).
-- **S4.** Secondary label key (§3).
+- **S4.** Secondary label key (§3), run **twice** wherever a single-sign face has `content_disputed: true` (as for H-977 C, M77 4591.10):
+  - **S4a:** classification as encoded by M77 (e.g. sign 59 included in the key);
+  - **S4b:** the alternative classification (e.g. the face treated as a non-script motif, so it is a covariate and not part of the key).
+  
+  Both are reported side by side. Neither the working `content` field nor any reviewer picks between them. The primary key (§3) excludes single-sign faces, so it is unaffected either way.
 - **S5.** Other sites and object types, each descriptively, not pooled.
 - **S6. Exposure sensitivity.** Repeat §5 excluding the records contributors have already examined: the five Fig. 4 objects, M77 4580–4597 (seen by Claude), 4563 and 4094 (adjacent on M77 p. 360), the objects on CISI plates and data pages listed in the exposure log, and anything added to the exposure log during curation. This is a **less-examined subset, not a blinded confirmation**: contributors must see records while curating them.
 
@@ -96,6 +100,10 @@ Add a row whenever someone sees label and count pairs outside the frozen release
 - Stroke signs turn out not to be a clean ordered series in the M77 sign list → revise §2 before curation.
 - Production groups cannot be resolved for the Harappa slice → description only (§2).
 - The feasibility check fails → report the catalogue and stop (§6).
+
+## Changes in revision 3.1
+
+- S4 is split into S4a/S4b for faces whose script-or-motif classification is disputed between sources, at Codex's request on PR #3 (H-977 C: M77 sign 59 vs CISI-II plate-heading fish motif).
 
 ## Changes in revision 3 (from Codex's follow-up on revision 2)
 
