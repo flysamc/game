@@ -38,7 +38,8 @@ class PhotoAndContentTests(unittest.TestCase):
         errors, report = self.check()
         self.assertEqual(errors, [])
         self.assertEqual(report['normalized_surfaces'], 12)
-        self.assertEqual(report['photo_check_outcomes'], {'confirms': 11, 'consistent': 6})
+        self.assertEqual(report['photo_check_outcomes'], {'consistent': 8, 'confirms': 9})
+        self.assertEqual(report['content_disputed_surfaces'], ['m77-4591-10'])
         self.assertFalse(report['ready_for_descriptive_analysis'])
 
     def test_consulted_photo_is_not_a_completed_check(self):
@@ -71,6 +72,7 @@ class PhotoAndContentTests(unittest.TestCase):
 
     def test_new_source_acceptance_needs_actual_review_metadata(self):
         self.manifest['curation_addendum']['independent_review'] = 'accepted'
+        self.manifest['curation_addendum']['reviewer'] = None
         self.assertTrue(any('source additions' in b for b in self.check()[1]['blockers']))
 
     def test_graphic_count_cannot_disagree_with_stroke_sign(self):
@@ -104,6 +106,34 @@ class PhotoAndContentTests(unittest.TestCase):
     def test_motif_face_cannot_carry_script_tokens(self):
         self.face()['content'] = 'non_script_motif'
         self.assertTrue(any('cannot assert script tokens' in e for e in self.check()[0]))
+
+    def test_fish_disagreement_preserves_the_published_transcription(self):
+        fish = self.data['records'][3]['surfaces'][0]
+        self.assertEqual(fish['surface_id'], 'm77-4591-10')
+        self.assertEqual([t['sign_id'] for t in fish['normalization']['tokens']], ['59'])
+        self.assertEqual({a['content'] for a in fish['content_assessments']}, {'script', 'non_script_motif'})
+        motif = next(a for a in fish['content_assessments'] if a['content'] == 'non_script_motif')
+        self.assertEqual(motif['basis'], 'reviewer_inference')
+        self.assertTrue(any('classification alternatives need independent review' in b for b in self.check()[1]['blockers']))
+
+    def test_disagreement_cannot_be_hidden_behind_a_false_flag(self):
+        self.data['records'][3]['surfaces'][0]['content_disputed'] = False
+        self.assertTrue(any('preserve differing source assessments' in e for e in self.check()[0]))
+
+    def test_dispute_cannot_be_asserted_without_alternative_evidence(self):
+        self.face()['content_disputed'] = True
+        self.assertTrue(any('preserve differing source assessments' in e for e in self.check()[0]))
+
+    def test_review_may_accept_documented_ambiguity_without_erasing_it(self):
+        fish_record = copy.deepcopy(self.data['records'][3])
+        self.make_synthetic_ready()
+        fish_record['review'] = copy.deepcopy(self.data['records'][0]['review'])
+        self.data['records'].append(fish_record)
+        self.data['selection']['catalogue_ids'].append('4591')
+        errors, report = self.check()
+        self.assertEqual(errors, [])
+        self.assertTrue(report['ready_for_descriptive_analysis'])
+        self.assertEqual(report['content_disputed_surfaces'], ['m77-4591-10'])
 
 
 if __name__ == '__main__':

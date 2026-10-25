@@ -347,7 +347,9 @@
         "photo_evidence_refs",
         "artifact_direction_evidence_refs",
         "content",
-        "photo_checks"
+        "photo_checks",
+        "content_disputed",
+        "content_assessments"
       ],
       "properties": {
         "surface_id": {
@@ -477,13 +479,25 @@
             "non_script_motif",
             "blank",
             "not_reported"
-          ]
+          ],
+          "description": "Working source classification, not a decipherment or a decision between disputed alternatives."
         },
         "photo_checks": {
           "type": "array",
           "items": {
             "$ref": "#/$defs/photo_check"
           }
+        },
+        "content_disputed": {
+          "type": "boolean",
+          "description": "True when differing classifications are recorded in content_assessments. False means no recorded conflict, not proof of linguistic status."
+        },
+        "content_assessments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/content_assessment"
+          },
+          "description": "Source-specific classifications; an inferred reading of a plate heading must be labelled reviewer_inference."
         }
       }
     },
@@ -617,6 +631,10 @@
             },
             "review": {
               "$ref": "#/$defs/review"
+            },
+            "review_scope": {
+              "type": "string",
+              "pattern": "\\S"
             }
           }
         },
@@ -667,6 +685,45 @@
         "checked_on": {
           "type": "string",
           "format": "date"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "note": {
+          "type": "string",
+          "pattern": "\\S"
+        }
+      }
+    },
+    "content_assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "content",
+        "basis",
+        "evidence_refs",
+        "note"
+      ],
+      "properties": {
+        "content": {
+          "enum": [
+            "script",
+            "non_script_motif",
+            "blank",
+            "not_reported"
+          ]
+        },
+        "basis": {
+          "enum": [
+            "source_explicit",
+            "reviewer_inference"
+          ]
         },
         "evidence_refs": {
           "type": "array",

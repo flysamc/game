@@ -158,6 +158,17 @@ def validate(data, schema, manifest):
                     errors.append(f"{sid}: diagram observation points to a different representation {reference}")
             if v02:
                 content = surface["content"]
+                assessments = surface["content_assessments"]
+                classifications = {a["content"] for a in assessments}
+                if assessments and content not in classifications:
+                    errors.append(f"{sid}: working content must be represented in the source assessments")
+                if surface["content_disputed"] != (len(classifications) > 1):
+                    errors.append(f"{sid}: content_disputed must preserve differing source assessments")
+                for assessment in assessments:
+                    if not any(evidence.get(ref, {}).get("kind") in ("text", "normalized_diagram", "photograph") for ref in assessment["evidence_refs"]):
+                        errors.append(f"{sid}: content assessment needs primary text or image evidence")
+                if surface["content_disputed"] and record["review"]["status"] != "accepted":
+                    blockers.append(f"{sid}: content classification alternatives need independent review")
                 if content != "script" and (surface["normalization"] is not None or surface["source_marks"] or surface["tall_strokes_next_to_cup"] is not None):
                     errors.append(f"{sid}: non-script or unreported content cannot assert script tokens, marks or a cup count")
                 if content == "not_reported":
@@ -225,6 +236,7 @@ def validate(data, schema, manifest):
         "surfaces": len(surfaces),
         "normalized_surfaces": sum(s["normalization"] is not None for s in surfaces),
         "surfaces_with_source_doubt": sum(bool(s["source_marks"]) for s in surfaces),
+        "content_disputed_surfaces": [s["surface_id"] for s in surfaces if s.get("content_disputed", False)],
         "photo_check_outcomes": dict(Counter(c["outcome"] for s in surfaces for c in s.get("photo_checks", []))),
         "photo_outcomes_are_independent_review": False,
         "ready_for_descriptive_analysis": not errors and not blockers,

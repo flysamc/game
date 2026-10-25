@@ -145,6 +145,13 @@
       "locator": "Printed p. 343, PDF p. 378: H-977 A, B/B bis, C/C bis; repeated views are not separate objects.",
       "kind": "photograph",
       "dependency_group": "CISI-II-H977-photographs"
+    },
+    {
+      "id": "cisi2-343-heading",
+      "source_id": "cisi-2-archive-scan",
+      "locator": "Printed p. 343, PDF p. 378: plate heading \"gharial; fish; geom.\" above Harappa 974–984. This is a plate-level heading, not an explicit per-face classification of H-977 C.",
+      "kind": "text",
+      "dependency_group": "CISI-II-H977-photographs"
     }
   ],
   "records": [
@@ -160,7 +167,7 @@
         {
           "scheme": "CISI-I",
           "value": "H-322",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source824",
             "cisi-index372"
@@ -169,7 +176,7 @@
         {
           "scheme": "FC-as-printed-in-CISI",
           "value": "4177",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source824",
             "cisi-index372"
@@ -178,7 +185,7 @@
         {
           "scheme": "museum-registration",
           "value": "ASI 49.255.200",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source824",
             "cisi-index372"
@@ -187,7 +194,7 @@
         {
           "scheme": "museum-registration",
           "value": "ASI 63.11.192",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source824",
             "cisi-index372"
@@ -204,19 +211,20 @@
         ]
       },
       "identity": {
-        "status": "unresolved",
-        "physical_object_group": null,
+        "status": "resolved",
+        "physical_object_group": "pilot-cisi-i-h322",
         "evidence_refs": [
           "m77-source824",
           "cisi-index372",
           "cisi226"
         ],
         "review": {
-          "status": "pending",
-          "reviewer": null,
-          "reviewed_on": null,
-          "reference": null
-        }
+          "status": "accepted",
+          "reviewer": "Claude",
+          "reviewed_on": "2026-10-25",
+          "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407"
+        },
+        "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
       },
       "review": {
         "status": "pending",
@@ -295,15 +303,17 @@
           "photo_checks": [
             {
               "field": "normalization",
-              "outcome": "confirms",
+              "outcome": "consistent",
               "checker": "Codex",
               "checked_on": "2026-10-25",
               "evidence_refs": [
                 "cisi226"
               ],
-              "note": "H-322 A shows the four graphic groups corresponding to 119, 87, 342 and 176. This checks the published normalization, not a phonetic reading."
+              "note": "Revised after Claude review: the raindrops, two strokes and jar are clear, but the harrow (176, leftmost in the photograph) is faint. The photograph is consistent with the published four-sign normalization; it does not fully confirm it."
             }
-          ]
+          ],
+          "content_disputed": false,
+          "content_assessments": []
         },
         {
           "surface_id": "m77-5498-20",
@@ -390,7 +400,9 @@
               ],
               "note": "H-322 B shows a cup-like outline beside 2 tall strokes; 2 is a graphic count, not an assigned numerical meaning."
             }
-          ]
+          ],
+          "content_disputed": false,
+          "content_assessments": []
         }
       ]
     },
@@ -406,7 +418,7 @@
         {
           "scheme": "CISI-I",
           "value": "H-303",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats348",
@@ -416,7 +428,7 @@
         {
           "scheme": "FC-as-printed-in-CISI",
           "value": "3444",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats348",
@@ -426,7 +438,7 @@
         {
           "scheme": "museum-registration",
           "value": "ASI 63.11.102",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats348",
@@ -436,7 +448,7 @@
         {
           "scheme": "Harappa-excavation-number",
           "value": "11291",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats348",
@@ -465,20 +477,20 @@
         ]
       },
       "identity": {
-        "status": "unresolved",
-        "physical_object_group": null,
+        "status": "resolved",
+        "physical_object_group": "pilot-cisi-i-h303",
         "evidence_refs": [
           "m77-source821",
-          "vats348",
           "cisi-index371",
           "cisi225"
         ],
         "review": {
-          "status": "pending",
-          "reviewer": null,
-          "reviewed_on": null,
-          "reference": null
-        }
+          "status": "accepted",
+          "reviewer": "Claude",
+          "reviewed_on": "2026-10-25",
+          "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407"
+        },
+        "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
       },
       "review": {
         "status": "pending",
@@ -566,7 +578,9 @@
               ],
               "note": "H-303 A shows the four graphic groups corresponding to 119, 87, 342 and 176."
             }
-          ]
+          ],
+          "content_disputed": false,
+          "content_assessments": []
         },
         {
           "surface_id": "m77-4444-20",
@@ -654,7 +668,9 @@
               ],
               "note": "H-303 B shows a cup-like outline beside 3 tall strokes; 3 is a graphic count, not an assigned numerical meaning."
             }
-          ]
+          ],
+          "content_disputed": false,
+          "content_assessments": []
         }
       ]
     },
@@ -670,7 +686,7 @@
         {
           "scheme": "CISI-II",
           "value": "H-916",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats348",
@@ -680,7 +696,7 @@
         {
           "scheme": "FC-as-printed-in-CISI",
           "value": "3456",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats348",
@@ -690,7 +706,7 @@
         {
           "scheme": "museum-registration",
           "value": "HM 320",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats348",
@@ -700,7 +716,7 @@
         {
           "scheme": "Harappa-excavation-number",
           "value": "12516",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats348",
@@ -729,20 +745,20 @@
         ]
       },
       "identity": {
-        "status": "unresolved",
-        "physical_object_group": null,
+        "status": "resolved",
+        "physical_object_group": "pilot-cisi-ii-h916",
         "evidence_refs": [
           "m77-source821",
-          "vats348",
           "cisi2-index444",
           "cisi2-339"
         ],
         "review": {
-          "status": "pending",
-          "reviewer": null,
-          "reviewed_on": null,
-          "reference": null
-        }
+          "status": "accepted",
+          "reviewer": "Claude",
+          "reviewed_on": "2026-10-25",
+          "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407"
+        },
+        "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
       },
       "review": {
         "status": "pending",
@@ -830,7 +846,9 @@
               ],
               "note": "H-916 A/A bis support the four-group arrangement; the oblique strokes of the first group differ in form from the standardized glyph. Retain the published M77 119 normalization without claiming every stroke is independently certain."
             }
-          ]
+          ],
+          "content_disputed": false,
+          "content_assessments": []
         },
         {
           "surface_id": "m77-4456-20",
@@ -918,7 +936,9 @@
               ],
               "note": "H-916 B shows a cup-like outline beside 3 tall strokes; 3 is a graphic count, not an assigned numerical meaning."
             }
-          ]
+          ],
+          "content_disputed": false,
+          "content_assessments": []
         }
       ]
     },
@@ -934,7 +954,7 @@
         {
           "scheme": "CISI-II",
           "value": "H-977",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats351",
@@ -944,7 +964,7 @@
         {
           "scheme": "FC-as-printed-in-CISI",
           "value": "3591",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats351",
@@ -954,7 +974,7 @@
         {
           "scheme": "museum-registration",
           "value": "HM 421",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats351",
@@ -964,7 +984,7 @@
         {
           "scheme": "Harappa-excavation-number",
           "value": "8480",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "m77-source821",
             "vats351",
@@ -993,20 +1013,20 @@
         ]
       },
       "identity": {
-        "status": "unresolved",
-        "physical_object_group": null,
+        "status": "resolved",
+        "physical_object_group": "pilot-cisi-ii-h977",
         "evidence_refs": [
           "m77-source821",
-          "vats351",
           "cisi2-index444",
           "cisi2-343"
         ],
         "review": {
-          "status": "pending",
-          "reviewer": null,
-          "reviewed_on": null,
-          "reference": null
-        }
+          "status": "accepted",
+          "reviewer": "Claude",
+          "reviewed_on": "2026-10-25",
+          "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407"
+        },
+        "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
       },
       "review": {
         "status": "pending",
@@ -1037,7 +1057,7 @@
               ]
             }
           ],
-          "source_description": "Project shape description: fish-shaped sign.",
+          "source_description": "Fish-shaped figure, encoded as sign 59 in the M77 normalization. Classification as script versus a motif is disputed; retain both source assessments.",
           "observed_from": {
             "evidence_refs": [
               "fig4"
@@ -1063,7 +1083,8 @@
             ],
             "change_log": [
               "Encoded the published normalized diagram using the primary M77 sign list; stored tokens in reading order.",
-              "Cross-checked the proposed CISI photograph; photographic qualifications are separate from source uncertainty. No semantic values assigned."
+              "Cross-checked the proposed CISI photograph; photographic qualifications are separate from source uncertainty. No semantic values assigned.",
+              "After Claude review, retained M77 sign 59 and added the competing motif assessment; no token or source uncertainty was changed."
             ]
           },
           "photo_evidence_refs": [
@@ -1080,7 +1101,28 @@
               "evidence_refs": [
                 "cisi2-343"
               ],
-              "note": "H-977 C/C bis are consistent with the fish-shaped sign 59; wear and oblique presentation limit a stronger claim. Do not infer a word or a fish species."
+              "note": "H-977 C/C bis are consistent with the fish-shaped figure encoded as 59 by M77; wear and oblique presentation limit a stronger graphic comparison. This outcome does not settle whether the figure functions as script or iconography."
+            }
+          ],
+          "content_disputed": true,
+          "content_assessments": [
+            {
+              "content": "script",
+              "basis": "source_explicit",
+              "evidence_refs": [
+                "fig4",
+                "m77-sign-list"
+              ],
+              "note": "Mahadevan includes this figure in the normalized text as sign 59. This records his encoding, not a claim about its phonetic or semantic value."
+            },
+            {
+              "content": "non_script_motif",
+              "basis": "reviewer_inference",
+              "evidence_refs": [
+                "cisi2-343-heading",
+                "cisi2-343"
+              ],
+              "note": "Claude proposed, and Codex agrees on inspection, that the plate heading and large fish figure suggest an iconographic treatment by CISI-II. The heading covers the plate as a whole; the inference is not an explicit per-face editorial ruling and does not establish that the mark cannot function as script."
             }
           ]
         },
@@ -1172,7 +1214,9 @@
               ],
               "note": "H-977 A supports the main arrangement; the first reading-order group lies by a worn/sloping edge. Retain the source asterisk on 119; the photo does not remove that doubt."
             }
-          ]
+          ],
+          "content_disputed": false,
+          "content_assessments": []
         },
         {
           "surface_id": "m77-4591-30",
@@ -1242,13 +1286,13 @@
           "photo_checks": [
             {
               "field": "normalization",
-              "outcome": "confirms",
+              "outcome": "consistent",
               "checker": "Codex",
               "checked_on": "2026-10-25",
               "evidence_refs": [
                 "cisi2-343"
               ],
-              "note": "H-977 B shows a cup-like outline beside 4 tall strokes; 4 is a graphic count, not an assigned numerical meaning."
+              "note": "Revised after Claude review: B/B bis preserve four intact strokes, but the tablet is broken at the cup end and only part of 328 survives. The full normalization is consistent; the separate stroke-count outcome remains confirms."
             },
             {
               "field": "tall_strokes_next_to_cup.count",
@@ -1258,9 +1302,11 @@
               "evidence_refs": [
                 "cisi2-343"
               ],
-              "note": "H-977 B shows a cup-like outline beside 4 tall strokes; 4 is a graphic count, not an assigned numerical meaning."
+              "note": "H-977 B/B bis preserve four intact tall strokes. This confirms the graphic count only; the broken cup end leaves the full normalization qualified."
             }
-          ]
+          ],
+          "content_disputed": false,
+          "content_assessments": []
         }
       ]
     },
@@ -1276,7 +1322,7 @@
         {
           "scheme": "CISI-I",
           "value": "H-351",
-          "status": "source_reported",
+          "status": "reviewed",
           "evidence_refs": [
             "paper-case"
           ]
@@ -1292,7 +1338,7 @@
         {
           "scheme": "ASI-accession",
           "value": "63.11/75",
-          "status": "source_reported",
+          "status": "reviewed",
           "evidence_refs": [
             "paper-case"
           ]
@@ -1300,7 +1346,7 @@
         {
           "scheme": "Excavation-number",
           "value": "2429",
-          "status": "source_reported",
+          "status": "reviewed",
           "evidence_refs": [
             "paper-case"
           ]
@@ -1308,7 +1354,7 @@
         {
           "scheme": "FC-as-printed-in-CISI",
           "value": "3581",
-          "status": "proposed_from_primary_sources",
+          "status": "reviewed",
           "evidence_refs": [
             "paper-case",
             "m77-source821",
@@ -1327,21 +1373,21 @@
         ]
       },
       "identity": {
-        "status": "unresolved",
-        "physical_object_group": null,
+        "status": "resolved",
+        "physical_object_group": "pilot-cisi-i-h351",
         "evidence_refs": [
           "paper-case",
           "m77-source821",
-          "vats351",
           "cisi-index372",
           "cisi230"
         ],
         "review": {
-          "status": "pending",
-          "reviewer": null,
-          "reviewed_on": null,
-          "reference": null
-        }
+          "status": "accepted",
+          "reviewer": "Claude",
+          "reviewed_on": "2026-10-25",
+          "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407"
+        },
+        "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
       },
       "review": {
         "status": "pending",
@@ -1421,7 +1467,9 @@
               ],
               "note": "H-351 C shows the X-shaped sign corresponding to M77 137."
             }
-          ]
+          ],
+          "content_disputed": false,
+          "content_assessments": []
         },
         {
           "surface_id": "m77-4581-20",
@@ -1516,7 +1564,9 @@
               ],
               "note": "H-351 A supports the arrangement but the first group is worn. Retain the source asterisk on 119, as also noted by Claude in the IND-002 review."
             }
-          ]
+          ],
+          "content_disputed": false,
+          "content_assessments": []
         },
         {
           "surface_id": "m77-4581-30",
@@ -1608,7 +1658,9 @@
               ],
               "note": "Four strokes are consistent with H-351 B, but edge damage and a slanting stroke prevent an unqualified photographic count."
             }
-          ]
+          ],
+          "content_disputed": false,
+          "content_assessments": []
         }
       ]
     }

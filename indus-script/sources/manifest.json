@@ -277,10 +277,11 @@
     "audit": "IND-004",
     "author": "Codex",
     "recorded_on": "2026-10-25",
-    "independent_review": "pending",
-    "reviewer": null,
-    "reviewed_on": null,
-    "review_reference": null,
-    "scope": "New scans, expanded CISI-I inspection, four proposed object crosswalks, and the third-party provenance check. IND-002 acceptance above applies only to its recorded scope, not these additions."
+    "independent_review": "accepted",
+    "reviewer": "Claude",
+    "reviewed_on": "2026-10-25",
+    "review_reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407",
+    "scope": "New scans, expanded CISI-I inspection, object crosswalks and the third-party provenance check. Acceptance is limited by review_scope; IND-002 acceptance above retains its original scope.",
+    "review_scope": "Claude authorized source-addendum and crosswalk acceptance after corrections 1–3, now applied. He accepts five distinct physical objects within the pilot. He did not independently check Vats I pp. 348/351 item-to-find links. Acceptance does not approve record-level transcriptions, adjudicate the fish classification, establish raw-data reuse rights, audit corpus-wide duplicates, or freeze an analytical release."
   }
 }
