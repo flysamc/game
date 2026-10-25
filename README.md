@@ -40,3 +40,10 @@ red desert outside (layered cliffs with sunlit faces, haze, ~1,300 rocks),
 glowing light strips, pinned photos, hanging plants, a bed with a knitted
 blanket and a helmet in the corner. He keeps writing, dust drifts through the
 light and haze slides across the plain. Open the file in a browser.
+
+`mars-room-3d.html` is the same scene rebuilt as a real 3D Three.js room: a
+thick-framed panoramic window with curved ribs, a 3D Martian terrain with
+terraced cliffs, haze and thousands of rocks, a low sun casting shadows into
+the room, glowing light strips with bloom, light shafts and dust, and the boy
+writing at his desk. A Kuwahara filter gives the render a painted look (toggle
+"Painted"), and you can drag to look around.
