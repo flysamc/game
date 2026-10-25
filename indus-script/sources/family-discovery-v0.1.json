@@ -1,0 +1,30 @@
+{
+  "protocol_version": "0.1",
+  "recorded_on": "2026-10-25",
+  "author": "Codex",
+  "independent_review": "pending",
+  "purpose": "Discovery queue only; not an analytical corpus or an H001 test",
+  "source": {
+    "repository": "joyboseroy/indus_decipher",
+    "commit": "cd600349f6d3193a241c3eb87ff80a2a65377efc",
+    "path": "data/m77_indusscript_real_corpus.csv",
+    "git_blob_sha": "c61d3777ad19807efd7835da6296fa6d10833845",
+    "unit": "One nonempty M77 catalogue text number and side/line pair, according to its converter",
+    "raw_data_redistributed": false,
+    "underlying_portal_data_reuse_rights": "unestablished"
+  },
+  "query": {
+    "tall_stroke_signs": [86, 87, 89, 95, 96],
+    "cup_sign": 328,
+    "exact_token_count": 2,
+    "sequence_order": "as_stored_no_reversal",
+    "complete_face_line_code": "0",
+    "require_no_other_exported_row_on_same_side": true,
+    "unknown_span_is_wildcard": false,
+    "audit_all_other_rows_containing_cup": true,
+    "do_not_emit_candidate_stroke_counts_or_other_face_labels": true
+  },
+  "frozen_pilot_catalogue_ids": ["5498", "4444", "4456", "4591", "4581"],
+  "next_curation_order": "ascending M77 catalogue number, existing pilot anchors flagged separately",
+  "analysis_plan_status": "H001 revision 3.1 remains unlocked"
+}
