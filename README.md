@@ -31,3 +31,12 @@ The camera pushes in for the snack; the "Close-ups" button keeps the full frame.
 they wobble, overshoot and break like ink; character lines re-jitter on a
 three-frame cycle like hand-drawn animation, and a paper grain sits on top.
 Open the file in a browser; it fits any screen at 16:9.
+
+# Mars Bedroom
+
+`mars-room.html` paints a warm, cinematic Mars habitat bedroom on a canvas: a
+boy writing at his desk under a curved panoramic window, with a procedural
+red desert outside (layered cliffs with sunlit faces, haze, ~1,300 rocks),
+glowing light strips, pinned photos, hanging plants, a bed with a knitted
+blanket and a helmet in the corner. He keeps writing, dust drifts through the
+light and haze slides across the plain. Open the file in a browser.
