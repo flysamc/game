@@ -1,5 +1,5 @@
 {
-  "manifest_version": "0.1",
+  "manifest_version": "0.2",
   "audit": "IND-002",
   "audited_on": "2026-10-25",
   "author": "Codex",
@@ -72,6 +72,41 @@
           "pdf_page": 266,
           "printed_page": "230",
           "location": "H-351 A/B/C photographs"
+        },
+        {
+          "pdf_page": 261,
+          "printed_page": "225",
+          "location": "H-303 A/B photographs"
+        },
+        {
+          "pdf_page": 262,
+          "printed_page": "226",
+          "location": "H-322 A/B photographs"
+        },
+        {
+          "pdf_page": 401,
+          "printed_page": "365",
+          "location": "Basic-data table key: second column is FC, not M77"
+        },
+        {
+          "pdf_page": 402,
+          "printed_page": "366",
+          "location": "Table-key continuation warns concordance numbers may differ"
+        },
+        {
+          "pdf_page": 407,
+          "printed_page": "371",
+          "location": "H-303 identifiers"
+        },
+        {
+          "pdf_page": 408,
+          "printed_page": "372",
+          "location": "H-322 and H-351 identifiers; H-354/H-356 duplication"
+        },
+        {
+          "pdf_page": 411,
+          "printed_page": "375",
+          "location": "Corrigenda reclassifies H-356 A/B/C as H-354 A/B/C bis"
         }
       ],
       "reuse_license": "Copyright page assigns volume rights to Academia Scientiarum Fennica and photograph rights to owners of the original objects; no open reuse permission observed."
@@ -146,6 +181,83 @@
       ],
       "limitation": "Historical documentation; not confirmation that current access or exports behave identically.",
       "reuse_license": "Copyright Andreas Fuls, Berlin 2010; no bulk-data license established."
+    },
+    {
+      "id": "m77-full-scan",
+      "title": "The Indus Script: Texts, Concordance and Tables",
+      "author": "Iravatham Mahadevan",
+      "publication_year": 1977,
+      "url": "https://ia800704.us.archive.org/19/items/TheIndusScript.TextConcordanceAndTablesIravathanMahadevan/The%20Indus%20Script.%20Text%2C%20Concordance%20and%20Tables%20-Iravathan%20Mahadevan.pdf",
+      "access": "Downloaded complete scan; selected primary pages visually inspected. OCR used only for navigation.",
+      "bytes": 36288883,
+      "sha256": "afa32284c375b4f501a4c38efba7806b64765f041db07b22ea2e56f7205f0f67",
+      "pdf_pages": 842,
+      "inspected": [
+        "Printed pp. 30–35 / PDF pp. 41–46: coding conventions and sign list",
+        "Printed p. 360 / PDF p. 371: all five pilot inscriptions",
+        "Printed p. 821 / PDF p. 830: M77-to-Vats item mapping",
+        "Printed p. 824 / PDF p. 833: 5498 museum reference"
+      ],
+      "reuse_license": "not established; scan not redistributed"
+    },
+    {
+      "id": "vats-text-scan",
+      "title": "Excavations at Harappa, vol. I: Text",
+      "author": "Madho Sarup Vats",
+      "publication_year": 1940,
+      "url": "https://ia600805.us.archive.org/23/items/in.ernet.dli.2015.358921/2015.358921.Excavations-At.pdf",
+      "access": "Downloaded scan; selected tables and title page visually inspected. Archive item title says vol. 2, but the inspected content is the text volume; cite printed pages.",
+      "bytes": 29576656,
+      "sha256": "75951907da932a7a9be2c86cf56a6180953a717e916be907ab2f5fde1943c975",
+      "pdf_pages": 513,
+      "inspected": [
+        "PDF p. 3: title page",
+        "Printed p. 348 / PDF p. 372: items 444 and 456",
+        "Printed p. 351 / PDF p. 375: items 581 and 591"
+      ],
+      "reuse_license": "not established; scan not redistributed"
+    },
+    {
+      "id": "cisi-2-archive-scan",
+      "title": "Corpus of Indus Seals and Inscriptions, vol. 2: Collections in Pakistan",
+      "editors": [
+        "Sayid Ghulam Mustafa Shah",
+        "Asko Parpola"
+      ],
+      "publication_year": 1991,
+      "url": "https://ia800704.us.archive.org/19/items/TheIndusScript.TextConcordanceAndTablesIravathanMahadevan/Corpus%20of%20Indus%20Seals%20and%20Inscriptions.%20Collections%20in%20Pakistan.pdf",
+      "access": "Downloaded scan; selected pages visually inspected. OCR used only for navigation.",
+      "bytes": 35870617,
+      "sha256": "727132579a485ee626e48a64c663148a85fbc0811fb523818fd615231f8a327d",
+      "pdf_pages": 486,
+      "inspected": [
+        "PDF pp. 4–5: title and copyright",
+        "Printed p. 339 / PDF p. 374: H-916",
+        "Printed p. 343 / PDF p. 378: H-977",
+        "Printed p. 444 / PDF p. 479: basic-data rows H-916 and H-977"
+      ],
+      "reuse_license": "Copyright page assigns 1991 volume rights to Academia Scientiarum Fennica and photograph rights to owners of original objects; no open reuse permission observed."
+    },
+    {
+      "id": "joyboseroy-m77-copy",
+      "title": "Third-party M77 export and converter in joyboseroy/indus_decipher",
+      "repository": "https://github.com/joyboseroy/indus_decipher",
+      "commit": "cd600349f6d3193a241c3eb87ff80a2a65377efc",
+      "url": "https://github.com/joyboseroy/indus_decipher/blob/cd600349f6d3193a241c3eb87ff80a2a65377efc/data/m77_indusscript_real_corpus.csv",
+      "blob_sha": "c61d3777ad19807efd7835da6296fa6d10833845",
+      "bytes": 266368,
+      "converter_url": "https://github.com/joyboseroy/indus_decipher/blob/cd600349f6d3193a241c3eb87ff80a2a65377efc/data/convert_m77_indusscript_to_csv.py",
+      "access": "Public repository metadata, LICENSE, converter and CSV fetched; only the 12 pilot rows inspected after primary-source transcription checkpoint. No broad tabulation performed.",
+      "provenance_claim": "Converter author says the input was exported from IndusScript.in through a logged-in browser. We did not obtain the raw export or independently audit that extraction.",
+      "independent_check": "All 12 pilot base-sign sequences agree with our primary-source normalization. Main faces 4581.20 and 4591.20 have 25.0 mean_uncertainty; this does not locate the doubtful sign.",
+      "limitations": [
+        "Converter discards exact positions of starred signs in the CSV.",
+        "R-L is a default meaning as-stored, not an audited direction.",
+        "damaged=False is a converter default, not proof of an undamaged object.",
+        "Zero/000 is not an ordinary M77 sign; an illegible span can cover one or more signs.",
+        "No validation here of full-corpus counts or its claim to match a published analytical corpus."
+      ],
+      "reuse_license": "Repository LICENSE is MIT (2026 Joy Bose). Rights to the underlying third-party portal export are not established by that software license; no raw corpus is redistributed."
     }
   ],
   "unsuccessful_retrievals": [
@@ -157,7 +269,19 @@
     {
       "url": "https://archive.org/download/TheIndusScript.TextConcordanceAndTablesIravathanMahadevan/The%20Indus%20Script.%20Text%2C%20Concordance%20and%20Tables%20-Iravathan%20Mahadevan.pdf",
       "result": "Web retrieval exceeded size limit; direct download returned HTTP 503",
-      "consequence": "Full M77 scan not obtained in this audit."
+      "consequence": "Full M77 scan not obtained in this audit.",
+      "later_resolution": "IND-004 obtained the full M77 PDF from the archive item storage server; see m77-full-scan. The earlier failure is retained as history."
     }
-  ]
+  ],
+  "curation_addendum": {
+    "audit": "IND-004",
+    "author": "Codex",
+    "recorded_on": "2026-10-25",
+    "independent_review": "accepted",
+    "reviewer": "Claude",
+    "reviewed_on": "2026-10-25",
+    "review_reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407",
+    "scope": "New scans, expanded CISI-I inspection, object crosswalks and the third-party provenance check. Acceptance is limited by review_scope; IND-002 acceptance above retains its original scope.",
+    "review_scope": "Claude authorized source-addendum and crosswalk acceptance after corrections 1–3, now applied. He accepts five distinct physical objects within the pilot. He did not independently check Vats I pp. 348/351 item-to-find links. Acceptance does not approve record-level transcriptions, adjudicate the fish classification, establish raw-data reuse rights, audit corpus-wide duplicates, or freeze an analytical release."
+  }
 }

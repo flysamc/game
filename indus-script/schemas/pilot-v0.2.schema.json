@@ -1,0 +1,745 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Indus transcription pilot v0.2: evidence and photographic outcomes",
+  "description": "Restricted schema for this undated five-entry source inventory. Review readiness also requires the cross-record validator. Unknown dating and unfinished normalization stay null.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dataset_id",
+    "release_status",
+    "created_by",
+    "created_on",
+    "selection",
+    "evidence",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2.0"
+    },
+    "dataset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "release_status": {
+      "enum": [
+        "draft",
+        "frozen"
+      ]
+    },
+    "created_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "catalogue_ids",
+        "evidence_refs",
+        "scope",
+        "population_inference_allowed"
+      ],
+      "properties": {
+        "kind": {
+          "const": "author_selected_illustration"
+        },
+        "catalogue_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9]{4}$"
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "population_inference_allowed": {
+          "const": false
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    }
+  },
+  "$defs": {
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reviewer",
+        "reviewed_on",
+        "reference"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "accepted",
+            "needs_changes"
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "reviewed_on": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "reference": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "source_id",
+        "locator",
+        "kind",
+        "dependency_group"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "text",
+            "normalized_diagram",
+            "photograph",
+            "third_party_digitization"
+          ]
+        },
+        "dependency_group": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scheme",
+        "value",
+        "status",
+        "evidence_refs"
+      ],
+      "properties": {
+        "scheme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "source_reported",
+            "reviewed",
+            "proposed_from_primary_sources"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "label": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "namespace",
+        "value",
+        "evidence_refs"
+      ],
+      "properties": {
+        "namespace": {
+          "enum": [
+            "M77-side-line",
+            "Mahadevan-paper-side",
+            "CISI-I-face",
+            "CISI-II-face"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "mark": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "symbol",
+        "kind",
+        "position_1based",
+        "evidence_refs"
+      ],
+      "properties": {
+        "symbol": {
+          "const": "*"
+        },
+        "kind": {
+          "const": "doubtful_reading"
+        },
+        "position_1based": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "token": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sign_id",
+        "certainty"
+      ],
+      "properties": {
+        "sign_id": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{0,2}$"
+        },
+        "certainty": {
+          "enum": [
+            "not_marked_doubtful",
+            "source_doubtful"
+          ]
+        }
+      }
+    },
+    "normalization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sign_scheme",
+        "sequence_order",
+        "tokens",
+        "evidence_refs",
+        "change_log"
+      ],
+      "properties": {
+        "sign_scheme": {
+          "const": "M77-1977"
+        },
+        "sequence_order": {
+          "const": "reading_order"
+        },
+        "tokens": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/token"
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "change_log": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "surface": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "surface_id",
+        "labels",
+        "source_description",
+        "observed_from",
+        "artifact_direction",
+        "source_marks",
+        "tall_strokes_next_to_cup",
+        "normalization",
+        "photo_evidence_refs",
+        "artifact_direction_evidence_refs",
+        "content",
+        "photo_checks",
+        "content_disputed",
+        "content_assessments"
+      ],
+      "properties": {
+        "surface_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "labels": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/label"
+          }
+        },
+        "source_description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_from": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "evidence_refs",
+            "representation",
+            "display_reading_direction"
+          ],
+          "properties": {
+            "evidence_refs": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "representation": {
+              "enum": [
+                "normalized_diagram",
+                "photograph",
+                "text"
+              ]
+            },
+            "display_reading_direction": {
+              "enum": [
+                "right_to_left",
+                "left_to_right",
+                "unknown"
+              ]
+            }
+          }
+        },
+        "artifact_direction": {
+          "enum": [
+            null,
+            "right_to_left",
+            "left_to_right",
+            "single_sign",
+            "unknown"
+          ]
+        },
+        "source_marks": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "$ref": "#/$defs/mark"
+          }
+        },
+        "tall_strokes_next_to_cup": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "count",
+                "evidence_refs"
+              ],
+              "properties": {
+                "count": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "evidence_refs": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "normalization": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/normalization"
+            }
+          ]
+        },
+        "photo_evidence_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "artifact_direction_evidence_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "content": {
+          "enum": [
+            "script",
+            "non_script_motif",
+            "blank",
+            "not_reported"
+          ],
+          "description": "Working source classification, not a decipherment or a decision between disputed alternatives."
+        },
+        "photo_checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/photo_check"
+          }
+        },
+        "content_disputed": {
+          "type": "boolean",
+          "description": "True when differing classifications are recorded in content_assessments. False means no recorded conflict, not proof of linguistic status."
+        },
+        "content_assessments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/content_assessment"
+          },
+          "description": "Source-specific classifications; an inferred reading of a plate heading must be labelled reviewer_inference."
+        }
+      }
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_id",
+        "catalogue",
+        "recorded_by",
+        "recorded_on",
+        "aliases",
+        "metadata",
+        "identity",
+        "review",
+        "surfaces"
+      ],
+      "properties": {
+        "record_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "catalogue": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "scheme",
+            "text_id"
+          ],
+          "properties": {
+            "scheme": {
+              "const": "M77-1977"
+            },
+            "text_id": {
+              "type": "string",
+              "pattern": "^[0-9]{4}$"
+            }
+          }
+        },
+        "recorded_by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recorded_on": {
+          "type": "string",
+          "format": "date"
+        },
+        "aliases": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "$ref": "#/$defs/alias"
+          }
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "site",
+            "object_type",
+            "material",
+            "dating",
+            "evidence_refs"
+          ],
+          "properties": {
+            "site": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            },
+            "object_type": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            },
+            "material": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            },
+            "dating": {
+              "type": "null"
+            },
+            "evidence_refs": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "physical_object_group",
+            "evidence_refs",
+            "review"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "unresolved",
+                "resolved"
+              ]
+            },
+            "physical_object_group": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            },
+            "evidence_refs": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "review": {
+              "$ref": "#/$defs/review"
+            },
+            "review_scope": {
+              "type": "string",
+              "pattern": "\\S"
+            }
+          }
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        },
+        "surfaces": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/surface"
+          }
+        }
+      }
+    },
+    "photo_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field",
+        "outcome",
+        "checker",
+        "checked_on",
+        "evidence_refs",
+        "note"
+      ],
+      "properties": {
+        "field": {
+          "enum": [
+            "normalization",
+            "tall_strokes_next_to_cup.count",
+            "content",
+            "surface_mapping"
+          ]
+        },
+        "outcome": {
+          "enum": [
+            "confirms",
+            "consistent",
+            "illegible",
+            "contradicts"
+          ]
+        },
+        "checker": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "checked_on": {
+          "type": "string",
+          "format": "date"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "note": {
+          "type": "string",
+          "pattern": "\\S"
+        }
+      }
+    },
+    "content_assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "content",
+        "basis",
+        "evidence_refs",
+        "note"
+      ],
+      "properties": {
+        "content": {
+          "enum": [
+            "script",
+            "non_script_motif",
+            "blank",
+            "not_reported"
+          ]
+        },
+        "basis": {
+          "enum": [
+            "source_explicit",
+            "reviewer_inference"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "note": {
+          "type": "string",
+          "pattern": "\\S"
+        }
+      }
+    }
+  },
+  "$id": "https://github.com/flysamc/game/blob/indus/IND-004-pilot-curation/indus-script/schemas/pilot-v0.2.schema.json"
+}

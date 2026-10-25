@@ -1,0 +1,1668 @@
+{
+  "schema_version": "0.2.0",
+  "dataset_id": "mahadevan-fig4-pilot-v0.2",
+  "release_status": "frozen",
+  "created_by": "Codex",
+  "created_on": "2026-10-25",
+  "selection": {
+    "kind": "author_selected_illustration",
+    "catalogue_ids": [
+      "5498",
+      "4444",
+      "4456",
+      "4591",
+      "4581"
+    ],
+    "evidence_refs": [
+      "fig4"
+    ],
+    "scope": "Complete inventory of the five entries shown in Figure 4, not an exhaustive set of Harappa parallels.",
+    "population_inference_allowed": false
+  },
+  "evidence": [
+    {
+      "id": "paper-case",
+      "source_id": "mahadevan-tablet-paper",
+      "locator": "Section 3, PDF pp. 2–3",
+      "kind": "text",
+      "dependency_group": "mahadevan-tablet-paper"
+    },
+    {
+      "id": "paper-parallels",
+      "source_id": "mahadevan-tablet-paper",
+      "locator": "Section 5, PDF pp. 3–4",
+      "kind": "text",
+      "dependency_group": "mahadevan-tablet-paper"
+    },
+    {
+      "id": "fig4",
+      "source_id": "mahadevan-tablet-figures",
+      "locator": "PDF p. 3, Figure 4; reproduction of M77 printed p. 360",
+      "kind": "normalized_diagram",
+      "dependency_group": "M77-p360"
+    },
+    {
+      "id": "fig2",
+      "source_id": "mahadevan-tablet-figures",
+      "locator": "PDF p. 2, Figure 2, H-351 three-face photograph",
+      "kind": "photograph",
+      "dependency_group": "CISI-I-H351-photographs"
+    },
+    {
+      "id": "cisi230",
+      "source_id": "cisi-1-ignca-scan",
+      "locator": "PDF p. 266, printed p. 230, H-351 A/B/C",
+      "kind": "photograph",
+      "dependency_group": "CISI-I-H351-photographs"
+    },
+    {
+      "id": "m77-sign-list",
+      "source_id": "m77-full-scan",
+      "locator": "Printed pp. 32–35, PDF pp. 43–46: signs 59, 87, 89, 95, 119, 137, 176, 328, 342.",
+      "kind": "normalized_diagram",
+      "dependency_group": "M77-signary"
+    },
+    {
+      "id": "m77-codes",
+      "source_id": "m77-full-scan",
+      "locator": "Printed pp. 30–31, PDF pp. 41–42: object, face, line, direction and uncertainty codes.",
+      "kind": "text",
+      "dependency_group": "M77-codes"
+    },
+    {
+      "id": "m77-source821",
+      "source_id": "m77-full-scan",
+      "locator": "Printed p. 821, PDF p. 830: reference numbers 4001–4713 correspond to EH vol. II items 1–713.",
+      "kind": "text",
+      "dependency_group": "M77-object-list"
+    },
+    {
+      "id": "m77-source824",
+      "source_id": "m77-full-scan",
+      "locator": "Printed p. 824, PDF p. 833: 5498 = ASI 49.255.200; excavation number blank.",
+      "kind": "text",
+      "dependency_group": "M77-object-list"
+    },
+    {
+      "id": "vats348",
+      "source_id": "vats-text-scan",
+      "locator": "Printed p. 348, PDF p. 372: item 444/find 11291; item 456/find 12516; white steatite.",
+      "kind": "text",
+      "dependency_group": "Vats-object-table"
+    },
+    {
+      "id": "vats351",
+      "source_id": "vats-text-scan",
+      "locator": "Printed p. 351, PDF p. 375: item 591/find 8480 (white steatite); item 581/find 2429 (black steatite).",
+      "kind": "text",
+      "dependency_group": "Vats-object-table"
+    },
+    {
+      "id": "cisi-index371",
+      "source_id": "cisi-1-ignca-scan",
+      "locator": "Printed p. 371, PDF p. 407: H-303 / FC 3444 / find 11291 / ASI 63.11.102 / HU 587.",
+      "kind": "text",
+      "dependency_group": "CISI-I-basic-data"
+    },
+    {
+      "id": "cisi-index372",
+      "source_id": "cisi-1-ignca-scan",
+      "locator": "Printed p. 372, PDF p. 408: H-322 / FC 4177 / ASI 63.11.192 and 49.255.200; H-351 / FC 3581 / find 2429 / ASI 63.11.75. The second museum-number line belongs to H-322, not H-323.",
+      "kind": "text",
+      "dependency_group": "CISI-I-basic-data"
+    },
+    {
+      "id": "cisi2-index444",
+      "source_id": "cisi-2-archive-scan",
+      "locator": "Printed p. 444, PDF p. 479: H-916 / FC 3456 / find 12516 / HM 320; H-977 / FC 3591 / find 8480 / HM 421.",
+      "kind": "text",
+      "dependency_group": "CISI-II-basic-data"
+    },
+    {
+      "id": "cisi225",
+      "source_id": "cisi-1-ignca-scan",
+      "locator": "Printed p. 225, PDF p. 261: H-303 A and B.",
+      "kind": "photograph",
+      "dependency_group": "CISI-I-H303-photographs"
+    },
+    {
+      "id": "cisi226",
+      "source_id": "cisi-1-ignca-scan",
+      "locator": "Printed p. 226, PDF p. 262: H-322 A and B.",
+      "kind": "photograph",
+      "dependency_group": "CISI-I-H322-photographs"
+    },
+    {
+      "id": "cisi2-339",
+      "source_id": "cisi-2-archive-scan",
+      "locator": "Printed p. 339, PDF p. 374: H-916 A, A bis and B; repeated views are not separate objects.",
+      "kind": "photograph",
+      "dependency_group": "CISI-II-H916-photographs"
+    },
+    {
+      "id": "cisi2-343",
+      "source_id": "cisi-2-archive-scan",
+      "locator": "Printed p. 343, PDF p. 378: H-977 A, B/B bis, C/C bis; repeated views are not separate objects.",
+      "kind": "photograph",
+      "dependency_group": "CISI-II-H977-photographs"
+    },
+    {
+      "id": "cisi2-343-heading",
+      "source_id": "cisi-2-archive-scan",
+      "locator": "Printed p. 343, PDF p. 378: plate heading \"gharial; fish; geom.\" above Harappa 974–984. This is a plate-level heading, not an explicit per-face classification of H-977 C.",
+      "kind": "text",
+      "dependency_group": "CISI-II-H977-photographs"
+    }
+  ],
+  "records": [
+    {
+      "record_id": "m77-5498",
+      "catalogue": {
+        "scheme": "M77-1977",
+        "text_id": "5498"
+      },
+      "recorded_by": "Codex",
+      "recorded_on": "2026-10-25",
+      "aliases": [
+        {
+          "scheme": "CISI-I",
+          "value": "H-322",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source824",
+            "cisi-index372"
+          ]
+        },
+        {
+          "scheme": "FC-as-printed-in-CISI",
+          "value": "4177",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source824",
+            "cisi-index372"
+          ]
+        },
+        {
+          "scheme": "museum-registration",
+          "value": "ASI 49.255.200",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source824",
+            "cisi-index372"
+          ]
+        },
+        {
+          "scheme": "museum-registration",
+          "value": "ASI 63.11.192",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source824",
+            "cisi-index372"
+          ]
+        }
+      ],
+      "metadata": {
+        "site": "Harappa",
+        "object_type": "miniature_tablet",
+        "material": null,
+        "dating": null,
+        "evidence_refs": [
+          "paper-parallels"
+        ]
+      },
+      "identity": {
+        "status": "resolved",
+        "physical_object_group": "pilot-cisi-i-h322",
+        "evidence_refs": [
+          "m77-source824",
+          "cisi-index372",
+          "cisi226"
+        ],
+        "review": {
+          "status": "accepted",
+          "reviewer": "Claude",
+          "reviewed_on": "2026-10-25",
+          "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407"
+        },
+        "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
+      },
+      "review": {
+        "status": "accepted",
+        "reviewer": "Claude",
+        "reviewed_on": "2026-10-25",
+        "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653"
+      },
+      "surfaces": [
+        {
+          "surface_id": "m77-5498-10",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "10",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "CISI-I-face",
+              "value": "A",
+              "evidence_refs": [
+                "m77-source824",
+                "cisi-index372",
+                "cisi226",
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: raindrops-like group; two tall strokes; jar-like sign; harrow-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": null,
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "119",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "87",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "342",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "176",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Encoded the published normalized diagram using the primary M77 sign list; stored tokens in reading order.",
+              "Cross-checked the proposed CISI photograph; photographic qualifications are separate from source uncertainty. No semantic values assigned."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi226"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "consistent",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi226"
+              ],
+              "note": "Revised after Claude review: the raindrops, two strokes and jar are clear, but the harrow (176, leftmost in the photograph) is faint. The photograph is consistent with the published four-sign normalization; it does not fully confirm it."
+            }
+          ],
+          "content_disputed": false,
+          "content_assessments": []
+        },
+        {
+          "surface_id": "m77-5498-20",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "20",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "CISI-I-face",
+              "value": "B",
+              "evidence_refs": [
+                "m77-source824",
+                "cisi-index372",
+                "cisi226",
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: 2 tall strokes followed by a cup-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": {
+            "count": 2,
+            "evidence_refs": [
+              "fig4"
+            ]
+          },
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "87",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "328",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Encoded the published normalized diagram using the primary M77 sign list; stored tokens in reading order.",
+              "Cross-checked the proposed CISI photograph; photographic qualifications are separate from source uncertainty. No semantic values assigned."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi226"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "confirms",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi226"
+              ],
+              "note": "H-322 B shows a cup-like outline beside 2 tall strokes; 2 is a graphic count, not an assigned numerical meaning."
+            },
+            {
+              "field": "tall_strokes_next_to_cup.count",
+              "outcome": "confirms",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi226"
+              ],
+              "note": "H-322 B shows a cup-like outline beside 2 tall strokes; 2 is a graphic count, not an assigned numerical meaning."
+            }
+          ],
+          "content_disputed": false,
+          "content_assessments": []
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4444",
+      "catalogue": {
+        "scheme": "M77-1977",
+        "text_id": "4444"
+      },
+      "recorded_by": "Codex",
+      "recorded_on": "2026-10-25",
+      "aliases": [
+        {
+          "scheme": "CISI-I",
+          "value": "H-303",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats348",
+            "cisi-index371"
+          ]
+        },
+        {
+          "scheme": "FC-as-printed-in-CISI",
+          "value": "3444",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats348",
+            "cisi-index371"
+          ]
+        },
+        {
+          "scheme": "museum-registration",
+          "value": "ASI 63.11.102",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats348",
+            "cisi-index371"
+          ]
+        },
+        {
+          "scheme": "Harappa-excavation-number",
+          "value": "11291",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats348",
+            "cisi-index371"
+          ]
+        },
+        {
+          "scheme": "Vats-1940-item",
+          "value": "444",
+          "status": "proposed_from_primary_sources",
+          "evidence_refs": [
+            "m77-source821",
+            "vats348",
+            "cisi-index371"
+          ]
+        }
+      ],
+      "metadata": {
+        "site": "Harappa",
+        "object_type": "miniature_tablet",
+        "material": "steatite",
+        "dating": null,
+        "evidence_refs": [
+          "paper-parallels",
+          "vats348"
+        ]
+      },
+      "identity": {
+        "status": "resolved",
+        "physical_object_group": "pilot-cisi-i-h303",
+        "evidence_refs": [
+          "m77-source821",
+          "cisi-index371",
+          "cisi225"
+        ],
+        "review": {
+          "status": "accepted",
+          "reviewer": "Claude",
+          "reviewed_on": "2026-10-25",
+          "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407"
+        },
+        "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
+      },
+      "review": {
+        "status": "accepted",
+        "reviewer": "Claude",
+        "reviewed_on": "2026-10-25",
+        "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653"
+      },
+      "surfaces": [
+        {
+          "surface_id": "m77-4444-10",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "10",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "CISI-I-face",
+              "value": "A",
+              "evidence_refs": [
+                "m77-source821",
+                "vats348",
+                "cisi-index371",
+                "cisi225",
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: raindrops-like group; two tall strokes; jar-like sign; harrow-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": null,
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "119",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "87",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "342",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "176",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Encoded the published normalized diagram using the primary M77 sign list; stored tokens in reading order.",
+              "Cross-checked the proposed CISI photograph; photographic qualifications are separate from source uncertainty. No semantic values assigned."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi225"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "confirms",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi225"
+              ],
+              "note": "H-303 A shows the four graphic groups corresponding to 119, 87, 342 and 176."
+            }
+          ],
+          "content_disputed": false,
+          "content_assessments": []
+        },
+        {
+          "surface_id": "m77-4444-20",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "20",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "CISI-I-face",
+              "value": "B",
+              "evidence_refs": [
+                "m77-source821",
+                "vats348",
+                "cisi-index371",
+                "cisi225",
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: 3 tall strokes followed by a cup-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": {
+            "count": 3,
+            "evidence_refs": [
+              "fig4"
+            ]
+          },
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "89",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "328",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Encoded the published normalized diagram using the primary M77 sign list; stored tokens in reading order.",
+              "Cross-checked the proposed CISI photograph; photographic qualifications are separate from source uncertainty. No semantic values assigned."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi225"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "confirms",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi225"
+              ],
+              "note": "H-303 B shows a cup-like outline beside 3 tall strokes; 3 is a graphic count, not an assigned numerical meaning."
+            },
+            {
+              "field": "tall_strokes_next_to_cup.count",
+              "outcome": "confirms",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi225"
+              ],
+              "note": "H-303 B shows a cup-like outline beside 3 tall strokes; 3 is a graphic count, not an assigned numerical meaning."
+            }
+          ],
+          "content_disputed": false,
+          "content_assessments": []
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4456",
+      "catalogue": {
+        "scheme": "M77-1977",
+        "text_id": "4456"
+      },
+      "recorded_by": "Codex",
+      "recorded_on": "2026-10-25",
+      "aliases": [
+        {
+          "scheme": "CISI-II",
+          "value": "H-916",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats348",
+            "cisi2-index444"
+          ]
+        },
+        {
+          "scheme": "FC-as-printed-in-CISI",
+          "value": "3456",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats348",
+            "cisi2-index444"
+          ]
+        },
+        {
+          "scheme": "museum-registration",
+          "value": "HM 320",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats348",
+            "cisi2-index444"
+          ]
+        },
+        {
+          "scheme": "Harappa-excavation-number",
+          "value": "12516",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats348",
+            "cisi2-index444"
+          ]
+        },
+        {
+          "scheme": "Vats-1940-item",
+          "value": "456",
+          "status": "proposed_from_primary_sources",
+          "evidence_refs": [
+            "m77-source821",
+            "vats348",
+            "cisi2-index444"
+          ]
+        }
+      ],
+      "metadata": {
+        "site": "Harappa",
+        "object_type": "miniature_tablet",
+        "material": "steatite",
+        "dating": null,
+        "evidence_refs": [
+          "paper-parallels",
+          "vats348"
+        ]
+      },
+      "identity": {
+        "status": "resolved",
+        "physical_object_group": "pilot-cisi-ii-h916",
+        "evidence_refs": [
+          "m77-source821",
+          "cisi2-index444",
+          "cisi2-339"
+        ],
+        "review": {
+          "status": "accepted",
+          "reviewer": "Claude",
+          "reviewed_on": "2026-10-25",
+          "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407"
+        },
+        "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
+      },
+      "review": {
+        "status": "accepted",
+        "reviewer": "Claude",
+        "reviewed_on": "2026-10-25",
+        "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653"
+      },
+      "surfaces": [
+        {
+          "surface_id": "m77-4456-10",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "10",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "CISI-II-face",
+              "value": "A",
+              "evidence_refs": [
+                "m77-source821",
+                "vats348",
+                "cisi2-index444",
+                "cisi2-339",
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: raindrops-like group; two tall strokes; jar-like sign; harrow-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": null,
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "119",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "87",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "342",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "176",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Encoded the published normalized diagram using the primary M77 sign list; stored tokens in reading order.",
+              "Cross-checked the proposed CISI photograph; photographic qualifications are separate from source uncertainty. No semantic values assigned."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi2-339"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "consistent",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi2-339"
+              ],
+              "note": "H-916 A/A bis support the four-group arrangement; the oblique strokes of the first group differ in form from the standardized glyph. Retain the published M77 119 normalization without claiming every stroke is independently certain."
+            }
+          ],
+          "content_disputed": false,
+          "content_assessments": []
+        },
+        {
+          "surface_id": "m77-4456-20",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "20",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "CISI-II-face",
+              "value": "B",
+              "evidence_refs": [
+                "m77-source821",
+                "vats348",
+                "cisi2-index444",
+                "cisi2-339",
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: 3 tall strokes followed by a cup-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": {
+            "count": 3,
+            "evidence_refs": [
+              "fig4"
+            ]
+          },
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "89",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "328",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Encoded the published normalized diagram using the primary M77 sign list; stored tokens in reading order.",
+              "Cross-checked the proposed CISI photograph; photographic qualifications are separate from source uncertainty. No semantic values assigned."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi2-339"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "confirms",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi2-339"
+              ],
+              "note": "H-916 B shows a cup-like outline beside 3 tall strokes; 3 is a graphic count, not an assigned numerical meaning."
+            },
+            {
+              "field": "tall_strokes_next_to_cup.count",
+              "outcome": "confirms",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi2-339"
+              ],
+              "note": "H-916 B shows a cup-like outline beside 3 tall strokes; 3 is a graphic count, not an assigned numerical meaning."
+            }
+          ],
+          "content_disputed": false,
+          "content_assessments": []
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4591",
+      "catalogue": {
+        "scheme": "M77-1977",
+        "text_id": "4591"
+      },
+      "recorded_by": "Codex",
+      "recorded_on": "2026-10-25",
+      "aliases": [
+        {
+          "scheme": "CISI-II",
+          "value": "H-977",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats351",
+            "cisi2-index444"
+          ]
+        },
+        {
+          "scheme": "FC-as-printed-in-CISI",
+          "value": "3591",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats351",
+            "cisi2-index444"
+          ]
+        },
+        {
+          "scheme": "museum-registration",
+          "value": "HM 421",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats351",
+            "cisi2-index444"
+          ]
+        },
+        {
+          "scheme": "Harappa-excavation-number",
+          "value": "8480",
+          "status": "reviewed",
+          "evidence_refs": [
+            "m77-source821",
+            "vats351",
+            "cisi2-index444"
+          ]
+        },
+        {
+          "scheme": "Vats-1940-item",
+          "value": "591",
+          "status": "proposed_from_primary_sources",
+          "evidence_refs": [
+            "m77-source821",
+            "vats351",
+            "cisi2-index444"
+          ]
+        }
+      ],
+      "metadata": {
+        "site": "Harappa",
+        "object_type": "miniature_tablet",
+        "material": "steatite",
+        "dating": null,
+        "evidence_refs": [
+          "paper-parallels",
+          "vats351"
+        ]
+      },
+      "identity": {
+        "status": "resolved",
+        "physical_object_group": "pilot-cisi-ii-h977",
+        "evidence_refs": [
+          "m77-source821",
+          "cisi2-index444",
+          "cisi2-343"
+        ],
+        "review": {
+          "status": "accepted",
+          "reviewer": "Claude",
+          "reviewed_on": "2026-10-25",
+          "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407"
+        },
+        "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
+      },
+      "review": {
+        "status": "accepted",
+        "reviewer": "Claude",
+        "reviewed_on": "2026-10-25",
+        "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653"
+      },
+      "surfaces": [
+        {
+          "surface_id": "m77-4591-10",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "10",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "CISI-II-face",
+              "value": "C",
+              "evidence_refs": [
+                "m77-source821",
+                "vats351",
+                "cisi2-index444",
+                "cisi2-343",
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Fish-shaped figure, encoded as sign 59 in the M77 normalization. Classification as script versus a motif is disputed; retain both source assessments.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": null,
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "59",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Encoded the published normalized diagram using the primary M77 sign list; stored tokens in reading order.",
+              "Cross-checked the proposed CISI photograph; photographic qualifications are separate from source uncertainty. No semantic values assigned.",
+              "After Claude review, retained M77 sign 59 and added the competing motif assessment; no token or source uncertainty was changed."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi2-343"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "consistent",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi2-343"
+              ],
+              "note": "H-977 C/C bis are consistent with the fish-shaped figure encoded as 59 by M77; wear and oblique presentation limit a stronger graphic comparison. This outcome does not settle whether the figure functions as script or iconography."
+            }
+          ],
+          "content_disputed": true,
+          "content_assessments": [
+            {
+              "content": "script",
+              "basis": "source_explicit",
+              "evidence_refs": [
+                "fig4",
+                "m77-sign-list"
+              ],
+              "note": "Mahadevan includes this figure in the normalized text as sign 59. This records his encoding, not a claim about its phonetic or semantic value."
+            },
+            {
+              "content": "non_script_motif",
+              "basis": "reviewer_inference",
+              "evidence_refs": [
+                "cisi2-343-heading",
+                "cisi2-343"
+              ],
+              "note": "Claude proposed, and Codex agrees on inspection, that the plate heading and large fish figure suggest an iconographic treatment by CISI-II. The heading covers the plate as a whole; the inference is not an explicit per-face editorial ruling and does not establish that the mark cannot function as script."
+            }
+          ]
+        },
+        {
+          "surface_id": "m77-4591-20",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "20",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "CISI-II-face",
+              "value": "A",
+              "evidence_refs": [
+                "m77-source821",
+                "vats351",
+                "cisi2-index444",
+                "cisi2-343",
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: raindrops-like group; two tall strokes; jar-like sign; harrow-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [
+            {
+              "symbol": "*",
+              "kind": "doubtful_reading",
+              "position_1based": 1,
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "tall_strokes_next_to_cup": null,
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "119",
+                "certainty": "source_doubtful"
+              },
+              {
+                "sign_id": "87",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "342",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "176",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Encoded the published normalized diagram using the primary M77 sign list; stored tokens in reading order.",
+              "Cross-checked the proposed CISI photograph; photographic qualifications are separate from source uncertainty. No semantic values assigned."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi2-343"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "consistent",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi2-343"
+              ],
+              "note": "H-977 A supports the main arrangement; the first reading-order group lies by a worn/sloping edge. Retain the source asterisk on 119; the photo does not remove that doubt."
+            }
+          ],
+          "content_disputed": false,
+          "content_assessments": []
+        },
+        {
+          "surface_id": "m77-4591-30",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "30",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "CISI-II-face",
+              "value": "B",
+              "evidence_refs": [
+                "m77-source821",
+                "vats351",
+                "cisi2-index444",
+                "cisi2-343",
+                "fig4"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: 4 tall strokes followed by a cup-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": {
+            "count": 4,
+            "evidence_refs": [
+              "fig4"
+            ]
+          },
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "95",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "328",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Encoded the published normalized diagram using the primary M77 sign list; stored tokens in reading order.",
+              "Cross-checked the proposed CISI photograph; photographic qualifications are separate from source uncertainty. No semantic values assigned."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi2-343"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "consistent",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi2-343"
+              ],
+              "note": "Revised after Claude review: B/B bis preserve four intact strokes, but the tablet is broken at the cup end and only part of 328 survives. The full normalization is consistent; the separate stroke-count outcome remains confirms."
+            },
+            {
+              "field": "tall_strokes_next_to_cup.count",
+              "outcome": "confirms",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi2-343"
+              ],
+              "note": "H-977 B/B bis preserve four intact tall strokes. This confirms the graphic count only; the broken cup end leaves the full normalization qualified."
+            }
+          ],
+          "content_disputed": false,
+          "content_assessments": []
+        }
+      ]
+    },
+    {
+      "record_id": "m77-4581",
+      "catalogue": {
+        "scheme": "M77-1977",
+        "text_id": "4581"
+      },
+      "recorded_by": "Codex",
+      "recorded_on": "2026-10-25",
+      "aliases": [
+        {
+          "scheme": "CISI-I",
+          "value": "H-351",
+          "status": "reviewed",
+          "evidence_refs": [
+            "paper-case"
+          ]
+        },
+        {
+          "scheme": "Vats",
+          "value": "581",
+          "status": "source_reported",
+          "evidence_refs": [
+            "paper-case"
+          ]
+        },
+        {
+          "scheme": "ASI-accession",
+          "value": "63.11/75",
+          "status": "reviewed",
+          "evidence_refs": [
+            "paper-case"
+          ]
+        },
+        {
+          "scheme": "Excavation-number",
+          "value": "2429",
+          "status": "reviewed",
+          "evidence_refs": [
+            "paper-case"
+          ]
+        },
+        {
+          "scheme": "FC-as-printed-in-CISI",
+          "value": "3581",
+          "status": "reviewed",
+          "evidence_refs": [
+            "paper-case",
+            "m77-source821",
+            "vats351",
+            "cisi-index372"
+          ]
+        }
+      ],
+      "metadata": {
+        "site": "Harappa",
+        "object_type": "miniature_tablet",
+        "material": "steatite",
+        "dating": null,
+        "evidence_refs": [
+          "paper-case"
+        ]
+      },
+      "identity": {
+        "status": "resolved",
+        "physical_object_group": "pilot-cisi-i-h351",
+        "evidence_refs": [
+          "paper-case",
+          "m77-source821",
+          "cisi-index372",
+          "cisi230"
+        ],
+        "review": {
+          "status": "accepted",
+          "reviewer": "Claude",
+          "reviewed_on": "2026-10-25",
+          "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407"
+        },
+        "review_scope": "Object crosswalk and distinct physical identity within this five-object pilot. No corpus-wide duplicate or production-group adjudication. Vats I pp. 348/351 item-to-find links were not independently checked by Claude; see the linked review."
+      },
+      "review": {
+        "status": "accepted",
+        "reviewer": "Claude",
+        "reviewed_on": "2026-10-25",
+        "reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653"
+      },
+      "surfaces": [
+        {
+          "surface_id": "m77-4581-10",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "10",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "Mahadevan-paper-side",
+              "value": "Side 3",
+              "evidence_refs": [
+                "paper-case"
+              ]
+            },
+            {
+              "namespace": "CISI-I-face",
+              "value": "C",
+              "evidence_refs": [
+                "cisi230"
+              ]
+            }
+          ],
+          "source_description": "Project shape description: X-shaped sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": null,
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "137",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "paper-case",
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Typed the paper's normalized sign IDs in its reading order; no sign merger, repair, or cross-face concatenation."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi230",
+            "fig2"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "confirms",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi230"
+              ],
+              "note": "H-351 C shows the X-shaped sign corresponding to M77 137."
+            }
+          ],
+          "content_disputed": false,
+          "content_assessments": []
+        },
+        {
+          "surface_id": "m77-4581-20",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "20",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "Mahadevan-paper-side",
+              "value": "Side 1",
+              "evidence_refs": [
+                "paper-case"
+              ]
+            },
+            {
+              "namespace": "CISI-I-face",
+              "value": "A",
+              "evidence_refs": [
+                "cisi230"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: raindrops-like group; two tall strokes; jar-like sign; harrow-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [
+            {
+              "symbol": "*",
+              "kind": "doubtful_reading",
+              "position_1based": 1,
+              "evidence_refs": [
+                "fig4"
+              ]
+            }
+          ],
+          "tall_strokes_next_to_cup": null,
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "119",
+                "certainty": "source_doubtful"
+              },
+              {
+                "sign_id": "87",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "342",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "176",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "paper-case",
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Typed the paper's normalized sign IDs in its reading order; no sign merger, repair, or cross-face concatenation.",
+              "Retained the first-sign asterisk from Figure 4, although the paper's prose prints 119 without it."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi230",
+            "fig2"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "consistent",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi230"
+              ],
+              "note": "H-351 A supports the arrangement but the first group is worn. Retain the source asterisk on 119, as also noted by Claude in the IND-002 review."
+            }
+          ],
+          "content_disputed": false,
+          "content_assessments": []
+        },
+        {
+          "surface_id": "m77-4581-30",
+          "labels": [
+            {
+              "namespace": "M77-side-line",
+              "value": "30",
+              "evidence_refs": [
+                "fig4"
+              ]
+            },
+            {
+              "namespace": "Mahadevan-paper-side",
+              "value": "Side 2",
+              "evidence_refs": [
+                "paper-case"
+              ]
+            },
+            {
+              "namespace": "CISI-I-face",
+              "value": "B",
+              "evidence_refs": [
+                "cisi230"
+              ]
+            }
+          ],
+          "source_description": "Project shape description in diagram reading order: 4 tall strokes followed by a cup-like sign.",
+          "observed_from": {
+            "evidence_refs": [
+              "fig4"
+            ],
+            "representation": "normalized_diagram",
+            "display_reading_direction": "right_to_left"
+          },
+          "artifact_direction": null,
+          "source_marks": [],
+          "tall_strokes_next_to_cup": {
+            "count": 4,
+            "evidence_refs": [
+              "fig4"
+            ]
+          },
+          "normalization": {
+            "sign_scheme": "M77-1977",
+            "sequence_order": "reading_order",
+            "tokens": [
+              {
+                "sign_id": "95",
+                "certainty": "not_marked_doubtful"
+              },
+              {
+                "sign_id": "328",
+                "certainty": "not_marked_doubtful"
+              }
+            ],
+            "evidence_refs": [
+              "paper-case",
+              "fig4",
+              "m77-sign-list"
+            ],
+            "change_log": [
+              "Typed the paper's normalized sign IDs in its reading order; no sign merger, repair, or cross-face concatenation."
+            ]
+          },
+          "photo_evidence_refs": [
+            "cisi230",
+            "fig2"
+          ],
+          "artifact_direction_evidence_refs": [],
+          "content": "script",
+          "photo_checks": [
+            {
+              "field": "normalization",
+              "outcome": "consistent",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi230"
+              ],
+              "note": "Four strokes are consistent with H-351 B, but edge damage and a slanting stroke prevent an unqualified photographic count."
+            },
+            {
+              "field": "tall_strokes_next_to_cup.count",
+              "outcome": "consistent",
+              "checker": "Codex",
+              "checked_on": "2026-10-25",
+              "evidence_refs": [
+                "cisi230"
+              ],
+              "note": "Four strokes are consistent with H-351 B, but edge damage and a slanting stroke prevent an unqualified photographic count."
+            }
+          ],
+          "content_disputed": false,
+          "content_assessments": []
+        }
+      ]
+    }
+  ]
+}

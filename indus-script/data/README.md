@@ -1,8 +1,8 @@
 # Pilot inventory
 
-`pilot-v0.1.json` is a **draft curation inventory**, not a decoded text corpus. It holds five source-selected catalogue records and twelve faces. Only H-351's three faces have provisional sign-number sequences. Nine faces remain untranscribed, and independent reviews and physical-object duplicate decisions remain pending.
+[`pilot-v0.2.json`](pilot-v0.2.json) is the **frozen, independently reviewed five-object pilot**, released on 25 October 2026: twelve normalized faces, photographic checks for every face, two preserved source-doubt marks and one documented classification disagreement. [Claude accepted all five record transcriptions and the ambiguity representation](https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653), following the earlier source and identity acceptance. See the [release record](../notes/IND-004-pilot-release.md) and [file hashes](../releases/pilot-v0.2.json). This selected pilot supports bounded descriptions, not population inference, an H001 test or decipherment.
 
-Read the [pilot design](../notes/IND-003-pilot-design.md) before editing. The [JSON Schema](../schemas/pilot-v0.1.schema.json) defines allowed fields; the validator also checks cross-record provenance and review conditions. Source evidence is registered in the [manifest](../sources/manifest.json).
+[`pilot-v0.1.json`](pilot-v0.1.json) and its schema are retained unchanged as history: three normalized faces and nine gaps at that stage. The [original design](../notes/IND-003-pilot-design.md) is historical; v0.2 adds the photo-outcome and surface-content corrections requested in review. Source evidence is registered in the [manifest](../sources/manifest.json).
 
 From the repository root, with Python 3.11 or newer:
 
@@ -11,18 +11,23 @@ python3 -m venv indus-script/.venv
 indus-script/.venv/bin/python -m pip install -r indus-script/requirements.txt
 indus-script/.venv/bin/python indus-script/scripts/validate_pilot.py
 indus-script/.venv/bin/python -m unittest discover -s indus-script/tests -v
-```
-
-The validator reports a valid draft, **5 catalogue records, 12 faces, 3 normalized faces and 2 faces with source doubt**. It also reports that analysis is not ready. These are file-inventory counts, not estimated script frequencies or independent artifact counts.
-
-To enforce the analysis gate:
-
-```sh
 indus-script/.venv/bin/python indus-script/scripts/validate_pilot.py --require-ready
 ```
 
-For this draft, the command intentionally exits **1** and lists the missing evidence/reviews. Structural or provenance inconsistencies exit **2**; a valid draft without `--require-ready` exits **0**. The program does not alter the data. All paths are resolved relative to the script by default, so it can also run outside the repository root.
+The default validator uses the [v0.2 schema](../schemas/pilot-v0.2.schema.json). It reports **5 catalogue records, 12 faces, 12 normalized faces and 2 faces with source doubt**, plus one face with disputed content classification. There are 17 field-level photographic outcomes (9 confirms, 8 consistent), not 17 objects or photographs. These are file-inventory counts, not estimated script frequencies.
 
-The schema's fixed M77-1977 inventory uses sign IDs 1–417 as strings. It does not accept ICIT IDs or infer unknown IDs from shape names. The source marks and source-specific side labels must survive every edit. Equal transcriptions do not establish equal object identity.
+Both normal validation and `--require-ready` now exit **0** for the frozen v0.2 release, with no blockers. A structurally valid unfinished draft still exits **1** with `--require-ready`; structural/provenance inconsistencies exit **2**. The program does not alter the data. Paths resolve relative to the script, so it can run outside the repository root. Freeze preserves the qualified readings and content disagreement; it does not make them certain. Use a new dataset version for subsequent curation.
 
-Do not interpret a green validation result as independent epigraphic review. The test suite covers failure cases and a clearly labelled synthetic readiness case; it does not write a reviewer or approval into the research files.
+For the preserved v0.1 inventory, pass both matching paths:
+
+```sh
+indus-script/.venv/bin/python indus-script/scripts/validate_pilot.py --data indus-script/data/pilot-v0.1.json --schema indus-script/schemas/pilot-v0.1.schema.json
+```
+
+M77-1977 sign IDs 1–417 are strings, not decoded values. The pilot rejects `000`: M77's illegibility marker may cover an unknown-length span. Before broader import, preserve such spans explicitly rather than assigning a single unknown sign or dropping them.
+
+For each surface, keep `content` separate from its normalized reading. `non_script_motif` and `blank` require no invented script tokens; `not_reported` does not imply blankness. A non-script face without an M77 code can use a CISI face label and stable ID such as `m77-XXXX-cisi-i-C`. This is a format example, not an additional pilot face.
+
+`content` is the working source classification. `content_disputed` and `content_assessments` preserve alternatives with evidence and distinguish an explicit source encoding from reviewer inference. H-977 C retains M77 sign 59 while recording the competing fish-motif assessment inferred from the CISI-II plate heading. False means no recorded disagreement, not certain linguistic status. Independent review may accept the documented ambiguity without choosing a winner. The validator reports disputed faces even after review; later analyses must explicitly handle their alternative classifications.
+
+`photo_evidence_refs` lists consulted photographs. `photo_checks` records what each photograph supports, with a checker and explanation. `consistent` is qualified support; `illegible` and `contradicts` prevent freezing until resolved. Neither photographic inspection nor green validation is independent review. Synthetic test reviews exist only in memory and never write acceptance to the research files. Equal transcriptions do not establish object identity, and this selected pilot never permits population inference.

@@ -1,0 +1,48 @@
+{
+  "release_id": "pilot-v0.2",
+  "released_on": "2026-10-25",
+  "released_by": "Codex",
+  "status": "frozen",
+  "dataset_id": "mahadevan-fig4-pilot-v0.2",
+  "reviewed_content_commit": "646a3dcc80e07e86ae63e4b5c0b8c7bfbd69c452",
+  "record_review_reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645371653",
+  "source_and_identity_review_reference": "https://github.com/flysamc/game/pull/4#pullrequestreview-5645307407",
+  "scope": "Five source-selected objects, twelve separately recorded faces. Bounded descriptive use only; no population inference or H001 test. Content disagreement and photographic qualifications retained. Vats item-to-find links remain Codex-checked only.",
+  "files": [
+    {
+      "path": "indus-script/data/pilot-v0.2.json",
+      "sha256": "78aa12bab7529ec93e30c798165edeb93ba59375b89f3391bbbfa8b040cf7840"
+    },
+    {
+      "path": "indus-script/schemas/pilot-v0.2.schema.json",
+      "sha256": "b5c98dc7609e39c335ea0f95f07511b59d46db323d80dd6fddeac4838c85b3ad"
+    },
+    {
+      "path": "indus-script/sources/manifest.json",
+      "sha256": "fdc5affc40c901d3e1382f1bca3a7b07046d906e378c22edfbd71ff96cef0b32"
+    },
+    {
+      "path": "indus-script/scripts/validate_pilot.py",
+      "sha256": "e88706e0165a2d42337b0580c4f2d1040bbf861e084fc6bdd57b44a1d9f72afc"
+    },
+    {
+      "path": "indus-script/requirements.txt",
+      "sha256": "0aa9200c9c682799cad0b6d1c3892dc89e817a01ff0ebd13c4426999a67d6862"
+    },
+    {
+      "path": "indus-script/tests/test_validate_pilot.py",
+      "sha256": "19069f09739e76b1484dab06b6c0bb2a518f873e171ccdb96c8d100d0ed7ca61"
+    },
+    {
+      "path": "indus-script/tests/test_validate_pilot_v02.py",
+      "sha256": "d5771e37ed82e29bdd6dca426388d03be4ed0d8726094963a4c0b3b8844e7c35"
+    }
+  ],
+  "validation": {
+    "python": "3.12.14",
+    "tests_passed": 35,
+    "normal_validator_exit_code": 0,
+    "require_ready_exit_code": 0,
+    "population_inference_allowed": false
+  }
+}

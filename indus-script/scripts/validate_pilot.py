@@ -48,6 +48,8 @@ def validate(data, schema, manifest):
     if errors:
         return errors, {"valid": False, "ready_for_descriptive_analysis": False}
 
+    v02 = data["schema_version"] == "0.2.0"
+
     if not isinstance(manifest, dict) or not isinstance(manifest.get("sources"), list) or any(
         not isinstance(s, dict) or not isinstance(s.get("id"), str) or not s["id"].strip()
         for s in manifest.get("sources", [])
@@ -89,6 +91,14 @@ def validate(data, schema, manifest):
     )
     if not source_reviewed:
         blockers.append("IND-002 source audit has no recorded independent acceptance.")
+    addendum = manifest.get("curation_addendum", {})
+    addendum_reviewed = (
+        addendum.get("independent_review") == "accepted"
+        and all(isinstance(addendum.get(k), str) and addendum[k].strip() for k in ("reviewer", "reviewed_on", "review_reference"))
+        and addendum["reviewer"].strip().casefold() != addendum.get("author", "").strip().casefold()
+    )
+    if v02 and not addendum_reviewed:
+        blockers.append("IND-004 source additions and crosswalks have no recorded independent acceptance.")
 
     aliases = defaultdict(list)
     surfaces = []
@@ -115,7 +125,7 @@ def validate(data, schema, manifest):
             missing.append("independent transcription review")
         if identity["status"] != "resolved":
             missing.append("object identity/duplicate adjudication")
-        unnormalized = sum(s["normalization"] is None for s in record["surfaces"])
+        unnormalized = sum(s["normalization"] is None and s.get("content", "script") == "script" for s in record["surfaces"])
         unphotographed = sum(not s["photo_evidence_refs"] for s in record["surfaces"])
         if unnormalized:
             missing.append(f"normalization on {unnormalized} face(s)")
@@ -132,14 +142,62 @@ def validate(data, schema, manifest):
             if len(set(namespaces)) != len(namespaces):
                 errors.append(f"{sid}: duplicate label namespace")
             m77 = [x["value"] for x in labels if x["namespace"] == "M77-side-line"]
-            if len(m77) != 1 or not re.fullmatch(r"[0-6][0-39]", m77[0]) or sid != f"{rid}-{m77[0]}":
+            cisi = [x for x in labels if x["namespace"] in ("CISI-I-face", "CISI-II-face")]
+            non_script_anchor = (
+                v02 and surface["content"] != "script" and not m77 and len(cisi) == 1
+                and re.fullmatch(r"[A-Z][0-9]?", cisi[0]["value"])
+                and sid == f"{rid}-{cisi[0]['namespace'].removesuffix('-face').lower()}-{cisi[0]['value']}"
+            )
+            if not non_script_anchor and (len(m77) != 1 or not re.fullmatch(r"[0-6][0-39]", m77[0]) or sid != f"{rid}-{m77[0]}"):
                 errors.append(f"{sid}: invalid M77 side/line label or surface anchor")
             for reference in surface["photo_evidence_refs"]:
                 if reference in evidence and evidence[reference]["kind"] != "photograph":
                     errors.append(f"{sid}: photograph check points to non-photograph {reference}")
             for reference in surface["observed_from"]["evidence_refs"]:
-                if reference in evidence and evidence[reference]["kind"] != "normalized_diagram":
+                if reference in evidence and evidence[reference]["kind"] != surface["observed_from"]["representation"]:
                     errors.append(f"{sid}: diagram observation points to a different representation {reference}")
+            if v02:
+                content = surface["content"]
+                assessments = surface["content_assessments"]
+                classifications = {a["content"] for a in assessments}
+                if assessments and content not in classifications:
+                    errors.append(f"{sid}: working content must be represented in the source assessments")
+                if surface["content_disputed"] != (len(classifications) > 1):
+                    errors.append(f"{sid}: content_disputed must preserve differing source assessments")
+                for assessment in assessments:
+                    if not any(evidence.get(ref, {}).get("kind") in ("text", "normalized_diagram", "photograph") for ref in assessment["evidence_refs"]):
+                        errors.append(f"{sid}: content assessment needs primary text or image evidence")
+                if surface["content_disputed"] and record["review"]["status"] != "accepted":
+                    blockers.append(f"{sid}: content classification alternatives need independent review")
+                if content != "script" and (surface["normalization"] is not None or surface["source_marks"] or surface["tall_strokes_next_to_cup"] is not None):
+                    errors.append(f"{sid}: non-script or unreported content cannot assert script tokens, marks or a cup count")
+                if content == "not_reported":
+                    blockers.append(f"{sid}: surface content is not reported; do not infer blankness")
+                checks = surface["photo_checks"]
+                for check in checks:
+                    if check["field"] == "normalization" and surface["normalization"] is None:
+                        errors.append(f"{sid}: normalization check has no normalized reading to assess")
+                    if check["field"] == "tall_strokes_next_to_cup.count" and surface["tall_strokes_next_to_cup"] is None:
+                        errors.append(f"{sid}: count check has no stroke count to assess")
+                    for reference in check["evidence_refs"]:
+                        if reference in evidence and evidence[reference]["kind"] != "photograph":
+                            errors.append(f"{sid}: photo outcome points to non-photograph {reference}")
+                        if reference not in surface["photo_evidence_refs"]:
+                            errors.append(f"{sid}: photo outcome references an unlisted consulted photograph {reference}")
+                    if check["outcome"] in ("illegible", "contradicts"):
+                        blockers.append(f"{sid}: {check['field']} photo outcome is {check['outcome']}; adjudication required")
+                required_fields = {"normalization"} if content == "script" else {"content"}
+                if surface["tall_strokes_next_to_cup"] is not None:
+                    required_fields.add("tall_strokes_next_to_cup.count")
+                checked_fields = {c["field"] for c in checks}
+                for field in sorted(required_fields - checked_fields):
+                    blockers.append(f"{sid}: missing explicit photographic outcome for {field}")
+                if surface["tall_strokes_next_to_cup"] is not None and surface["normalization"] is not None:
+                    count = surface["tall_strokes_next_to_cup"]["count"]
+                    expected = {1: "86", 2: "87", 3: "89", 4: "95"}.get(count)
+                    actual = [t["sign_id"] for t in surface["normalization"]["tokens"]]
+                    if expected is None or actual != [expected, "328"]:
+                        errors.append(f"{sid}: pilot stroke count disagrees with its two-sign M77 normalization")
             if surface["artifact_direction"] is not None and not surface["artifact_direction_evidence_refs"]:
                 errors.append(f"{sid}: artifact direction requires evidence")
             if surface["artifact_direction"] is None and surface["artifact_direction_evidence_refs"]:
@@ -151,6 +209,8 @@ def validate(data, schema, manifest):
             normalization = surface["normalization"]
             if normalization is None:
                 continue
+            if v02 and not any(evidence.get(ref, {}).get("kind") in ("text", "normalized_diagram", "photograph") for ref in normalization["evidence_refs"]):
+                errors.append(f"{sid}: third-party digitization cannot be sole normalization evidence")
             tokens = normalization["tokens"]
             if any(p > len(tokens) for p in positions):
                 errors.append(f"{sid}: mark position exceeds normalized sequence length")
@@ -176,6 +236,9 @@ def validate(data, schema, manifest):
         "surfaces": len(surfaces),
         "normalized_surfaces": sum(s["normalization"] is not None for s in surfaces),
         "surfaces_with_source_doubt": sum(bool(s["source_marks"]) for s in surfaces),
+        "content_disputed_surfaces": [s["surface_id"] for s in surfaces if s.get("content_disputed", False)],
+        "photo_check_outcomes": dict(Counter(c["outcome"] for s in surfaces for c in s.get("photo_checks", []))),
+        "photo_outcomes_are_independent_review": False,
         "ready_for_descriptive_analysis": not errors and not blockers,
         "population_inference_allowed": False,
         "blockers": blockers,
@@ -185,8 +248,8 @@ def validate(data, schema, manifest):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--data", type=Path, default=ROOT / "data/pilot-v0.1.json")
-    parser.add_argument("--schema", type=Path, default=ROOT / "schemas/pilot-v0.1.schema.json")
+    parser.add_argument("--data", type=Path, default=ROOT / "data/pilot-v0.2.json")
+    parser.add_argument("--schema", type=Path, default=ROOT / "schemas/pilot-v0.2.schema.json")
     parser.add_argument("--manifest", type=Path, default=ROOT / "sources/manifest.json")
     parser.add_argument("--require-ready", action="store_true")
     args = parser.parse_args()

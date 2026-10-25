@@ -1,7 +1,7 @@
 # Indus script research
 
 Started: 25 October 2026  
-Status: IND-003 draft pilot design and data examples prepared; independent source/design review pending. No decipherment or corpus statistics yet.
+Status: the five-object v0.2 pilot is frozen after Claude's source, identity and record-level transcription reviews. Broader family curation is next; H001 remains unlocked. No decipherment or corpus statistics yet.
 
 This folder is the shared research workspace for Sam, Codex, Claude, and other contributors. The goal is to investigate how much structure, function, meaning, and eventually pronunciation can be recovered from Indus inscriptions through reproducible tests.
 
@@ -12,12 +12,12 @@ Start here, then read [COORDINATION.md](COORDINATION.md) for the current task an
 - An initial literature scan covered comparative/rebus readings, statistical models, cryptanalysis, sign variants, archaeological interpretations, and recent neural approaches.
 - Mahadevan's published normalized transcription of Harappa tablet **H-351** was read and selected as a first case.
 - A provisional hypothesis and an ordered research plan were defined.
-- [IND-002 source audit](notes/IND-002-source-audit.md): checked H-351 against the CISI photograph and separate illustration supplement; identified five candidate catalogue entries, source-specific surface labels, and two doubtful sign readings. Independent review is pending.
+- [IND-002 source audit](notes/IND-002-source-audit.md): checked H-351 against the CISI photograph and separate illustration supplement; identified five candidate catalogue entries, source-specific surface labels, and two doubtful sign readings. [Claude accepted the source audit with additions](notes/IND-002-review-claude.md); PR #1 is merged.
 - Added a [source manifest](sources/manifest.json) with retrieval details and hashes for downloaded reference PDFs.
-- [IND-003 pilot design](notes/IND-003-pilot-design.md) defines source selection, per-face records and duplicate-handling rules. The [draft inventory](data/README.md) holds five catalogue records and twelve faces; only H-351's three faces currently have sign-number sequences.
-- Added a JSON Schema and runnable validator. Eighteen regression tests pass; the draft explicitly fails the analysis-readiness gate because evidence and reviews are still missing.
+- [IND-003 pilot design](notes/IND-003-pilot-design.md) defines source selection, per-face records and duplicate-handling rules. [IND-004 curation](notes/IND-004-pilot-curation.md) completes all twelve normalized faces, with accepted photographic crosswalks to H-322, H-303, H-916, H-977 and H-351. The [v0.2 inventory](data/README.md) retains qualified readings, both doubtful signs and the fish face's competing script/motif assessments. The [review response](notes/IND-004-review-response.md) records the scope of Claude's acceptance and the Vats links he could not independently inspect.
+- [Released pilot v0.2](notes/IND-004-pilot-release.md) after Claude accepted all five record transcriptions and the fish ambiguity representation. Thirty-five tests pass and the readiness gate now passes. The broader [H001 proposal](https://github.com/flysamc/game/pull/3) is at revision 3.1 and remains unlocked; the selected pilot is not its test dataset.
 
-This was an initial literature review, not an exhaustive systematic review. **Reference scans have been downloaded and H-351's published photograph has been visually checked. A small machine-readable draft inventory has been created, but no independently validated analytical corpus is available; no corpus statistics, sign pronunciation or translation have been established.** Numbers and results below belong to the cited studies unless explicitly marked as our own future results.
+This was an initial literature review, not an exhaustive systematic review. **Published photographs and source normalizations for the five pilot records have been independently reviewed. The frozen machine-readable pilot contains only source-selected examples; a representative corpus is not yet curated. No corpus statistics, sign pronunciation or translation have been established.** Numbers and results below belong to the cited studies unless explicitly marked as our own future results.
 
 ## Starting position
 
@@ -73,7 +73,7 @@ Mahadevan describes related Harappa tablets with the same four-sign group on one
 
 ### Hypothesis H001 — fixed label with variable numerical field
 
-**Status: proposed; five illustrated candidates identified in IND-002, with independent transcription review and hypothesis testing still pending.**
+**Status: proposed; the five illustrated examples are independently reviewed and frozen, but broader family curation and hypothesis testing remain pending.**
 
 Some tablets may combine a relatively fixed label with a variable numerical field.
 
@@ -108,7 +108,7 @@ For model tests, group duplicate and related records before splitting, fit trans
 
 Near-term progress means a verified dataset, replicated structural findings, and clearly testable functional hypotheses. Stronger progress would be a fixed interpretation that predicts independent inscriptions and fits external evidence with few exceptions. Model agreement or two assistants agreeing does not replace independent evidence.
 
-The immediate handoff is **review of the [IND-002 source audit](notes/IND-002-source-audit.md) and [IND-003 pilot design](notes/IND-003-pilot-design.md)**, followed by completing the object crosswalks and transcriptions in IND-004. See [COORDINATION.md](COORDINATION.md) for status. Do not start translation generation or large models before the source and transcription checks.
+The immediate handoff is **broader strokes-plus-cup family discovery and curation**, preserving the frozen pilot and recording the search rules before extraction. Agree on the still-unlocked H001 plan before expanded label/count tabulation. See [COORDINATION.md](COORDINATION.md) for status. Do not start translation generation or large models before the source and transcription checks.
 
 [yadav]: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009506
 [parpola]: https://tuhat.helsinki.fi/ws/portalfiles/portal/127256488/Parpola_A_2009._Hind_leg_fish_in_the_Indus_script._Scripta1_37_76.pdf
