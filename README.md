@@ -19,3 +19,13 @@ exposed faces only with per-vertex ambient occlusion baked into the vertex
 colours. Water is a separate translucent shader surface whose colour and
 opacity follow the depth below it. Shadows come from a single directional
 sun; a two-pass tilt-shift blur and a light colour grade finish the frame.
+
+# Penguin Donut Shop
+
+`donut-shop.html` is a hand-drawn style 2D scene on a canvas: a muted shopfront
+with a pastry display case, a COFFEE / TEA / MILK sign, hanging bulbs, a mauve
+door, and two animated penguins (one peeking over the case, one reaching for the
+donut machine in the wall). Lines are drawn with a seeded "sketchy" stroke so
+they wobble, overshoot and break like ink; character lines re-jitter on a
+three-frame cycle like hand-drawn animation, and a paper grain sits on top.
+Open the file in a browser; it fits any screen at 16:9.

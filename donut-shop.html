@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
+<!-- artifact:start -->
+<title>Penguin Donut Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap">
+<style>
+  /* Layout: one 16:9 hand-drawn frame, letterboxed to fit any screen. */
+  :root {
+    --letterbox: #16171d;
+    color-scheme: dark;
+  }
+  html, body { height: 100%; }
+  body { margin: 0; overflow: hidden; background: var(--letterbox); display: grid; place-items: center; }
+  canvas { display: block; }
+</style>
+
+<canvas id="scene" role="img" aria-label="A hand-drawn shopfront with a pastry display case, a sign reading coffee, tea, milk, and two small penguins"></canvas>
+
+<script>
+(() => {
+'use strict';
+
+// The frame is drawn on a 2000 x 1125 logical canvas (16:9).
+const FW = 2000, FH = 1125, OY = 110; // OY: reference art was laid out with its top edge at y = 110
+
+const C = {
+  ink: '#2e3042',
+  inkSoft: '#3d4053',
+  wallLight: '#d6d7df',
+  wallLight2: '#cbccd6',
+  wallMid: '#babbc7',
+  pillar: '#8f909f',
+  pillarLight: '#a3a4b2',
+  header: '#a9aab8',
+  ceil: '#5b6881',
+  interior: '#56637b',
+  interiorDark: '#4a566e',
+  cabinet: '#3f4a61',
+  sign: '#c8b8ae',
+  signEdge: '#b5a39b',
+  counterTop: '#cdbcb4',
+  counterFront: '#b6b0c3',
+  caseFrame: '#6e6169',
+  caseGlass: '#4d596f',
+  shelf: '#bba9a3',
+  baseTop: '#c9b9b2',
+  baseFront: '#bdb7c7',
+  step: '#c7c2cc',
+  sidewalk: '#d2cfd8',
+  pastry: '#e4d0b3',
+  bulb: '#d5d6de',
+  socket: '#9c9daa',
+  bag: '#dac7ac',
+  box: '#7b6559',
+  regDark: '#47526a',
+  transomFrame: '#7c7481',
+  transomGlass: '#5f7193',
+  band: '#7f7279',
+  doorFrame: '#7e6572',
+  door: '#8f6d7b',
+  doorPanel: '#94717f',
+  doorGlass: '#5f6a81',
+  threshold: '#86717a',
+  siding: '#56627f',
+  machine: '#a19fae',
+  machineIn: '#3b3c4b',
+  donut: '#d9a43d',
+  donutDark: '#a8762a',
+  penguin: '#3e4372',
+  penguinHi: '#5a609a',
+  belly: '#ebebf1',
+  beak: '#e2b04a',
+  crate: '#cdbba8',
+  crateDark: '#b8a591',
+};
+
+// ---------------------------------------------------------------------------
+// Sketchy line toolkit. A seeded RNG keeps every redraw identical.
+// ---------------------------------------------------------------------------
+let seed = 1;
+const rnd = () => (seed = (seed * 16807) % 2147483647, (seed - 1) / 2147483646);
+const rr = a => (rnd() * 2 - 1) * a;
+let g; // active 2D context
+
+function L(x1, y1, x2, y2, w = 2.5, col = C.ink) {
+  const len = Math.hypot(x2 - x1, y2 - y1);
+  if (len < 0.5) return;
+  const ux = (x2 - x1) / len, uy = (y2 - y1) / len;
+  const ax = x1 - ux * (1 + rr(2)), ay = y1 - uy * (1 + rr(2));
+  const bx = x2 + ux * (1 + rr(2.5)), by = y2 + uy * (1 + rr(2.5));
+  const j = Math.min(1.8, 0.35 + len * 0.004);
+  let segs = [[0, 1]];
+  if (len > 150 && rnd() < 0.4) {
+    const t = 0.3 + rnd() * 0.4, gap = (5 + rnd() * 10) / len;
+    segs = [[0, t - gap / 2], [t + gap / 2, 1]];
+  }
+  g.strokeStyle = col;
+  g.lineCap = 'round';
+  for (const [t0, t1] of segs) {
+    const sx = ax + (bx - ax) * t0, sy = ay + (by - ay) * t0;
+    const ex = ax + (bx - ax) * t1, ey = ay + (by - ay) * t1;
+    const m = rr(j);
+    g.lineWidth = w * (0.8 + rnd() * 0.4);
+    g.beginPath();
+    g.moveTo(sx + rr(0.6), sy + rr(0.6));
+    g.quadraticCurveTo((sx + ex) / 2 - uy * m, (sy + ey) / 2 + ux * m, ex + rr(0.6), ey + rr(0.6));
+    g.stroke();
+  }
+}
+function fillPoly(pts, fill) {
+  g.fillStyle = fill;
+  g.beginPath();
+  g.moveTo(pts[0][0], pts[0][1]);
+  for (let i = 1; i < pts.length; i++) g.lineTo(pts[i][0], pts[i][1]);
+  g.closePath();
+  g.fill();
+}
+function poly(pts, fill, w = 2.5, closed = true) {
+  if (fill) fillPoly(pts, fill);
+  const n = closed ? pts.length : pts.length - 1;
+  for (let i = 0; i < n; i++) {
+    const a = pts[i], b = pts[(i + 1) % pts.length];
+    L(a[0], a[1], b[0], b[1], w);
+  }
+}
+function R(x, y, w, h, fill, lw = 2.5) {
+  if (fill) { g.fillStyle = fill; g.fillRect(x, y, w, h); }
+  if (lw) poly([[x, y], [x + w, y], [x + w, y + h], [x, y + h]], null, lw);
+}
+// short vertical strokes, the "wood grain" texture all over the reference
+function vgrain(x, y, w, h, n, lw = 1.8) {
+  for (let i = 0; i < n; i++) {
+    const px = x + 4 + rnd() * (w - 8);
+    const py = y + rnd() * h * 0.55;
+    const len = h * (0.18 + rnd() * 0.45);
+    L(px, py, px + rr(1.2), Math.min(y + h - 3, py + len), lw, C.inkSoft);
+  }
+}
+function hgrain(x, y, w, h, n, lw = 1.8) {
+  for (let i = 0; i < n; i++) {
+    const py = y + 4 + rnd() * (h - 8);
+    const px = x + rnd() * w * 0.5;
+    const len = w * (0.2 + rnd() * 0.45);
+    L(px, py, Math.min(x + w - 3, px + len), py + rr(1.2), lw, C.inkSoft);
+  }
+}
+function curve(pts, w = 2.4, col = C.ink) {
+  // smooth hand-drawn curve through points
+  g.strokeStyle = col; g.lineWidth = w; g.lineCap = 'round'; g.lineJoin = 'round';
+  g.beginPath();
+  g.moveTo(pts[0][0] + rr(0.6), pts[0][1] + rr(0.6));
+  for (let i = 1; i < pts.length - 1; i++) {
+    const mx = (pts[i][0] + pts[i + 1][0]) / 2, my = (pts[i][1] + pts[i + 1][1]) / 2;
+    g.quadraticCurveTo(pts[i][0] + rr(0.8), pts[i][1] + rr(0.8), mx, my);
+  }
+  const last = pts[pts.length - 1];
+  g.lineTo(last[0], last[1]);
+  g.stroke();
+}
+function ellipse(cx, cy, rx, ry, fill, lw = 2.4, rot = 0) {
+  g.beginPath();
+  g.ellipse(cx, cy, rx, ry, rot, 0, Math.PI * 2);
+  if (fill) { g.fillStyle = fill; g.fill(); }
+  if (lw) {
+    g.strokeStyle = C.ink; g.lineWidth = lw;
+    g.beginPath();
+    const s = rnd() * Math.PI * 2;
+    g.ellipse(cx + rr(0.6), cy + rr(0.6), rx + rr(0.8), ry + rr(0.8), rot, s, s + Math.PI * 2 * (0.96 + rnd() * 0.08));
+    g.stroke();
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Static scenery
+// ---------------------------------------------------------------------------
+function drawScenery() {
+  seed = 4242;
+
+  // ground
+  g.fillStyle = C.sidewalk; g.fillRect(0, 1060, FW, 200);
+
+  // ---- far left: wall, posts, painted wall with drips
+  R(0, 110, 42, 1130, C.wallLight2, 0);
+  R(40, 110, 52, 1130, C.pillar, 0);
+  L(41, 110, 41, 1235); L(92, 110, 92, 1235);
+  vgrain(40, 140, 52, 1050, 6);
+  R(92, 110, 58, 1130, C.wallLight, 0);
+  L(150, 110, 150, 1235);
+  hgrain(92, 140, 58, 1050, 6, 1.6);
+  L(98, 1030, 148, 1032, 2);
+  R(150, 110, 145, 1130, C.wallLight, 0);
+  // drips
+  curve([[205, 110], [212, 150], [230, 185], [240, 205], [246, 240], [252, 275], [258, 300]], 2.2);
+  curve([[266, 110], [264, 170], [266, 220], [270, 260], [268, 300]], 2.2);
+  curve([[252, 300], [256, 310], [262, 300]], 2.2);
+  curve([[249, 325], [244, 360], [247, 400], [252, 410], [258, 400], [260, 360], [254, 325], [249, 325]], 2.2);
+  curve([[214, 110], [222, 135], [236, 150]], 1.8);
+  L(155, 1180, 175, 1180, 2);
+
+  // ---- far right: plain wall, plank pillars, blue siding
+  R(1700, 110, 125, 1130, C.wallLight, 0);
+  L(1702, 140, 1702, 1170); L(1722, 140, 1722, 1165);
+  R(1825, 110, 145, 1130, C.wallLight2, 0);
+  L(1825, 110, 1825, 1180); L(1880, 110, 1880, 1235); L(1945, 110, 1945, 1235);
+  for (let y = 150; y < 1180; y += 40 + rnd() * 70) L(1828 + rnd() * 10, y, 1876, y + rr(2), 1.8);
+  for (let y = 140; y < 1180; y += 50 + rnd() * 90) L(1885, y, 1940 - rnd() * 10, y + rr(2), 1.8);
+  hgrain(1730, 500, 90, 600, 5, 1.6);
+  L(1740, 990, 1820, 1005, 2); L(1745, 560, 1815, 570, 1.8);
+  R(1970, 110, 40, 1130, C.siding, 0);
+  L(1970, 110, 1970, 1235);
+  for (let y = 135; y < 1235; y += 31) L(1972, y, 2000, y + rr(1), 2);
+
+  // ---- interior of the shop window
+  R(350, 155, 850, 925, C.interior, 0);
+  R(350, 155, 850, 120, C.ceil, 0);
+  // ceiling slats and rafters
+  for (const [x1, y1, x2, y2] of [[365, 165, 400, 205], [380, 162, 430, 215], [455, 160, 470, 190], [490, 160, 520, 195]]) L(x1, y1, x2, y2, 2);
+  for (const x of [610, 718, 822, 918, 1018, 1105]) L(x + rr(3), 158, x + rr(3), 182, 2);
+  for (const [x1, y1, x2, y2] of [[860, 160, 875, 180], [930, 160, 950, 182], [1000, 160, 1015, 178], [1080, 165, 1100, 182], [1110, 160, 1125, 176]]) L(x1, y1, x2, y2, 2);
+  L(350, 182, 1200, 184, 2.4);
+  R(627, 188, 568, 76, C.ceil);
+  for (const x of [700, 770, 910, 1010, 1080]) L(x, 200, x + rr(2), 230 + rnd() * 25, 1.8, C.inkSoft);
+  L(350, 268, 700, 270, 2.6); L(350, 282, 620, 283, 1.8);
+  R(350, 290, 200, 52, C.interiorDark);
+  vgrain(350, 290, 200, 52, 5);
+  L(560, 300, 620, 298, 2); L(560, 316, 600, 316, 1.8);
+  // back wall pieces
+  R(620, 265, 440, 605, C.interior, 0);
+  R(1060, 262, 140, 610, C.interior);
+  ellipse(1083, 406, 6, 13, null, 1.8);
+  R(560, 340, 60, 430, C.interiorDark, 2);
+  R(350, 340, 212, 430, C.cabinet);
+  L(365, 360, 366, 600, 2); L(400, 375, 401, 410, 1.8); L(545, 360, 546, 520, 1.8);
+  ellipse(581, 372, 5, 12, null, 1.8);
+  ellipse(590, 705, 5, 11, null, 1.8);
+  L(620, 448, 1060, 450, 2.4);
+  vgrain(620, 265, 440, 180, 9);
+  vgrain(1062, 270, 136, 190, 4);
+  R(1145, 475, 52, 395, C.interiorDark, 2);
+
+  // ---- light bulbs and the hanging sign
+  bulb(612, 155, 405);
+  bulb(823, 380, 407, true);
+  bulb(1018, 380, 407, true);
+  R(717, 155, 10, 130, C.interiorDark, 2);
+  R(1137, 155, 10, 130, C.interiorDark, 2);
+  poly([[694, 282], [1170, 280], [1172, 382], [696, 384]], C.sign, 2.8);
+  L(705, 296, 1160, 294, 1.6, C.inkSoft);
+  L(706, 372, 1160, 371, 1.6, C.inkSoft);
+  L(706, 296, 707, 372, 1.6, C.inkSoft);
+  L(1160, 294, 1161, 371, 1.6, C.inkSoft);
+  signText();
+
+  // ---- register counter (left)
+  R(378, 607, 76, 38, C.regDark);
+  R(388, 615, 56, 22, '#6b7891', 1.8);
+  R(410, 645, 12, 40, C.regDark, 2);
+  poly([[405, 690], [470, 688], [495, 760], [400, 762]], C.regDark);
+  poly([[372, 680], [432, 682], [425, 770], [362, 770]], C.bag);
+  L(400, 690, 398, 760, 1.4, C.inkSoft);
+  R(603, 718, 60, 52, C.box);
+  L(603, 728, 663, 728, 2);
+  R(350, 770, 315, 50, C.counterTop);
+  R(350, 820, 320, 260, C.counterFront);
+  vgrain(350, 822, 320, 255, 9);
+
+  // ---- pastry display case
+  poly([[688, 478], [1176, 476], [1192, 870], [672, 872]], C.caseFrame, 2.8);
+  poly([[708, 496], [1158, 494], [1170, 850], [692, 852]], C.caseGlass, 2.2);
+  sheen();
+  for (const [x, y] of [[750, 550], [892, 550], [1025, 550], [742, 667], [850, 667], [1020, 667], [812, 790], [1013, 790]])
+    R(x, y, 47, 29, C.pastry, 2.2);
+  R(919, 498, 7, 82, '#c9c9d3', 1.6);
+  R(919, 605, 7, 90, '#c9c9d3', 1.6);
+  R(919, 720, 7, 72, '#c9c9d3', 1.6);
+  for (const [y, h] of [[579, 26], [695, 26], [818, 32]]) {
+    R(692, y, 481, h, C.shelf, 2.4);
+    L(696, y + 6, 1168, y + 6, 1.4, C.inkSoft);
+  }
+  // counter under the case
+  R(668, 872, 532, 66, C.baseTop);
+  L(675, 885, 1195, 884, 1.6, C.inkSoft);
+  R(672, 938, 528, 142, C.baseFront);
+  vgrain(672, 940, 528, 140, 10);
+
+  // interior floor / step
+  R(350, 1080, 852, 80, C.step, 0);
+  L(350, 1080, 1200, 1082, 2.6);
+  L(350, 1158, 1200, 1160, 2.6);
+  hgrain(360, 1090, 830, 60, 8, 1.6);
+
+  // ---- structural frame
+  R(272, 110, 1474, 45, C.header);
+  L(280, 122, 1735, 120, 1.6, C.inkSoft);
+  L(700, 140, 1300, 141, 1.6, C.inkSoft);
+  R(290, 155, 60, 1005, C.pillar);
+  vgrain(290, 160, 60, 990, 6);
+  R(1200, 155, 105, 1015, C.pillar);
+  L(1222, 160, 1222, 1165, 2);
+  vgrain(1222, 170, 80, 980, 7);
+
+  // ---- door section (right)
+  R(1305, 155, 397, 210, C.transomFrame);
+  R(1305, 182, 357, 120, C.transomGlass);
+  R(1305, 302, 397, 63, C.band, 2);
+  R(1305, 365, 397, 720, C.doorFrame);
+  L(1636, 370, 1662, 365, 2);
+  poly([[1318, 405], [1628, 403], [1630, 1050], [1320, 1052]], C.door, 2.6);
+  L(1318, 1040, 1628, 1038, 1.6, C.inkSoft);
+  R(1330, 418, 283, 90, C.doorGlass);
+  R(1452, 418, 34, 90, C.door, 2.2);
+  poly([[1335, 420], [1350, 420], [1450, 505], [1435, 505]], C.door, 2);
+  poly([[1608, 420], [1593, 420], [1490, 505], [1505, 505]], C.door, 2);
+  L(1340, 518, 1400, 517, 1.8); L(1420, 518, 1590, 517, 1.8);
+  L(1335, 765, 1380, 765, 1.8); L(1395, 765, 1585, 764, 1.8);
+  L(1452, 822, 1490, 821, 1.8); L(1452, 572, 1490, 573, 1.8);
+  for (const [x, y, w, h] of [[1330, 573, 115, 182], [1498, 573, 115, 182], [1330, 823, 115, 210], [1498, 823, 115, 210]])
+    R(x, y, w, h, C.doorPanel, 2.2);
+  R(1305, 1085, 397, 75, C.threshold);
+  L(1310, 1100, 1695, 1099, 1.6, C.inkSoft);
+  L(1305, 1170, 1700, 1170, 2.2);
+
+  // sidewalk lines
+  L(160, 1160, 1305, 1163, 2.4);
+  L(160, 1210, 1960, 1212, 1.8);
+  L(340, 1195, 1960, 1195, 1.4, C.inkSoft);
+
+  // ---- donut machine in the wall + crates
+  poly([[183, 988], [258, 970], [266, 975], [266, 1160], [183, 1160]], C.machine, 2.6);
+  L(190, 993, 258, 978, 1.6, C.inkSoft);
+  poly([[196, 1002], [256, 996], [256, 1108], [196, 1110]], C.machineIn, 2.2);
+  donut(220, 1037);
+  donut(220, 1090);
+  poly([[193, 1125], [323, 1110], [327, 1148], [193, 1160]], C.crate, 2.4);
+  L(198, 1135, 320, 1122, 1.4, C.inkSoft);
+  poly([[176, 1160], [340, 1150], [344, 1185], [176, 1200]], C.crateDark, 2.4);
+  L(182, 1175, 338, 1166, 1.4, C.inkSoft);
+}
+
+function bulb(x, top, cy, hidden) {
+  if (!hidden) {
+    L(x, top, x, cy - 110, 2.2);
+    R(x - 12, cy - 112, 24, 38, C.socket, 2.2);
+    R(x - 5, cy - 128, 30, 8, C.socket, 1.8);
+    R(x - 8, cy - 74, 16, 20, C.socket, 2);
+  }
+  g.beginPath();
+  g.moveTo(x - 10, cy - 50);
+  g.bezierCurveTo(x - 10, cy - 34, x - 28, cy - 22, x - 28, cy);
+  g.arc(x, cy, 28, Math.PI, 0, true);
+  g.bezierCurveTo(x + 28, cy - 22, x + 10, cy - 34, x + 10, cy - 50);
+  g.closePath();
+  g.fillStyle = C.bulb; g.fill();
+  g.strokeStyle = C.ink; g.lineWidth = 2.4; g.stroke();
+  // filament
+  curve([[x - 6, cy + 4], [x - 4, cy - 18], [x, cy - 6], [x + 4, cy - 18], [x + 6, cy + 4]], 2);
+  L(x - 9, cy + 6, x + 9, cy + 6, 1.8);
+}
+
+function signText() {
+  g.save();
+  g.fillStyle = C.ink;
+  g.globalAlpha = 0.85;
+  g.font = '38px Gaegu, "Comic Sans MS", cursive';
+  g.textBaseline = 'alphabetic';
+  const word = (s, x, y, sp) => {
+    for (const ch of s) {
+      g.save();
+      g.translate(x, y + rr(2));
+      g.rotate(rr(0.05));
+      g.fillText(ch, 0, 0);
+      g.restore();
+      x += g.measureText(ch).width + sp;
+    }
+  };
+  word('CoFFEE --', 738, 326, 5);
+  word('TEA --', 980, 324, 9);
+  word('MILK   --', 740, 362, 6);
+  g.restore();
+}
+
+function sheen() {
+  g.save();
+  g.fillStyle = 'rgba(232, 235, 243, 0.9)';
+  g.strokeStyle = C.inkSoft; g.lineWidth = 1.6;
+  const shape = draw => { g.beginPath(); draw(); g.closePath(); g.fill(); g.stroke(); };
+  shape(() => {
+    g.moveTo(714, 508); g.lineTo(906, 506);
+    g.quadraticCurveTo(840, 520, 790, 548);
+    g.quadraticCurveTo(752, 568, 745, 580);
+    g.lineTo(712, 580); g.lineTo(714, 508);
+  });
+  shape(() => {
+    g.moveTo(708, 606); g.lineTo(745, 606);
+    g.quadraticCurveTo(722, 680, 720, 762);
+    g.lineTo(706, 765);
+  });
+  shape(() => {
+    g.moveTo(1140, 540);
+    g.quadraticCurveTo(1152, 540, 1152, 560);
+    g.lineTo(1160, 806);
+    g.lineTo(935, 808);
+    g.quadraticCurveTo(1030, 795, 1090, 760);
+    g.quadraticCurveTo(1122, 735, 1124, 690);
+    g.lineTo(1130, 560);
+    g.quadraticCurveTo(1131, 541, 1140, 540);
+  });
+  g.restore();
+}
+
+function donut(cx, cy) {
+  ellipse(cx, cy, 17, 15, C.donut, 2.2);
+  ellipse(cx + 1, cy + 1, 6, 5, C.machineIn, 1.8);
+  g.strokeStyle = '#f3dca5'; g.lineWidth = 2.4;
+  g.beginPath(); g.arc(cx, cy, 11, Math.PI * 1.05, Math.PI * 1.6); g.stroke();
+  g.strokeStyle = C.donutDark; g.lineWidth = 2;
+  g.beginPath(); g.arc(cx, cy, 12, Math.PI * 0.1, Math.PI * 0.6); g.stroke();
+}
+
+// ---------------------------------------------------------------------------
+// Animated characters (lines "boil" on threes, like hand-drawn animation)
+// ---------------------------------------------------------------------------
+function topPenguin(t) {
+  const bob = Math.sin(t * 2.2) * 1.5;
+  const x = 880, y = 462 + bob;
+  // body peeking over the case
+  g.beginPath();
+  g.ellipse(x, y, 22, 15, -0.05, 0, Math.PI * 2);
+  g.fillStyle = C.belly; g.fill();
+  g.beginPath();
+  g.ellipse(x, y - 3, 22, 12, -0.05, Math.PI * 1.02, Math.PI * 1.98);
+  g.quadraticCurveTo(x + 12, y + 2, x, y + 1);
+  g.quadraticCurveTo(x - 14, y, x - 22, y - 2);
+  g.fillStyle = C.penguin; g.fill();
+  ellipse(x, y, 22, 15, null, 2.2, -0.05);
+  // eye (blinks)
+  const blink = (t % 4.2) < 0.14;
+  if (blink) L(x - 6, y - 2, x + 2, y - 2, 2);
+  else { g.fillStyle = C.ink; g.beginPath(); g.ellipse(x - 2, y - 3, 2.6, 3.2, 0, 0, Math.PI * 2); g.fill(); }
+  poly([[x + 18, y - 3], [x + 27, y - 1], [x + 18, y + 2]], C.beak, 1.8);
+  // sparkle
+  const s = 0.75 + 0.35 * Math.abs(Math.sin(t * 3));
+  const sx = 910, sy = 442;
+  g.save();
+  g.translate(sx, sy); g.rotate(t * 0.8); g.scale(s, s);
+  for (let k = 0; k < 4; k++) {
+    const a = k * Math.PI / 4;
+    L(-Math.cos(a) * 8, -Math.sin(a) * 8, Math.cos(a) * 8, Math.sin(a) * 8, 2.2, '#f1f2f7');
+  }
+  g.restore();
+}
+
+function machinePenguin(t) {
+  // reaching up to the donut slot with its flipper
+  const reach = (Math.sin(t * 1.6) + 1) / 2;
+  const x = 248, base = 1124;
+  const sq = 1 + Math.sin(t * 3.2) * 0.012;
+  // feet
+  ellipse(x - 8, base - 2, 9, 4, C.beak, 1.8);
+  ellipse(x + 10, base - 1, 9, 4, C.beak, 1.8);
+  // body
+  g.save();
+  g.translate(x, base); g.scale(1 / sq, sq);
+  g.beginPath();
+  g.moveTo(-14, -4);
+  g.bezierCurveTo(-24, -40, -16, -80, -2, -86);
+  g.bezierCurveTo(12, -90, 22, -70, 20, -40);
+  g.bezierCurveTo(19, -20, 14, -6, 8, -2);
+  g.closePath();
+  g.fillStyle = C.penguin; g.fill();
+  // white edge of the belly (it faces the wall)
+  g.beginPath();
+  g.moveTo(10, -60);
+  g.bezierCurveTo(22, -50, 20, -20, 8, -3);
+  g.bezierCurveTo(12, -20, 14, -42, 10, -60);
+  g.fillStyle = C.belly; g.fill();
+  // highlight
+  g.strokeStyle = C.penguinHi; g.lineWidth = 3;
+  g.beginPath(); g.moveTo(-8, -70); g.quadraticCurveTo(-14, -45, -10, -20); g.stroke();
+  g.strokeStyle = C.ink; g.lineWidth = 2.4;
+  g.beginPath();
+  g.moveTo(-14, -4);
+  g.bezierCurveTo(-24, -40, -16, -80, -2, -86);
+  g.bezierCurveTo(12, -90, 22, -70, 20, -40);
+  g.bezierCurveTo(19, -20, 14, -6, 8, -2);
+  g.stroke();
+  // beak pointing up-left at the slot
+  poly([[-12, -80], [-22, -86], [-9, -73]], C.beak, 1.8);
+  // raised flipper
+  const ang = -1.9 - reach * 0.5;
+  g.save();
+  g.translate(-10, -58);
+  g.rotate(ang);
+  g.beginPath();
+  g.ellipse(18, 0, 22, 6, 0, 0, Math.PI * 2);
+  g.fillStyle = C.penguin; g.fill();
+  g.strokeStyle = C.ink; g.lineWidth = 2.2; g.stroke();
+  g.restore();
+  g.restore();
+}
+
+// ---------------------------------------------------------------------------
+// Frame composition
+// ---------------------------------------------------------------------------
+const canvas = document.getElementById('scene');
+const ctx = canvas.getContext('2d');
+const still = document.createElement('canvas');
+const grain = document.createElement('canvas');
+let scale = 1, dpr = 1;
+
+function makeGrain() {
+  grain.width = grain.height = 256;
+  const gc = grain.getContext('2d');
+  const img = gc.createImageData(256, 256);
+  seed = 99;
+  for (let i = 0; i < img.data.length; i += 4) {
+    const v = rnd() * 255;
+    img.data[i] = img.data[i + 1] = img.data[i + 2] = v;
+    img.data[i + 3] = 18;
+  }
+  gc.putImageData(img, 0, 0);
+}
+
+function layout() {
+  dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const vw = window.innerWidth, vh = window.innerHeight;
+  scale = Math.min(vw / FW, vh / FH);
+  const cw = Math.round(FW * scale), ch = Math.round(FH * scale);
+  canvas.style.width = cw + 'px';
+  canvas.style.height = ch + 'px';
+  canvas.width = Math.round(cw * dpr);
+  canvas.height = Math.round(ch * dpr);
+  still.width = canvas.width; still.height = canvas.height;
+  g = still.getContext('2d');
+  g.setTransform(scale * dpr, 0, 0, scale * dpr, 0, -OY * scale * dpr);
+  drawScenery();
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  g.globalAlpha = 1;
+  g.fillStyle = g.createPattern(grain, 'repeat');
+  g.fillRect(0, 0, still.width, still.height);
+}
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const t0 = performance.now();
+function frame(now) {
+  const t = reduceMotion ? 0 : (now - t0) / 1000;
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.drawImage(still, 0, 0);
+  g = ctx;
+  g.setTransform(scale * dpr, 0, 0, scale * dpr, 0, -OY * scale * dpr);
+  seed = 700 + (Math.floor(t * 8) % 3) * 31; // three-drawing line boil
+  topPenguin(t);
+  machinePenguin(t);
+  if (!reduceMotion) requestAnimationFrame(frame);
+}
+
+makeGrain();
+const start = () => { layout(); requestAnimationFrame(frame); };
+window.addEventListener('resize', () => { layout(); if (reduceMotion) requestAnimationFrame(frame); });
+(document.fonts && document.fonts.load ? document.fonts.load('38px Gaegu').catch(() => {}) : Promise.resolve()).then(start, start);
+})();
+</script>
+<!-- artifact:end -->
+</body>
+</html>
