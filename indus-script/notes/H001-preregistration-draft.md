@@ -1,86 +1,101 @@
 # H001 — pre-registration draft
 
-Author: Claude · 25 October 2026 · **DRAFT PROPOSAL — not locked**  
-Purpose: fix the test for H001 *before* anyone tabulates labels against stroke counts, so that the result cannot be shaped after seeing it.  
-Lock condition: reviewed and agreed by Codex and Sam, then committed with the word **LOCKED** and a date. Until then it can change freely. After locking, any change needs a dated amendment that says whether the change was made after seeing outcome data.
+Author: Claude · 25 October 2026 · **DRAFT PROPOSAL, revision 2 — not locked**  
+Purpose: fix how H001 is examined *before* anyone tabulates labels against stroke counts, so that the analysis cannot be shaped after seeing the data.  
+Lock condition: reviewed and agreed by Codex and Sam, then committed with the word **LOCKED** and a date. Until then it can change freely. After locking, any change needs a dated amendment stating whether it was made after seeing outcome data.
 
-This note proposes a design only. It contains no outcome tabulation.
+Revision 2 adopts Codex's six review points on PR #3 (2026-10-25). The changes are listed at the end. This note contains no outcome tabulation.
 
-## 1. What H001 claims, and what competes with it
+## 1. What is being examined
 
 H001 (README): some tablets combine a relatively fixed label with a variable numerical field.
 
-On a "strokes + cup" face (a stroke group followed by sign 328), the stroke count is the candidate variable field. The README already lists alternatives. They make different, testable predictions about **how the stroke count relates to the label on the same object**:
+On a "strokes + cup" face (a stroke group followed by sign 328), the stroke count is the candidate variable field. This analysis asks one descriptive question: **is the stroke count statistically dependent on the label carried by the same object, and how strongly?**
 
-| Model | What the strokes are | Prediction for objects carrying the *same* label |
-|---|---|---|
-| **A. Free quantity** (amount, denomination) | A value that changes with each issued object | Counts vary within a label about as much as across labels |
-| **B. Bound to the label** (grade or category tied to the issuer, or part of a fixed spelling/name) | Part of what the label is | Counts agree within a label far more than chance |
-| **C. Mixed** | Some labels take fixed counts, others free counts | Agreement above chance overall, with several labels showing two or more distinct counts |
+The README's alternatives (an amount or denomination, a grade or category, a phonetic or logographic expression) are **not** decided by this analysis:
+- Strong dependence fits a count bound to the label (a fixed grade, or part of a spelling) but does not prove it.
+- Weak or absent dependence is **not** evidence that the count is a freely varying quantity. It may reflect small groups, mixed production or transcription noise.
 
-None of these establishes a spoken number or the meaning of the cup. The test only asks whether the count behaves like an independent field or like part of the label.
+Results are reported as dependence, effect size and uncertainty. Interpretations stay as listed alternatives.
 
-## 2. Search set (declared before curation)
+## 2. Search set and units
 
-- **Population:** every object in Mahadevan 1977 (M77) with at least one face whose complete text is a stroke sign immediately followed by 328 (the "SC face"). This is the strokes-plus-cup family proposed in the IND-002 review.
-- **Stroke signs:** the M77 sign IDs that consist only of vertical strokes. They must be listed from the M77 sign list with the image of each sign, and checked by a second contributor. They must not be inferred from shape names or from this note. Working expectation, to be verified: 86 = one, 87 = two, 89 = three, 95 = four.
-- **Label:** the object's other script-bearing face or faces, as normalized M77 sequences in reading order. When there are several, the label is the tuple of those faces ordered by M77 side code. Non-script faces (e.g. dotted circles) are recorded but are not part of the label.
-- **Unit of analysis: the physical object**, after identity adjudication in IND-004. Impressions and duplicate publications of one object count once. Objects judged to come from one mould or production series are reported as a group, and the main test is repeated with one object per group.
-- **Source of transcriptions:** the IND-004 reviewed release. A third-party digitization may be used only as a blind cross-check (see the IND-003 review).
+- **Population:** objects in Mahadevan 1977 (M77) with at least one face whose complete text is a stroke sign immediately followed by 328 (the "SC face").
+- **Stroke signs:** the M77 sign IDs consisting only of vertical strokes, listed from the M77 sign list with the image of each sign and checked by a second contributor. They are not inferred from shape names. Working expectation, to be verified: 86 = one, 87 = two, 89 = three, 95 = four.
+- **Unit:** the physical object after IND-004 identity review. Impressions and repeated publications of one object count once. Objects judged to share a mould or production series form a **production group**. The primary analysis uses one object per production group, chosen by a rule fixed before tabulation (the lowest M77 text number).
+- **Primary slice:** reviewed **Harappa tablets** only, with the SC face inscribed (not moulded) where the source records the technique. Other sites and object types are reported descriptively and are not pooled in the primary comparison.
+- **Exchangeability:** inference requires units that can reasonably be treated as exchangeable under the null. If the reviewed slice cannot be split into such units (for example, because production groups cannot be resolved), the analysis **stops at description**: the catalogue and the per-label tables, with no p-value.
 
-## 3. Exclusions (declared now)
+## 3. Label key
 
-1. Objects whose SC face has an illegible or doubtful stroke group: excluded from the main test, included in sensitivity S2.
-2. Objects with no other script face: no label, so excluded from the dependence test, but counted in the descriptive summary.
-3. Labels containing an illegible sign (`000`): excluded from the main test, included in sensitivity S3 with the illegible sign treated as a wildcard.
+- **Primary key:** the unordered multiset of the object's complete **multi-sign, non-SC faces**, each kept in its internal reading order. M77 side order is a catalogue convention, so it does not order the key. Faces are never concatenated into a sentence.
+- **Covariates, not part of the key:** single-sign faces (such as 137 "X" or 59 "fish") and non-script faces (such as dotted circles), recorded with the IND-003 v0.2 surface-content field.
+- **Secondary key (sensitivity):** the multiset of all script-bearing non-SC faces, single-sign faces included.
+
+## 4. Exclusions
+
+1. Objects whose SC face has an unresolved stroke group (illegible, or photo outcome `illegible` or `contradicts`) are excluded from the primary comparison and kept in the catalogue.
+2. Objects with no other script face have no label. They are counted descriptively only.
+3. Labels with an illegible sign or an unresolved reading are excluded from the primary comparison. They are **not** turned into wildcard classes, because matching would be non-transitive and an illegible span may cover several signs. Where independent sources give specific alternative readings, those alternatives are enumerated and reported as a sensitivity.
 4. Nothing else is excluded without a dated amendment.
 
-## 4. Primary test
+## 5. Primary analysis
 
-**Statistic:** within-label agreement *W*. Across all labels carried by two or more independent objects, take every pair of objects sharing a label and compute the share of those pairs with the same stroke count.
+**Statistic:** dependence between label and stroke count among objects in label groups of two or more, measured as Cramér's *V* on the label × count table. Within-label agreement *W* (the share of same-label object pairs with equal counts) is reported alongside, because it is easier to read.
 
-**Null:** permute stroke counts across objects while keeping the set of labels and the overall count distribution fixed, 10,000 permutations. Seed fixed in code: 20261025.
+**Null and uncertainty:** permute counts across units within the primary slice, keeping label groups and the count distribution fixed; 10,000 permutations, seed 20261025. Report:
+- observed *V* and *W*;
+- the null mean and 2.5–97.5% range of each;
+- a **two-sided** permutation p-value, since unusually low agreement is as informative as unusually high;
+- a bootstrap 95% interval for *V* over units (2,000 resamples, same seed);
+- per label group: the number of units and the distinct counts observed.
 
-**Report:** observed *W*; the null mean and its 2.5–97.5% range; one-sided p-value for *W* above the null; the number of label groups used and objects per group; and, for each label group, the distinct counts observed.
+No verdict thresholds. The report states the estimate and its uncertainty, then lists which of the alternatives in §1 each pattern is compatible with.
 
-**Decision rules:**
-- **B supported** if p < 0.01 *and* fewer than 20% of label groups show two or more distinct counts.
-- **A supported** if p ≥ 0.05 *and* the confidence interval of *W* overlaps the null mean.
-- **C** if p < 0.01 but at least 20% of label groups show two or more distinct counts.
-- **Otherwise inconclusive.** Report it as such, and do not re-cut the data to reach a verdict.
+## 6. Feasibility check (before tabulation; not called "power")
 
-**Power, before running:** simulate data from models A and B on the actual label-group sizes but with synthetic counts. If the design cannot separate A from B at least 80% of the time, report that the test is underpowered and stop, instead of running it and interpreting noise.
+Two explicit generative models, run on the actual label-group sizes of the primary slice but with synthetic counts:
 
-## 5. Sensitivity analyses (all reported, whatever they show)
+- **M-free:** each unit's count drawn independently from the slice's count distribution.
+- **M-bound(ε):** each label group gets one count drawn from that distribution; each unit keeps it with probability 1 − ε, else takes a fresh draw. Run at ε = 0.1 and ε = 0.3, standing in for transcription error and genuine variation.
 
-- **S1.** One object per mould or production group.
-- **S2.** Include doubtful stroke groups.
-- **S3.** Include labels with an illegible sign as wildcards.
-- **S4.** Harappa only; most tablets of this type come from Harappa, and a site effect could mimic B.
-- **S5.** Collapse labels to their final two signs. If agreement collapses with the full label but not here, the count may be bound to the formula's end, not the whole label.
+Report how often the §5 interval for *V* separates M-free from M-bound at each ε, over 1,000 simulations. If it separates in fewer than half the simulations at ε = 0.1, the slice is too small to say anything about dependence; report the catalogue and stop.
 
-## 6. Exposure disclosure and held-out check
+Choosing the label-group sizes means looking at which labels share a face. That is structural information, not outcome, and the feasibility code must not read the counts.
 
-Contributors have already seen some outcome data:
+## 7. Sensitivity analyses (all reported, whatever they show)
 
-- Claude listed M77 records **4580–4597** while checking crosswalks for IND-002 and saw their label and stroke-count pairs.
-- Both assistants have seen the five Fig. 4 objects (5498, 4444, 4456, 4581, 4591). Mahadevan selected these because they share a label and show varying counts.
+- **S1.** All objects instead of one per production group.
+- **S2.** Include stroke groups whose photograph outcome is `consistent` but not `confirms`.
+- **S3.** Enumerated, independently sourced alternative readings for excluded labels (§4.3).
+- **S4.** Secondary label key (§3).
+- **S5.** Other sites and object types, each descriptively, not pooled.
+- **S6. Exposure sensitivity.** Repeat §5 excluding the records contributors have already examined: the five Fig. 4 objects, M77 4580–4597 (seen by Claude), 4563 and 4094 (adjacent on M77 p. 360), and anything added to the exposure log during curation. This is a **less-examined subset, not a blinded confirmation**: contributors must see records while curating them.
 
-To keep the test honest, every analysis is run twice:
+## 8. Exposure log
 
-1. on the full search set;
-2. on the **unseen subset**, excluding those 5 objects and 4580–4597.
+| Date | Contributor | What was seen |
+|---|---|---|
+| 2026-10-25 | Claude | M77 records 4580–4597 (labels and stroke counts); full concordance p. 360 (index of sign 119), including 4563 and 4094; corpus aggregates: four-sign group in 11 texts, 5 with an SC face; 255 texts with a two-sign `[X] 328` line |
+| 2026-10-25 | Codex | The five Fig. 4 objects; Claude's aggregates and the 5498 sequences (per Codex's PR #2 comment) |
 
-The verdict rests on the unseen subset if the two disagree. Any further exposure, for example during curation, must be added here with a date before the test is run.
+Add a row whenever someone sees label and count pairs outside the frozen release.
 
-## 7. What would change the plan
+## 9. What would change the plan
 
-- Stroke signs turn out not to be a clean ordered series in the M77 sign list → revise section 2 before curation.
-- Identity adjudication merges most objects into a few production groups → S1 becomes the main test.
-- The power check fails → stop at the descriptive catalogue.
+- Stroke signs turn out not to be a clean ordered series in the M77 sign list → revise §2 before curation.
+- Production groups cannot be resolved for the Harappa slice → description only (§2).
+- The feasibility check fails → report the catalogue and stop (§6).
 
-## Open questions for Codex and Sam
+## Changes in revision 2 (from Codex's review of revision 1)
 
-1. Is "within-label agreement under permutation" the right primary statistic, or would you prefer mutual information or a likelihood ratio between explicit A and B models?
-2. Are the 20% and p thresholds sensible, or should the decision be descriptive only, given the expected small group sizes?
-3. Should the test wait for the full IND-004 release, or run first on a reviewed Harappa-only slice?
+1. Removed the A/B/C verdict thresholds and the 20% rule. Results are dependence, effect size and uncertainty; a non-significant result is not support for a free quantity.
+2. The primary slice is now reviewed Harappa tablets, with one unit per production group and an explicit "stop at description" rule if exchangeable units are not available.
+3. The label key is the unordered multiset of complete multi-sign non-SC faces. Single-sign faces and motifs are covariates, and the all-face key is a sensitivity.
+4. No wildcard classes for illegible signs. Unresolved labels are excluded from the primary comparison; only independently sourced alternatives are enumerated.
+5. "Power" is replaced by a feasibility check against two explicit generative models, and the test is two-sided.
+6. The "unseen subset" is renamed an exposure sensitivity on a less-examined subset, and an exposure log is added.
+
+## Remaining open question
+
+One suggestion beyond Codex's points: if the Harappa slice is small, a **restricted permutation** that permutes counts only within object-type or stratum cells may keep more units than filtering does, while respecting exchangeability. Codex and Sam: worth adding as S7, or keep the filter-only design for simplicity?
