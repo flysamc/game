@@ -5,12 +5,11 @@ Project entry point: [README.md](README.md)
 
 ## Current handoff
 
-**Active task: IND-002 — source audit ready for independent review.**  
-Status: **IN REVIEW — Codex**, updated 25 October 2026.  
-Working branch: `indus/IND-002-source-audit`. Last completed step: source audit, H-351 photographic comparison, candidate inventory and access manifest prepared.  
-Review: [PR #1](https://github.com/flysamc/game/pull/1).  
-Audit: [review document](https://github.com/flysamc/game/blob/indus/IND-002-source-audit/indus-script/notes/IND-002-source-audit.md).  
-Suggested independent reviewer: **Claude**; checklist is in the audit. No review or acknowledgement has occurred.
+**Active task: IND-003 — pilot source, schema and duplicate-handling rules.**  
+Status: **IN PROGRESS — Codex**, claimed 25 October 2026 after Sam asked to do the next step.  
+Working branch: `indus/IND-003-pilot-schema`, based on the IND-002 source-audit branch. Last completed step: current files, branches and PR #1 checked; no reviews or comments were present.  
+IND-002 remains **IN REVIEW** at [PR #1](https://github.com/flysamc/game/pull/1). Sam's instruction authorizes drafting the next stage while that review is pending; it does not establish source approval.  
+Suggested independent reviewer: **Claude**. Review and curation gates still apply before freezing data or running H001 tests.
 
 Sam asked us to use `flysamc/game` as a shared workspace and proceed one step at a time. The summary is now the starting reference. Actual coordination happens through committed notes, task status, and reviews when a contributor's session is active; this file does not automatically invoke or synchronize assistants.
 
@@ -22,7 +21,7 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 |---|---|---|---|---|
 | IND-001 | Initial project summary, references, hypothesis, and coordination protocol | DONE | Codex | This initial documentation commit; no corpus analysis claimed |
 | IND-002 | Verify source availability and H-351 identification/transcription | IN REVIEW | Codex | [PR #1](https://github.com/flysamc/game/pull/1); independent review pending |
-| IND-003 | Choose the pilot source, schema, and deduplication rules | BLOCKED | Unclaimed | IND-002 reviewed; documented choice and example records |
+| IND-003 | Choose the pilot source, schema, and deduplication rules | IN PROGRESS | Codex | Claimed 2026-10-25 on `indus/IND-003-pilot-schema`; draft work authorized while IND-002 review remains pending |
 | IND-004 | Curate and independently review stroke-plus-cup parallels | BLOCKED | Unclaimed | IND-003; versioned pilot with per-record provenance and review status |
 | IND-005 | Test H001 descriptively and reproduce basic positional statistics where data support it | BLOCKED | Unclaimed | IND-004; rerunnable code, inputs, output, and limitations |
 | IND-006 | Compare structural models with matched controls and held-out records | BLOCKED | Unclaimed | Adequate audited corpus and locked evaluation design |
@@ -44,7 +43,7 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 
 - Before working, fetch the current default branch and read these two documents plus any applicable repository instructions. Claim the task by committing an owner/status update. Do not assume ownership from the suggested-contributor field.
 - Use explicit states: READY, IN PROGRESS, IN REVIEW, DONE, BLOCKED, DEFERRED. Record a date, branch, and last completed step for an active task.
-- Keep one active research stage at a time. A reviewer can examine its evidence, but later stages stay blocked until dependencies are met.
+- Keep one implementation stage active at a time. Sam's 2026-10-25 instruction to proceed allows IND-003 design and draft examples while IND-002 is in review. Do not treat this sequencing change as an independent review or freeze unreviewed data; later empirical tests still require their evidence dependencies.
 - Keep research files under `indus-script/`. Avoid unrelated game changes.
 - For substantive tasks, use a focused branch such as `indus/IND-002-source-audit` and a small PR to the current default branch. Recheck the branch head before updating shared files. Reconcile concurrent edits without overwriting another contributor's work or force-pushing shared history.
 - Use GitHub diffs and an independent review when feasible. Mark a review as pending until it has actually occurred. Do not sign off on behalf of another contributor.
@@ -84,6 +83,13 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 - Gaps: four other object crosswalks and photographs, duplicate checks, complete machine-readable corpus access and reuse terms remain unresolved. These are recorded explicitly for later curation. No statistical analysis or translation was attempted.
 - Next action: an independent reviewer follows the four-item checklist in the audit. Record corrections or acceptance here; only then mark IND-002 DONE and IND-003 READY. Do not infer that Claude has been invoked by this handoff.
 - Status: IN REVIEW; no independent review yet.
+
+### 2026-10-25 — Codex — IND-003 claim
+
+- Sam instructed Codex to do the next step.
+- Checked the default branch, IND-002 branch, repository instructions, PR #1 reviews and comments. No independent review was present; IND-003 was unclaimed.
+- Claimed pilot source choice, schema, duplicate-handling rules and draft example records. IND-002 stays IN REVIEW, and analytical release remains gated on review and curation.
+- Working branch: `indus/IND-003-pilot-schema`; will open a focused PR against the audit branch so its changes can be reviewed separately.
 
 ## Handoff entry template
 
