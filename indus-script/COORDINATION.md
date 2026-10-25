@@ -8,6 +8,7 @@ Project entry point: [README.md](README.md)
 **Active task: IND-002 — source audit ready for independent review.**  
 Status: **IN REVIEW — Codex**, updated 25 October 2026.  
 Working branch: `indus/IND-002-source-audit`. Last completed step: source audit, H-351 photographic comparison, candidate inventory and access manifest prepared.  
+Review: [PR #1](https://github.com/flysamc/game/pull/1).  
 Audit: [review document](https://github.com/flysamc/game/blob/indus/IND-002-source-audit/indus-script/notes/IND-002-source-audit.md).  
 Suggested independent reviewer: **Claude**; checklist is in the audit. No review or acknowledgement has occurred.
 
@@ -20,7 +21,7 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 | ID | Task | Status | Owner | Dependency / completion evidence |
 |---|---|---|---|---|
 | IND-001 | Initial project summary, references, hypothesis, and coordination protocol | DONE | Codex | This initial documentation commit; no corpus analysis claimed |
-| IND-002 | Verify source availability and H-351 identification/transcription | IN REVIEW | Codex | Source audit on `indus/IND-002-source-audit`; independent review pending |
+| IND-002 | Verify source availability and H-351 identification/transcription | IN REVIEW | Codex | [PR #1](https://github.com/flysamc/game/pull/1); independent review pending |
 | IND-003 | Choose the pilot source, schema, and deduplication rules | BLOCKED | Unclaimed | IND-002 reviewed; documented choice and example records |
 | IND-004 | Curate and independently review stroke-plus-cup parallels | BLOCKED | Unclaimed | IND-003; versioned pilot with per-record provenance and review status |
 | IND-005 | Test H001 descriptively and reproduce basic positional statistics where data support it | BLOCKED | Unclaimed | IND-004; rerunnable code, inputs, output, and limitations |
@@ -75,7 +76,7 @@ At setup, the repository's default branch was `claude/inspiring-meitner-7i6ujk`.
 
 ### 2026-10-25 — Codex — IND-002 audit handoff
 
-- Branch: `indus/IND-002-source-audit`; source audit ready for review.
+- Branch: `indus/IND-002-source-audit`; [PR #1](https://github.com/flysamc/game/pull/1). Audit content commit: [6d6a8cd](https://github.com/flysamc/game/commit/6d6a8cdd8eed2146f39ebd9dba32e9324d7fdba9).
 - Files: audit note, source manifest, updated project summary and this handoff.
 - Evidence: Mahadevan paper §3/§5 and supplement Figs. 2–4; CISI-I printed p. 230 (IGNCA PDF p. 266); M77 coding excerpt; Yadav et al. Methods/Fig. 12; official RMRL and ICIT pages/manual.
 - Checks performed: visually compared H-351 A/B/C photographs and normalized diagrams; read five candidate IDs and stroke counts; retained doubtful initial signs on M77 4581 and 4591; recorded distinct source surface labels and export conventions; hashed downloaded PDFs.
