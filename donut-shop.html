@@ -13,14 +13,33 @@
   /* Layout: one 16:9 hand-drawn frame, letterboxed to fit any screen. */
   :root {
     --letterbox: #16171d;
+    --chip: rgba(214, 215, 223, 0.85);
+    --chip-edge: #2e3042;
+    --chip-ink: #2e3042;
     color-scheme: dark;
   }
   html, body { height: 100%; }
   body { margin: 0; overflow: hidden; background: var(--letterbox); display: grid; place-items: center; }
   canvas { display: block; }
+  #closeups {
+    position: fixed;
+    right: calc(14px + env(safe-area-inset-right, 0px));
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    font: 18px Gaegu, "Comic Sans MS", cursive;
+    color: var(--chip-ink);
+    background: var(--chip);
+    border: 1.5px solid var(--chip-edge);
+    border-radius: 999px;
+    padding: 3px 14px 4px;
+    cursor: pointer;
+    opacity: 0.75;
+  }
+  #closeups:hover { opacity: 1; }
+  #closeups:focus-visible { outline: 2px solid var(--chip-ink); outline-offset: 2px; opacity: 1; }
 </style>
 
-<canvas id="scene" role="img" aria-label="A hand-drawn shopfront with a pastry display case, a sign reading coffee, tea, milk, and two small penguins"></canvas>
+<canvas id="scene" role="img" aria-label="A hand-drawn shopfront with a pastry display case and two small penguins; one pulls a donut from a machine in the wall and eats it"></canvas>
+<button id="closeups" type="button" aria-pressed="true">Close-ups on</button>
 
 <script>
 (() => {
@@ -106,7 +125,7 @@ function L(x1, y1, x2, y2, w = 2.5, col = C.ink) {
     const sx = ax + (bx - ax) * t0, sy = ay + (by - ay) * t0;
     const ex = ax + (bx - ax) * t1, ey = ay + (by - ay) * t1;
     const m = rr(j);
-    g.lineWidth = w * (0.8 + rnd() * 0.4);
+    g.lineWidth = LW(w) * (0.8 + rnd() * 0.4);
     g.beginPath();
     g.moveTo(sx + rr(0.6), sy + rr(0.6));
     g.quadraticCurveTo((sx + ex) / 2 - uy * m, (sy + ey) / 2 + ux * m, ex + rr(0.6), ey + rr(0.6));
@@ -152,7 +171,7 @@ function hgrain(x, y, w, h, n, lw = 1.8) {
 }
 function curve(pts, w = 2.4, col = C.ink) {
   // smooth hand-drawn curve through points
-  g.strokeStyle = col; g.lineWidth = w; g.lineCap = 'round'; g.lineJoin = 'round';
+  g.strokeStyle = col; g.lineWidth = LW(w); g.lineCap = 'round'; g.lineJoin = 'round';
   g.beginPath();
   g.moveTo(pts[0][0] + rr(0.6), pts[0][1] + rr(0.6));
   for (let i = 1; i < pts.length - 1; i++) {
@@ -168,10 +187,10 @@ function ellipse(cx, cy, rx, ry, fill, lw = 2.4, rot = 0) {
   g.ellipse(cx, cy, rx, ry, rot, 0, Math.PI * 2);
   if (fill) { g.fillStyle = fill; g.fill(); }
   if (lw) {
-    g.strokeStyle = C.ink; g.lineWidth = lw;
+    g.strokeStyle = C.ink; g.lineWidth = LW(lw);
     g.beginPath();
     const s = rnd() * Math.PI * 2;
-    g.ellipse(cx + rr(0.6), cy + rr(0.6), rx + rr(0.8), ry + rr(0.8), rot, s, s + Math.PI * 2 * (0.96 + rnd() * 0.08));
+    g.ellipse(cx + rr(0.6), cy + rr(0.6), Math.max(0.5, rx + rr(0.8)), Math.max(0.5, ry + rr(0.8)), rot, s, s + Math.PI * 2 * (0.96 + rnd() * 0.08));
     g.stroke();
   }
 }
@@ -335,8 +354,6 @@ function drawScenery() {
   poly([[183, 988], [258, 970], [266, 975], [266, 1160], [183, 1160]], C.machine, 2.6);
   L(190, 993, 258, 978, 1.6, C.inkSoft);
   poly([[196, 1002], [256, 996], [256, 1108], [196, 1110]], C.machineIn, 2.2);
-  donut(220, 1037);
-  donut(220, 1090);
   poly([[193, 1125], [323, 1110], [327, 1148], [193, 1160]], C.crate, 2.4);
   L(198, 1135, 320, 1122, 1.4, C.inkSoft);
   poly([[176, 1160], [340, 1150], [344, 1185], [176, 1200]], C.crateDark, 2.4);
@@ -357,7 +374,7 @@ function bulb(x, top, cy, hidden) {
   g.bezierCurveTo(x + 28, cy - 22, x + 10, cy - 34, x + 10, cy - 50);
   g.closePath();
   g.fillStyle = C.bulb; g.fill();
-  g.strokeStyle = C.ink; g.lineWidth = 2.4; g.stroke();
+  g.strokeStyle = C.ink; g.lineWidth = LW(2.4); g.stroke();
   // filament
   curve([[x - 6, cy + 4], [x - 4, cy - 18], [x, cy - 6], [x + 4, cy - 18], [x + 6, cy + 4]], 2);
   L(x - 9, cy + 6, x + 9, cy + 6, 1.8);
@@ -388,7 +405,7 @@ function signText() {
 function sheen() {
   g.save();
   g.fillStyle = 'rgba(232, 235, 243, 0.9)';
-  g.strokeStyle = C.inkSoft; g.lineWidth = 1.6;
+  g.strokeStyle = C.inkSoft; g.lineWidth = LW(1.6);
   const shape = draw => { g.beginPath(); draw(); g.closePath(); g.fill(); g.stroke(); };
   shape(() => {
     g.moveTo(714, 508); g.lineTo(906, 506);
@@ -414,22 +431,363 @@ function sheen() {
   g.restore();
 }
 
-function donut(cx, cy) {
-  ellipse(cx, cy, 17, 15, C.donut, 2.2);
-  ellipse(cx + 1, cy + 1, 6, 5, C.machineIn, 1.8);
-  g.strokeStyle = '#f3dca5'; g.lineWidth = 2.4;
-  g.beginPath(); g.arc(cx, cy, 11, Math.PI * 1.05, Math.PI * 1.6); g.stroke();
-  g.strokeStyle = C.donutDark; g.lineWidth = 2;
-  g.beginPath(); g.arc(cx, cy, 12, Math.PI * 0.1, Math.PI * 0.6); g.stroke();
+function donutRing(cx, cy, rx, ry, bites = 0) {
+  if (bites >= BITES.length) return;
+  g.save();
+  // carve bites out of the ring
+  for (let k = 0; k < bites; k++) {
+    const a = BITES[k];
+    g.beginPath();
+    g.rect(cx - 60, cy - 60, 120, 120);
+    g.arc(cx + Math.cos(a) * rx * 1.05, cy + Math.sin(a) * ry * 1.05, rx * 0.58, 0, Math.PI * 2);
+    g.clip('evenodd');
+  }
+  g.beginPath();
+  g.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
+  g.ellipse(cx + 0.5, cy + 0.5, rx * 0.36, ry * 0.34, 0, 0, Math.PI * 2);
+  g.fillStyle = C.donut; g.fill('evenodd');
+  g.strokeStyle = '#f3dca5'; g.lineWidth = LW(2.4);
+  g.beginPath(); g.ellipse(cx, cy, rx * 0.68, ry * 0.68, 0, Math.PI * 1.05, Math.PI * 1.6); g.stroke();
+  g.strokeStyle = C.donutDark; g.lineWidth = LW(2);
+  g.beginPath(); g.ellipse(cx, cy, rx * 0.72, ry * 0.72, 0, Math.PI * 0.1, Math.PI * 0.6); g.stroke();
+  g.strokeStyle = C.ink; g.lineWidth = LW(2.2);
+  g.beginPath(); g.ellipse(cx + rr(0.4), cy + rr(0.4), rx, ry, 0, 0, Math.PI * 2); g.stroke();
+  g.lineWidth = LW(1.8);
+  g.beginPath(); g.ellipse(cx + 0.5, cy + 0.5, rx * 0.36, ry * 0.34, 0, 0, Math.PI * 2); g.stroke();
+  g.restore();
+  // ink along each bite edge, kept inside the donut
+  if (bites) {
+    g.save();
+    g.beginPath(); g.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2); g.clip();
+    g.strokeStyle = C.ink; g.lineWidth = LW(2);
+    for (let k = 0; k < bites; k++) {
+      const a = BITES[k];
+      g.beginPath();
+      g.arc(cx + Math.cos(a) * rx * 1.05, cy + Math.sin(a) * ry * 1.05, rx * 0.58, 0, Math.PI * 2);
+      g.stroke();
+    }
+    g.restore();
+  }
 }
 
 // ---------------------------------------------------------------------------
-// Animated characters (lines "boil" on threes, like hand-drawn animation)
+// The story: reach, grab, turn, eat in four bites, machine refills. Loops.
 // ---------------------------------------------------------------------------
-function topPenguin(t) {
+const CYCLE = 18;
+const K = {
+  camIn0: 1.2, camIn1: 2.6,
+  reach: 2.6, grip: 3.6, pull: 3.9, turn: 4.7, admire: 5.3,
+  bite0: 5.8, biteLen: 1.15, done: 10.4,
+  turnBack: 12.0, refill: 12.8, refill2: 13.6, refillEnd: 14.4,
+  camOut0: 14.8, camOut1: 16.4,
+};
+const BITES = [-Math.PI / 2, -Math.PI * 0.2, -Math.PI * 0.8, Math.PI * 0.5];
+const PX = 248, PB = 1124;                       // where the penguin stands
+const SLOT_TOP = [220, 1037], SLOT_BOT = [220, 1090];
+const WINDOW = [[196, 1002], [256, 996], [256, 1108], [196, 1110]];
+const ZOOM = 3.5, FOCUS = [262, 1058];
+
+const ease = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
+const easeOutBack = x => { x = clamp01(x); const c = 1.8; return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2; };
+const clamp01 = x => x < 0 ? 0 : x > 1 ? 1 : x;
+const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
+const seg = (t, a, b) => clamp01((t - a) / (b - a));
+const mix = (a, b, t) => a + (b - a) * t;
+const fract = x => x - Math.floor(x);
+const h3 = (a, b, c) => fract(Math.sin(a * 127.1 + b * 311.7 + c * 74.7) * 43758.5453);
+let lwk = 1;
+const LW = w => w * lwk;
+
+function camK(tau) { return ease(seg(tau, K.camIn0, K.camIn1)) - ease(seg(tau, K.camOut0, K.camOut1)); }
+function chompTime(k) { return K.bite0 + k * K.biteLen + 0.25; }
+function bitesTaken(tau) {
+  let n = 0;
+  for (let k = 0; k < 4; k++) if (tau >= chompTime(k)) n++;
+  return n;
+}
+
+function machineDonuts(tau) {
+  g.save();
+  g.beginPath();
+  WINDOW.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y));
+  g.closePath();
+  g.clip();
+  if (tau < K.grip) donutRing(SLOT_TOP[0], SLOT_TOP[1], 17, 15);
+  const up = ease(seg(tau, K.refill, K.refill2));
+  donutRing(SLOT_BOT[0], mix(SLOT_BOT[1], SLOT_TOP[1], up), 17, 15);
+  if (tau >= K.refill2) donutRing(SLOT_BOT[0], mix(1140, SLOT_BOT[1], easeOutBack(seg(tau, K.refill2, K.refillEnd))), 17, 15);
+  g.restore();
+  // clunk marks when the machine moves a donut
+  for (const tc of [K.refill, K.refill2]) {
+    const d = tau - tc;
+    if (d >= 0 && d < 0.35) {
+      L(178, 1000, 168, 994, 2); L(176, 1018, 164, 1018, 2); L(270, 985, 280, 976, 2);
+    }
+  }
+}
+
+function penguinFrame(tau) {
+  const s = {
+    view: 'side', sx: 1, sy: 1 + Math.sin(tau * 3.2) * 0.012, hop: 0,
+    flip: 1.9 + Math.sin(tau * 2) * 0.05, look: 0, donut: null, bites: bitesTaken(tau),
+    beak: 0, eyes: 'open', cheeks: 0, pupil: [0, 0], fl: null,
+  };
+  // turning (squash horizontally, swap drawings at the midpoint)
+  const turnIn = seg(tau, K.turn, K.turn + 0.6), turnOut = seg(tau, K.turnBack, K.turnBack + 0.6);
+  if (tau >= K.turn && tau < K.turnBack + 0.6) {
+    s.view = 'front';
+    if (tau < K.turn + 0.6) { s.sx = Math.max(0.06, Math.abs(Math.cos(Math.PI * turnIn))); if (turnIn < 0.5) s.view = 'side'; }
+    if (tau >= K.turnBack) { s.sx = Math.max(0.06, Math.abs(Math.cos(Math.PI * turnOut))); if (turnOut >= 0.5) s.view = 'side'; }
+  }
+
+  // reaching up on tiptoes
+  if (tau >= K.reach && tau < K.grip) {
+    const e = ease(seg(tau, K.reach, K.grip));
+    s.flip = mix(1.9, 4.15, e);
+    s.sy *= 1 + 0.07 * e; s.sx *= 1 - 0.03 * e;
+    s.look = e;
+  }
+  // the donut leaves the slot and travels to the penguin's chest
+  if (tau >= K.grip && tau < K.admire) {
+    let p = [...SLOT_TOP];
+    if (tau < K.pull) { p[0] += Math.sin(tau * 45) * 1.2; s.sy *= 1.07; s.look = 1; }
+    else if (tau < K.turn) {
+      const e = ease(seg(tau, K.pull, K.turn));
+      p = [mix(SLOT_TOP[0], PX - 16, e), mix(SLOT_TOP[1], PB - 46, e) - Math.sin(e * Math.PI) * 8];
+      s.sy *= mix(1.07, 1, e); s.look = 1 - e;
+    } else {
+      const e = ease(turnIn);
+      p = [mix(PX - 16, PX, e), PB - 38];
+    }
+    s.donut = p;
+  }
+  if (s.view === 'side' && s.donut) {
+    const pvx = PX - 10 * s.sx, pvy = PB - 58 * s.sy;
+    s.flip = Math.atan2(s.donut[1] - pvy, s.donut[0] - pvx);
+  }
+
+  // front: admire, then four bites with chewing
+  if (tau >= K.admire && tau < K.done) {
+    let lift = 0;
+    s.donut = [PX, PB - 36];
+    if (tau < K.bite0) {
+      const p = seg(tau, K.admire, K.bite0);
+      s.hop = -Math.abs(Math.sin(p * Math.PI * 2)) * 6;
+      s.pupil = [0, 2];
+    } else {
+      const k = Math.min(3, Math.floor((tau - K.bite0) / K.biteLen));
+      const p = tau - (K.bite0 + k * K.biteLen);
+      if (p < 0.25) { lift = ease(p / 0.25); s.beak = lift; s.pupil = [0, 2]; }
+      else if (p < 0.45) { lift = 1 - ease((p - 0.25) / 0.2); s.eyes = 'happy'; s.cheeks = 1; if (p < 0.33) s.sy *= 0.96; }
+      else { s.beak = 0.55 * Math.max(0, Math.sin((p - 0.45) * Math.PI * 4.3)); s.eyes = 'happy'; s.cheeks = 1; s.sy *= 1 - 0.015 * s.beak; }
+      if (tau >= chompTime(k) && tau < chompTime(k) + 0.12) s.donut[0] += Math.sin(tau * 90) * 1.5;
+    }
+    s.donut[1] += s.hop - 19 * lift;
+    if (s.bites >= 4) s.donut = null;
+  }
+  // satisfied: flap, then rub the belly
+  if (tau >= K.done && tau < K.turnBack) {
+    s.eyes = 'happy'; s.cheeks = 0.7;
+    if (tau < K.done + 0.9) {
+      const f = Math.sin(tau * 16);
+      s.fl = [-0.2 + 0.55 * f, -0.2 + 0.55 * f];
+      s.hop = -Math.abs(Math.sin((tau - K.done) * Math.PI * 3.3)) * 5;
+    } else {
+      const w = Math.sin(tau * 7) * 0.18;
+      s.fl = [2.15 + w, 2.15 - w];
+      s.sx *= 1 + Math.sin(tau * 7) * 0.02;
+    }
+  }
+  // back to the machine: lower the flipper, perk up when a new donut arrives
+  if (tau >= K.turnBack + 0.3 && tau < K.turnBack + 1.0) s.flip = mix(3.0, 1.9, ease(seg(tau, K.turnBack + 0.3, K.turnBack + 1.0)));
+  if (tau >= K.refill2 + 0.25 && tau < K.refill2 + 0.85) {
+    s.hop = -Math.abs(Math.sin(seg(tau, K.refill2 + 0.25, K.refill2 + 0.85) * Math.PI)) * 7;
+    s.look = 0.5;
+  }
+  return s;
+}
+
+function drawSidePenguin(s) {
+  g.save();
+  g.translate(PX, PB + s.hop);
+  ellipse(-8 * s.sx, -2 - s.hop, 9 * s.sx, 4, C.beak, LW(1.8));
+  ellipse(10 * s.sx, -1 - s.hop, 9 * s.sx, 4, C.beak, LW(1.8));
+  g.scale(s.sx, s.sy);
+  const body = () => {
+    g.beginPath();
+    g.moveTo(-14, -4);
+    g.bezierCurveTo(-24, -40, -16, -80, -2, -86);
+    g.bezierCurveTo(12, -90, 22, -70, 20, -40);
+    g.bezierCurveTo(19, -20, 14, -6, 8, -2);
+    g.closePath();
+  };
+  body(); g.fillStyle = C.penguin; g.fill();
+  g.beginPath();
+  g.moveTo(10, -60);
+  g.bezierCurveTo(22, -50, 20, -20, 8, -3);
+  g.bezierCurveTo(12, -20, 14, -42, 10, -60);
+  g.fillStyle = C.belly; g.fill();
+  g.strokeStyle = C.penguinHi; g.lineWidth = LW(3);
+  g.beginPath(); g.moveTo(-8, -70); g.quadraticCurveTo(-14, -45, -10, -20); g.stroke();
+  body(); g.strokeStyle = C.ink; g.lineWidth = LW(2.4); g.stroke();
+  // eye
+  g.fillStyle = '#f4f4f8'; g.beginPath(); g.arc(-7, -73 - s.look * 2, 3.4, 0, Math.PI * 2); g.fill();
+  g.fillStyle = C.ink; g.beginPath(); g.arc(-8.5, -74 - s.look * 3, 1.9, 0, Math.PI * 2); g.fill();
+  // beak: level when idle, tipped up toward the slot when looking
+  const lk = s.look;
+  poly([[-12, mix(-70, -80, lk)], [mix(-24, -22, lk), mix(-69, -87, lk)], [mix(-11, -9, lk), mix(-65, -73, lk)]], C.beak, LW(1.8));
+  if (s.donut) donutRing((s.donut[0] - PX) / s.sx, (s.donut[1] - PB - s.hop) / s.sy, 17, 15);
+  g.save();
+  g.translate(-10, -58);
+  g.rotate(s.flip);
+  g.beginPath(); g.ellipse(18, 0, 22, 6, 0, 0, Math.PI * 2);
+  g.fillStyle = C.penguin; g.fill();
+  g.strokeStyle = C.ink; g.lineWidth = LW(2.2); g.stroke();
+  g.restore();
+  g.restore();
+}
+
+function drawFrontPenguin(s) {
+  g.save();
+  g.translate(PX, PB + s.hop);
+  ellipse(-9 * s.sx, -2 - s.hop, 9 * s.sx, 4, C.beak, LW(1.8));
+  ellipse(9 * s.sx, -2 - s.hop, 9 * s.sx, 4, C.beak, LW(1.8));
+  g.scale(s.sx, s.sy);
+  const body = () => {
+    g.beginPath();
+    g.moveTo(-15, -3);
+    g.bezierCurveTo(-26, -34, -22, -84, 0, -87);
+    g.bezierCurveTo(22, -84, 26, -34, 15, -3);
+    g.closePath();
+  };
+  body(); g.fillStyle = C.penguin; g.fill();
+  g.beginPath(); g.ellipse(0, -35, 14.5, 31, 0, 0, Math.PI * 2);
+  g.fillStyle = C.belly; g.fill();
+  g.strokeStyle = C.penguinHi; g.lineWidth = LW(3);
+  g.beginPath(); g.moveTo(-12, -74); g.quadraticCurveTo(-18, -60, -18, -44); g.stroke();
+  body(); g.strokeStyle = C.ink; g.lineWidth = LW(2.4); g.stroke();
+  // eyes
+  for (const ex of [-7, 7]) {
+    if (s.eyes === 'happy') {
+      g.strokeStyle = '#f4f4f8'; g.lineWidth = LW(2.4);
+      g.beginPath(); g.arc(ex, -71, 3.6, Math.PI * 1.1, Math.PI * 1.9); g.stroke();
+    } else {
+      g.fillStyle = '#f4f4f8'; g.beginPath(); g.arc(ex, -72, 3.6, 0, Math.PI * 2); g.fill();
+      g.fillStyle = C.ink; g.beginPath(); g.arc(ex + s.pupil[0], -72 + s.pupil[1], 2, 0, Math.PI * 2); g.fill();
+    }
+  }
+  if (s.cheeks) {
+    g.fillStyle = `rgba(232, 150, 168, ${0.75 * s.cheeks})`;
+    g.beginPath(); g.ellipse(-12, -62, 3.6, 2.4, 0, 0, Math.PI * 2); g.ellipse(12, -62, 3.6, 2.4, 0, 0, Math.PI * 2); g.fill();
+  }
+  // beak (opens to bite and chew)
+  const o = s.beak * 5;
+  if (o > 0.4) {
+    g.fillStyle = '#5a2f3a';
+    g.beginPath(); g.ellipse(0, -61 + o / 2, 3.5, o / 2 + 1, 0, 0, Math.PI * 2); g.fill();
+  }
+  poly([[-5, -67], [5, -67], [0, -61 - o * 0.2]], C.beak, LW(1.6));
+  poly([[-4, -62 + o], [4, -62 + o], [0, -58 + o]], C.beak, LW(1.6));
+  // the donut, held in both flippers
+  let lx = -17, ly = -54, rx = 17, ry = -54;
+  let aL, aR, tL = null, tR = null;
+  if (s.donut) {
+    const dx = (s.donut[0] - PX) / s.sx, dy = (s.donut[1] - PB - s.hop) / s.sy;
+    donutRing(dx, dy, 17, 15, s.bites);
+    // grip the rim from the sides so the bites stay visible
+    tR = [dx + 17, dy + 3]; tL = [dx - 17, dy + 3];
+    aR = Math.atan2(tR[1] - ry, tR[0] - rx);
+    aL = Math.atan2(tL[1] - ly, tL[0] - lx);
+  } else if (s.fl) {
+    aL = Math.PI - s.fl[0]; aR = s.fl[1];
+  } else {
+    aL = Math.PI - 1.25; aR = 1.25;
+  }
+  for (const [px, py, a, tip] of [[lx, ly, aL, tL], [rx, ry, aR, tR]]) {
+    const half = tip ? (Math.hypot(tip[0] - px, tip[1] - py) + 5) / 2 : 15;
+    g.save();
+    g.translate(px, py); g.rotate(a);
+    g.beginPath(); g.ellipse(half - 3, 0, half, 5.5, 0, 0, Math.PI * 2);
+    g.fillStyle = C.penguin; g.fill();
+    g.strokeStyle = C.ink; g.lineWidth = LW(2.2); g.stroke();
+    g.restore();
+  }
+  g.restore();
+}
+
+function crateY(x) { return 1125 - (x - 193) * 15 / 130 - 2; }
+
+function effects(tau) {
+  // crumbs fly from each bite, land on the crate and fade
+  for (let k = 0; k < 4; k++) {
+    const dt = tau - chompTime(k);
+    if (dt < 0 || dt > 3.4) continue;
+    const n = k === 3 ? 10 : 6;
+    for (let i = 0; i < n; i++) {
+      const a = h3(k, i, 1), b = h3(k, i, 2), c = h3(k, i, 3);
+      const x0 = PX + (a - 0.5) * 12, y0 = PB - 56;
+      const vx = (a - 0.5) * 120, vy = -50 - b * 110, gr = 520;
+      const x1 = x0 + vx * 0.4;
+      const floor = crateY(x1);
+      const tLand = (-vy + Math.sqrt(vy * vy + 4 * gr * (floor - y0))) / (2 * gr);
+      const tt = Math.min(dt, tLand);
+      const x = x0 + vx * tt, y = y0 + vy * tt + gr * tt * tt;
+      const fade = dt > tLand ? clamp01(1 - (dt - tLand - 1.3)) : 1;
+      if (fade <= 0) continue;
+      g.save();
+      g.globalAlpha = fade;
+      g.translate(x, y); g.rotate(c * 6 + (dt < tLand ? dt * 9 : 0));
+      const sz = 2.4 + c * 2.4;
+      g.fillStyle = c > 0.7 ? '#f3dca5' : C.donut;
+      g.fillRect(-sz / 2, -sz / 2, sz, sz);
+      g.strokeStyle = C.ink; g.lineWidth = LW(1); g.strokeRect(-sz / 2, -sz / 2, sz, sz);
+      g.restore();
+    }
+    // "nom"
+    if (dt < 1) {
+      g.save();
+      g.globalAlpha = 1 - dt;
+      g.fillStyle = C.ink;
+      g.font = `${k === 3 ? 24 : 20}px Gaegu, "Comic Sans MS", cursive`;
+      const x = PX + 20 + (k % 2) * 10;
+      g.translate(x, PB - 92 - (k % 2) * 14 - dt * 22);
+      g.rotate(k % 2 ? 0.12 : -0.12);
+      g.fillText(k === 3 ? 'nom!' : 'nom', 0, 0);
+      g.restore();
+    }
+  }
+  // a heart once it's all gone
+  const hp = seg(tau, K.done + 0.15, K.done + 1.9);
+  if (hp > 0 && hp < 1) {
+    const sc = easeOutBack(hp * 3) * 0.9;
+    g.save();
+    g.globalAlpha = hp > 0.7 ? 1 - (hp - 0.7) / 0.3 : 1;
+    g.translate(PX + 2, PB - 104 - hp * 26);
+    g.scale(sc, sc);
+    g.beginPath();
+    g.moveTo(0, 6);
+    g.bezierCurveTo(-14, -4, -9, -16, 0, -9);
+    g.bezierCurveTo(9, -16, 14, -4, 0, 6);
+    g.fillStyle = '#e58fa2'; g.fill();
+    g.strokeStyle = C.ink; g.lineWidth = LW(2); g.stroke();
+    g.restore();
+  }
+  // "!" when the machine delivers a fresh donut
+  const ep = seg(tau, K.refill2 + 0.25, K.refill2 + 1.3);
+  if (ep > 0 && ep < 1) {
+    g.save();
+    g.globalAlpha = ep > 0.75 ? 1 - (ep - 0.75) / 0.25 : 1;
+    g.fillStyle = C.ink;
+    g.font = '30px Gaegu, "Comic Sans MS", cursive';
+    g.fillText('!', PX - 6, PB - 100 - easeOutBack(ep * 3) * 6);
+    g.restore();
+  }
+}
+
+function topPenguin(t, tau) {
   const bob = Math.sin(t * 2.2) * 1.5;
   const x = 880, y = 462 + bob;
-  // body peeking over the case
+  const watching = tau >= K.turn && tau < K.done + 1.5;
   g.beginPath();
   g.ellipse(x, y, 22, 15, -0.05, 0, Math.PI * 2);
   g.fillStyle = C.belly; g.fill();
@@ -438,70 +796,21 @@ function topPenguin(t) {
   g.quadraticCurveTo(x + 12, y + 2, x, y + 1);
   g.quadraticCurveTo(x - 14, y, x - 22, y - 2);
   g.fillStyle = C.penguin; g.fill();
-  ellipse(x, y, 22, 15, null, 2.2, -0.05);
-  // eye (blinks)
+  ellipse(x, y, 22, 15, null, LW(2.2), -0.05);
   const blink = (t % 4.2) < 0.14;
   if (blink) L(x - 6, y - 2, x + 2, y - 2, 2);
-  else { g.fillStyle = C.ink; g.beginPath(); g.ellipse(x - 2, y - 3, 2.6, 3.2, 0, 0, Math.PI * 2); g.fill(); }
-  poly([[x + 18, y - 3], [x + 27, y - 1], [x + 18, y + 2]], C.beak, 1.8);
-  // sparkle
+  else {
+    g.fillStyle = C.ink; g.beginPath();
+    g.ellipse(x - 2 - (watching ? 3 : 0), y - 3 + (watching ? 1 : 0), 2.6, 3.2, 0, 0, Math.PI * 2); g.fill();
+  }
+  poly([[x + 18, y - 3], [x + 27, y - 1], [x + 18, y + 2]], C.beak, LW(1.8));
   const s = 0.75 + 0.35 * Math.abs(Math.sin(t * 3));
-  const sx = 910, sy = 442;
   g.save();
-  g.translate(sx, sy); g.rotate(t * 0.8); g.scale(s, s);
+  g.translate(910, 442); g.rotate(t * 0.8); g.scale(s, s);
   for (let k = 0; k < 4; k++) {
     const a = k * Math.PI / 4;
     L(-Math.cos(a) * 8, -Math.sin(a) * 8, Math.cos(a) * 8, Math.sin(a) * 8, 2.2, '#f1f2f7');
   }
-  g.restore();
-}
-
-function machinePenguin(t) {
-  // reaching up to the donut slot with its flipper
-  const reach = (Math.sin(t * 1.6) + 1) / 2;
-  const x = 248, base = 1124;
-  const sq = 1 + Math.sin(t * 3.2) * 0.012;
-  // feet
-  ellipse(x - 8, base - 2, 9, 4, C.beak, 1.8);
-  ellipse(x + 10, base - 1, 9, 4, C.beak, 1.8);
-  // body
-  g.save();
-  g.translate(x, base); g.scale(1 / sq, sq);
-  g.beginPath();
-  g.moveTo(-14, -4);
-  g.bezierCurveTo(-24, -40, -16, -80, -2, -86);
-  g.bezierCurveTo(12, -90, 22, -70, 20, -40);
-  g.bezierCurveTo(19, -20, 14, -6, 8, -2);
-  g.closePath();
-  g.fillStyle = C.penguin; g.fill();
-  // white edge of the belly (it faces the wall)
-  g.beginPath();
-  g.moveTo(10, -60);
-  g.bezierCurveTo(22, -50, 20, -20, 8, -3);
-  g.bezierCurveTo(12, -20, 14, -42, 10, -60);
-  g.fillStyle = C.belly; g.fill();
-  // highlight
-  g.strokeStyle = C.penguinHi; g.lineWidth = 3;
-  g.beginPath(); g.moveTo(-8, -70); g.quadraticCurveTo(-14, -45, -10, -20); g.stroke();
-  g.strokeStyle = C.ink; g.lineWidth = 2.4;
-  g.beginPath();
-  g.moveTo(-14, -4);
-  g.bezierCurveTo(-24, -40, -16, -80, -2, -86);
-  g.bezierCurveTo(12, -90, 22, -70, 20, -40);
-  g.bezierCurveTo(19, -20, 14, -6, 8, -2);
-  g.stroke();
-  // beak pointing up-left at the slot
-  poly([[-12, -80], [-22, -86], [-9, -73]], C.beak, 1.8);
-  // raised flipper
-  const ang = -1.9 - reach * 0.5;
-  g.save();
-  g.translate(-10, -58);
-  g.rotate(ang);
-  g.beginPath();
-  g.ellipse(18, 0, 22, 6, 0, 0, Math.PI * 2);
-  g.fillStyle = C.penguin; g.fill();
-  g.strokeStyle = C.ink; g.lineWidth = 2.2; g.stroke();
-  g.restore();
   g.restore();
 }
 
@@ -512,7 +821,7 @@ const canvas = document.getElementById('scene');
 const ctx = canvas.getContext('2d');
 const still = document.createElement('canvas');
 const grain = document.createElement('canvas');
-let scale = 1, dpr = 1;
+let scale = 1, dpr = 1, grainPattern = null;
 
 function makeGrain() {
   grain.width = grain.height = 256;
@@ -527,6 +836,29 @@ function makeGrain() {
   gc.putImageData(img, 0, 0);
 }
 
+// camera: k = 0 is the full frame, k = 1 a close-up on the penguin
+function setCamera(target, k) {
+  const z = 1 + (ZOOM - 1) * k;
+  const hw = FW / 2 / z, hh = FH / 2 / z;
+  const cx = clamp(mix(FW / 2, FOCUS[0], k), hw, FW - hw);
+  const cy = clamp(mix(OY + FH / 2, FOCUS[1], k), OY + hh, OY + FH - hh);
+  const s = scale * dpr * z;
+  target.setTransform(s, 0, 0, s, target.canvas.width / 2 - cx * s, target.canvas.height / 2 - cy * s);
+  lwk = 1 / Math.sqrt(z);
+}
+function paintScenery(target, k) {
+  g = target;
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  g.fillStyle = C.sidewalk;
+  g.fillRect(0, 0, target.canvas.width, target.canvas.height);
+  setCamera(g, k);
+  drawScenery();
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  g.fillStyle = grainPattern;
+  g.fillRect(0, 0, target.canvas.width, target.canvas.height);
+  lwk = 1;
+}
+
 function layout() {
   dpr = Math.min(window.devicePixelRatio || 1, 2);
   const vw = window.innerWidth, vh = window.innerHeight;
@@ -537,32 +869,47 @@ function layout() {
   canvas.width = Math.round(cw * dpr);
   canvas.height = Math.round(ch * dpr);
   still.width = canvas.width; still.height = canvas.height;
-  g = still.getContext('2d');
-  g.setTransform(scale * dpr, 0, 0, scale * dpr, 0, -OY * scale * dpr);
-  drawScenery();
-  g.setTransform(1, 0, 0, 1, 0, 0);
-  g.globalAlpha = 1;
-  g.fillStyle = g.createPattern(grain, 'repeat');
-  g.fillRect(0, 0, still.width, still.height);
+  grainPattern = ctx.createPattern(grain, 'repeat');
+  paintScenery(still.getContext('2d'), 0);
 }
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let closeups = !reduceMotion;
+const btn = document.getElementById('closeups');
+btn.setAttribute('aria-pressed', String(closeups));
+btn.addEventListener('click', () => {
+  closeups = !closeups;
+  btn.setAttribute('aria-pressed', String(closeups));
+  btn.textContent = closeups ? 'Close-ups on' : 'Close-ups off';
+});
+btn.textContent = closeups ? 'Close-ups on' : 'Close-ups off';
+
 const t0 = performance.now();
 function frame(now) {
-  const t = reduceMotion ? 0 : (now - t0) / 1000;
-  ctx.setTransform(1, 0, 0, 1, 0, 0);
-  ctx.drawImage(still, 0, 0);
+  const t = (now - t0) / 1000;
+  const tau = t % CYCLE;
+  const k = closeups ? camK(tau) : 0;
+  if (k < 0.002) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.drawImage(still, 0, 0);
+  } else {
+    paintScenery(ctx, k);
+  }
   g = ctx;
-  g.setTransform(scale * dpr, 0, 0, scale * dpr, 0, -OY * scale * dpr);
+  setCamera(ctx, k);
   seed = 700 + (Math.floor(t * 8) % 3) * 31; // three-drawing line boil
-  topPenguin(t);
-  machinePenguin(t);
-  if (!reduceMotion) requestAnimationFrame(frame);
+  machineDonuts(tau);
+  const s = penguinFrame(tau);
+  if (s.view === 'front') drawFrontPenguin(s); else drawSidePenguin(s);
+  effects(tau);
+  topPenguin(t, tau);
+  lwk = 1;
+  requestAnimationFrame(frame);
 }
 
 makeGrain();
 const start = () => { layout(); requestAnimationFrame(frame); };
-window.addEventListener('resize', () => { layout(); if (reduceMotion) requestAnimationFrame(frame); });
+window.addEventListener('resize', layout);
 (document.fonts && document.fonts.load ? document.fonts.load('38px Gaegu').catch(() => {}) : Promise.resolve()).then(start, start);
 })();
 </script>

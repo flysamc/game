@@ -24,8 +24,10 @@ sun; a two-pass tilt-shift blur and a light colour grade finish the frame.
 
 `donut-shop.html` is a hand-drawn style 2D scene on a canvas: a muted shopfront
 with a pastry display case, a COFFEE / TEA / MILK sign, hanging bulbs, a mauve
-door, and two animated penguins (one peeking over the case, one reaching for the
-donut machine in the wall). Lines are drawn with a seeded "sketchy" stroke so
+door, and two animated penguins. On an 18-second loop the penguin by the wall machine
+reaches up, pulls out a donut, turns to face you and eats it in four bites
+(crumbs, "nom"s, a happy heart), then the machine slides a fresh donut into place.
+The camera pushes in for the snack; the "Close-ups" button keeps the full frame. Lines are drawn with a seeded "sketchy" stroke so
 they wobble, overshoot and break like ink; character lines re-jitter on a
 three-frame cycle like hand-drawn animation, and a paper grain sits on top.
 Open the file in a browser; it fits any screen at 16:9.
