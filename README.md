@@ -47,3 +47,11 @@ terraced cliffs, haze and thousands of rocks, a low sun casting shadows into
 the room, glowing light strips with bloom, light shafts and dust, and the boy
 writing at his desk. A Kuwahara filter gives the render a painted look (toggle
 "Painted"), and you can drag to look around.
+
+# Indus Script Research
+
+A collaborative research project investigating Indus inscriptions through source
+verification, structural analysis, and testable hypotheses.
+
+- [Project summary, literature, and first case](indus-script/README.md)
+- [Current task, Claude/Codex handoff, and research log](indus-script/COORDINATION.md)
